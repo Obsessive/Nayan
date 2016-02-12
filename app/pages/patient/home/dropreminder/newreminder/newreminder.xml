@@ -1,0 +1,19 @@
+<Page loaded="dropreminderLoaded">
+<ScrollView>
+  <StackLayout>
+  	 <Label text="Select Date to remind on" class="message" textWrap="true"/>
+  	<DatePicker day="12" month="2" year="2016" verticalAlignment="center" horizontalAlignment="center"/>
+  	<Label text="Select Time to remind on" class="message" textWrap="true"/>
+  	<TimePicker hour="18" minute="30"/>
+  	<Label text="Set Reminder for:" class="message" textWrap="true"/>
+  	 <SegmentedBar style="vertical-align: center; margin: 20;">
+    <SegmentedBar.items>
+      <SegmentedBarItem title="Left eye" />
+      <SegmentedBarItem title="Right eye" />
+      <SegmentedBarItem title="Both eyes" />
+    </SegmentedBar.items>
+  </SegmentedBar>
+   <Button text="Set Reminder" tap="{{ setReminderAction }}" />
+  </StackLayout>
+</ScrollView>
+</Page>

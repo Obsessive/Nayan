@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientconditionglucomaLoaded">
+ <ScrollView>
+ <StackLayout>
+ 	<TextView editable="false" text="Red Eyes" id="patientconditionspage"/>
+ 	<TextView editable="false" text="What are Eye Infections?" class="patientconditionquestion"/>
+    <TextView editable="false" text="Eye infections are eye conditions caused by microbiological agents such as viruses and bacteria that may cause your eyes to become red and swollen."/>
+
+    <TextView editable="false" text="How do I know if I have an Eye Infection?" class="patientconditionquestion"/>
+    <TextView editable="false" text="You may experience one or more of the following symptoms:
+Red eyes
+Eye discharge (watery, mucus, pus)
+Eye discomfort / pain
+Eye swelling or swelling of tissue surrounding the eye
+Persistent itching
+Blurring vision
+Flaking of the eyelids"/>
+
+    <TextView editable="false" text="How do I prevent Eye Infections?" class="patientconditionquestion"/>
+    <TextView editable="false" text="To prevent pathogens from entering your eye:
+Wash your hands before and after touching your eyes or face
+Avoid sharing eye makeup and change eye makeup every six months
+Practice good contact lens care and never share contact lens equipment, containers or solutions
+Do not share towels, linen, pillows or handkerchiefs
+Avoid exposing your eyes to contaminated water
+"/>
+
+    <TextView editable="false" text="
+What kinds of treatments are available for Eye Infections?" class="patientconditionquestion"/>
+    <TextView editable="false" text="You should see your eye doctor to determine the cause of your eye infection and get advice on the best course of treatment. Treatment usually includes antibiotic eye drops or ointment treatment."/>
+
+ </StackLayout>
+</ScrollView>
+</Page>

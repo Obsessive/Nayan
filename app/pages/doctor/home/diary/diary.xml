@@ -1,0 +1,6 @@
+<Page loaded="pageLoaded">
+ <StackLayout orientation="vertical">
+   <TextView hint="Type your entry.." />
+   <Button text="Done"/>
+ </StackLayout>
+</Page>

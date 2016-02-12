@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
+ <ScrollView>
+ <StackLayout>
+ 	<Label text="My Profile" id="patientprofilepage"/>
+ 	<Label text="Name" id="patientprofilename"/>
+    <TextField text="Vivek Pandit" hint="please enter your name" />
+
+    <Label text="Number" id="patientprofilephone"/>
+    <TextField text="+91 8553812341" hint="please enter your phone number" />
+
+    <Label text="Email" id="patientprofileemail"/>
+    <TextField text="vivek@smak.in" hint="please enter your email id" />
+
+    <Label text="Address" id="patientprofilehospital"/>
+    <TextField text="HAL" hint="please enter your Address" />
+
+    <Button text="Edit" tap="{{ editAction }}" />
+ </StackLayout>
+</ScrollView>
+</Page>

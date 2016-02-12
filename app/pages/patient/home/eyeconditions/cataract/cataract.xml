@@ -1,0 +1,22 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientconditionglucomaLoaded">
+ <ScrollView>
+ <StackLayout>
+ 	<TextView editable="false" text="Cataract" id="patientconditionspage"/>
+ 	<TextView editable="false" text="What causes Cataract?" class="patientconditionquestion"/>
+    <TextView editable="false" text="It is common in the elderly due to ageing of natural lens present inside the eye becomes progressively opaque, resulting in blurred vision.
+
+    	Prolonged ultra-violet light exposure, long term use of medications such as steroids and certain illnesses like diabetes are also risk factors for the development of cataract. In the young, cataract can be present at birth or develop as a result of injury."/>
+
+    <TextView editable="false" text="What are the symptoms?" class="patientconditionquestion"/>
+    <TextView editable="false" text="The first sign is usually blurring of vision. Other complaints may include frequent change of glasses due to increasing short-sightedness in the adults, colours appearing dull, poor vision in bright light, glare, haloes around lights, difficulty in reading or watching television or driving at night.
+"/>
+
+    <TextView editable="false" text="What can I do to prevent Cataracts?" class="patientconditionquestion"/>
+    <TextView editable="false" text="There is no scientifically proven prevention. However, you can protect your eyes from ultra-violet light by wearing sunglasses regularly, eating a balanced diet, treating diseases such as diabetes, and refrain from smoking.
+"/>
+
+    <TextView editable="false" text="How can my Cataract be treated?" class="patientconditionquestion"/>
+    <TextView editable="false" text="Cataract can be easily treated by surgical procedure. Surgery is usually advised by eye specialist when poor vision caused by cataract cannot be corrected with glasses and interferes with your daily activities."/>
+ </StackLayout>
+</ScrollView>
+</Page>

@@ -1,0 +1,9 @@
+<Page loaded="dropreminderLoaded">
+<ScrollView>
+  <StackLayout>
+  	 <Label text="No new reminders.. " class="message" textWrap="true"/>
+  	
+   <Button text="Create New Reminder" tap="{{ createReminderAction }}" />
+  </StackLayout>
+</ScrollView>
+</Page>

@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorHomeLoaded">
+<ScrollView>
+
+ 	<ListView id="doctorhomelist" items="{{ doctorhomelist }}" itemTap="doctorhomelistitemTap">
+		<ListView.itemTemplate>
+		<StackLayout>
+          <Label class="doctorhomelabel" text="{{ name }}" class="doctorhomecard"/>
+          <!-- <Button class="doctorhomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
+        </StackLayout>
+				<!-- <Label class="doctorhomelabel" text="{{ name }}"  /> -->
+			
+	</ListView.itemTemplate>
+</ListView>
+<!-- <Button class="doctorhomelist" text="My Profile" tap="{{ doctorProfileAction }}" />
+<Button class="doctorhomelist" text="Products" tap="{{ doctorProductAction }}" />
+<Button class="doctorhomelist" text="My Patients" tap="{{ doctorPatientAction }}" />
+<Button class="doctorhomelist" text="Medical Diary" tap="{{ doctordiaryAction }}" />
+<Button class="doctorhomelist" text="My Inbox" tap="{{ doctorinboxAction }}" />
+<Button class="doctorhomelist" text="References" tap="{{ doctorreferencesAction }}" />
+<Button class="doctorhomelist" text="Others" tap="{{ doctorothersrAction }}" />
+<Button class="doctorhomelist" text="Contact Us" tap="{{ doctorcontactusAction }}" /> -->
+
+</ScrollView>
+</Page>

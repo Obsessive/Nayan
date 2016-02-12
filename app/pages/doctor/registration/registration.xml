@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="registrationLoaded">
+<ScrollView>
+  <StackLayout>
+    <Label text="Name" id="doctorregistrationname"/>
+    <TextField hint="please enter your name" />
+
+    <Label text="Number" id="doctorregistrationphone"/>
+    <TextField hint="please enter your phone number" />
+
+    <Label text="Email" id="doctorregistrationemail"/>
+    <TextField hint="please enter your email id" />
+
+    <Label text="MCN" id="doctorregistrationmcn"/>
+    <TextField hint="please enter your Medical Council number" />
+
+    <Button text="Register" tap="{{ registerAction }}" />
+  </StackLayout>
+</ScrollView>
+</Page>

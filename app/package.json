@@ -1,0 +1,1 @@
+{"name":"Nayan","main":"app.js","version":"1.5.1","author":{"name":"Micro Labs"},"description":"Eye drops","license":"Apache-2.0","keywords":["eye"],"repository":{"type":"git","url":""},"bugs":{"url":""},"homepage":"","android":{"v8Flags":"--expose_gc"},"readme":"ERROR: No README data found!","_id":"Nayan@1.0","_from":"Nayan@1.0"}

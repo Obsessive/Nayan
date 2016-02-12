@@ -1,0 +1,159 @@
+.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+    /*background-color:#1E88E5;*/
+}
+
+button {
+    font-size: 42;
+    horizontal-align: center;
+    background-color: #1E88E5;
+    margin-bottom:20;
+    color:#fff;
+    border-radius:5;
+
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+label{
+    color:#01579B;
+    font-size: 20;
+}
+
+TextField{
+    margin-bottom:20;
+}
+.doctorhomelabel{
+    font-size:34;
+    color:#fff;
+    padding:10;
+}
+#doctorhomelist{
+    font-size: 42;
+    /*horizontal-align: center;*/
+    /*margin-bottom:10;*/
+    padding:10;
+    color:#2196F3;
+    /*width:100%;*/
+   /* border-radius:5;*/
+    background-color:#fff;
+}
+
+
+#doctorprofilepage{
+    background-color:#2196F3;
+    font-size: 42;
+    color:#fff;
+    padding-top:100;
+}
+.patienthomelabel{
+       font-size: 42;
+    color:#fff;
+}
+#patienthomelist{
+    font-size: 42;
+    /*horizontal-align: center;*/
+    /*margin-bottom:10;*/
+    padding:10;
+    color:#2196F3;
+    /*width:100%;*/
+   /* border-radius:5;*/
+    background-color:#fff;
+}
+
+
+#patientprofilepage{
+    background-color:#2196F3;
+    font-size: 42;
+    color:#fff;
+    padding-top:100;
+}
+#patientEyeConditionslist{
+    font-size:42;
+    padding:10;
+    color:#2196F3;
+}
+.patientEyeConditionslabel{
+    font-size:32;
+    padding:10;
+    color:#2196F3;
+}
+.doctorproducts{
+   /* width:100;*/
+}
+.logo{
+    horizontal-align: center;
+    /*width:100%;*/
+    height:200%;
+}
+#patientconditionspage{
+    background-color:#0091EA;
+    font-size: 42;
+    color:#fff;
+    padding-top:100;
+}
+.patienthomecard{
+    background-color:#0091EA;
+    font-size: 42;
+    color:#eee;
+    padding-top:30;
+    margin-bottom:30;
+
+}
+.doctorhomecard{
+    background-color:#0091EA;
+    font-size: 42;
+    color:#fff;
+    padding-top:60;
+    margin-bottom:10;
+}
+
+.patientconditionquestion{
+font-size:36;
+color:#0091EA;
+}
+
+.patientconditionanswer{
+font-size:28;
+color:#0091EA;
+}
+.chatlabelincoming {
+    margin: 10;
+    horizontal-align: left;
+    vertical-align: center;
+    background-color: #FF9800;
+    padding:5;
+    border-radius: 10;
+}
+.chatlabeloutgoing {
+    margin: 10;
+    horizontal-align: right;
+    vertical-align: center;
+    background-color: #FF9800;
+    color:#fff;
+    padding:5;
+    border-radius: 10;
+}
+.message_input {
+    border-radius: 2px;
+    border-width: 3;
+    border-style: solid;
+    border-color: grey;
+    padding: 3;
+    font-size:16;
+}
+
+.sendchat{
+        /*font-size: 26;*/
+    horizontal-align: center;
+    background-color: #1E88E5;
+    margin:10;
+    color:#fff;
+    border-radius:5;
+}

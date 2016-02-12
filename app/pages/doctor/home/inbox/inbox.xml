@@ -1,0 +1,47 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="inboxLoaded">
+
+	<DockLayout stretchLastChild="true" >
+
+		<StackLayout dock="bottom">
+			<TextField  dock="left" class="messageInput" text="{{ messageInput }}"
+				 hint="message..." />
+			<Button class="sendchat" text="Send" tap="addMessage" />
+		</StackLayout>
+
+
+<!-- <absoluteWrap> -->
+		<ScrollView id="messageScroll">
+			<ListView id="doctorchatlist" items="{{ doctorchatlist }}" itemTap="doctorhomelistitemTap">
+		<ListView.itemTemplate>
+		<StackLayout id="Mycontainer">
+          <Label cssClass="{{ inout === 1 ? 'chatlabelincoming' : 'chatlabeloutgoing' }}" text="{{ text }}" />
+        </StackLayout>
+				<!-- <Label class="doctorhomelabel" text="{{ name }}"  /> -->
+			
+		</ListView.itemTemplate>
+	</ListView>
+
+
+
+
+				<!-- <Repeater items="{{ incomingList }}">
+					<Repeater.itemTemplate>
+						<Label class="chatlabelincoming" text="{{ incoming }}" 
+							 margin="10" textWrap="true" />
+							 
+						
+					</Repeater.itemTemplate>
+				</Repeater>
+				<Repeater items="{{ outgoingList }}">
+					<Repeater.itemTemplate>
+						<Label class="chatlabeloutgoing" text="{{ outgoing }}" 
+							 margin="10" textWrap="true"/>
+						
+					</Repeater.itemTemplate>
+				</Repeater> -->
+		</ScrollView>
+		
+
+			
+	</DockLayout>
+</Page>

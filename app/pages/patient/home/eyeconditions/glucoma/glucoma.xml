@@ -1,0 +1,30 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientconditionglucomaLoaded">
+ <ScrollView>
+ <StackLayout>
+ 	<TextView editable="false" text="Glucoma" id="patientconditionspage"/>
+ 	<TextView editable="false" text="What is Glaucoma?" class="patientconditionquestion"/>
+    <TextView editable="false" text="Glaucoma is an eye disease that damages the eye's optic nerve. This damage is often caused by an abnormally high pressure in the eye."/>
+
+    <TextView editable="false" text="What causes Glaucoma?" class="patientconditionquestion"/>
+    <TextView editable="false" text="The excessive build-up of pressure in your eye occurs because of an imbalance between fluid production and its drainage out of the eye."/>
+
+    <TextView editable="false" text="How do I know if I have Glaucoma?" class="patientconditionquestion"/>
+    <TextView editable="false" text="The disease can develop slowly and you may not be aware of the gradual loss of sight until very late in the disease when your vision is seriously affected."/>
+
+    <TextView editable="false" text="What puts me at risk of Glaucoma?" class="patientconditionquestion"/>
+    <TextView editable="false" text="Age – your risk increases once you are over 50 years old. 
+Chronic diseases – The risk increases among diabetics and cardiac patients 
+Ethnicity – Asians and Afro-Caribbean’s are more susceptible to develop glaucoma
+Eye injuries
+Extreme near-sightedness or short-sightedness
+Family history of glaucoma
+Use of steroids
+"/>
+
+<TextView editable="false" text="What kinds of treatments are available for Glaucoma?" class="patientconditionquestion"/>
+    <TextView editable="false" text="Glaucoma cannot be cured, but it can be successfully controlled in most cases. Treatment depends on the type and severity of glaucoma and it may be in the form of medication, laser therapy or surgery.
+An eye specialist can determine the most appropriate individualised treatment for glaucoma clinical evaluation."/>
+  
+ </StackLayout>
+</ScrollView>
+</Page>
