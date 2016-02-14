@@ -1,10 +1,10 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
   <ScrollView>
-  <StackLayout>
-  	<Image src="res://logo" stretch ="aspectFit" class="logo" />
+  <StackLayout class="introbg"> 
+  	<Image src="res://logo" stretch ="aspectFit" class="intrologo" />
     <Label text="Welcome" class="title"/>
-    <Button text="I am a Doctor" tap="{{ doctorAction }}" />
-    <Button text="I am a Patient" tap="{{ patientAction }}" />
+    <Button text="&#xf0f1; Doctor" class="introbutton" tap="{{ doctorAction }}" />
+    <Button class="introbutton" text="&#xf21e; Patient" tap="{{ patientAction }}" />
     <Label text="{{ message }}" class="message" textWrap="true"/>
   </StackLayout>
 </ScrollView>

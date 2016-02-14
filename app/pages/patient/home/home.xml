@@ -1,25 +1,14 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientHomeLoaded">
-	<!-- <ListView id="patienthomelist" items="{{ patienthomelist }}">
-		<ListView.itemTemplate>
-		<Label class="patienthomelabel" text="{{ name }}"  />
-	</ListView.itemTemplate>
-</ListView> -->
 <ScrollView>
-	 
 
-<ListView id="patienthomelist" items="{{ patienthomelist }}" itemTap="patienthomelistitemTap">
-
+ 	<ListView id="patienthomelist" items="{{ patienthomelist }}" itemTap="patienthomelistitemTap">
 		<ListView.itemTemplate>
-		<StackLayout marginBottom="5" class="patienthomecard"  >
-			<Image src="{{icon}}" stretch ="aspectFit" class="icon" />
-			<!-- <TextView editable="false" text="Home " id="patientconditionspage"/> -->
-          <Label class="patienthomelabel" text="{{ name }}" />
-          <!-- <Button class="patienthomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
+		<StackLayout>
+          <Label class="patienthomelabel" text="{{ name }}" class="patienthomecard"/>
+          <!-- <Button class="doctorhomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
         </StackLayout>
-				<!-- <Label class="patienthomelabel" text="{{ name }}"  /> -->
-			
+				
 	</ListView.itemTemplate>
 </ListView>
-
 </ScrollView>
 </Page>

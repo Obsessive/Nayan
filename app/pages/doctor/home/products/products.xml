@@ -3,10 +3,12 @@
 
 
  	<StackLayout>
-		 <Image class="doctorproducts" src="res://product1" stretch ="none" />
-	  	 
-	  	 <Image class="doctorproducts" src="res://product3" stretch ="none" />
-	  	 <Image class="doctorproducts" src="res://product4" stretch ="none" />
+		 <Image class="doctorproducts" style="width:200" src="res://product1" stretch ="aspectFit" />
+	  	 <TextView editable="false"  style="width:200;text-align:center" text="FBN Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="res://product3" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex DS" />
+	  	 <Image class="doctorproducts" style="width:200" src="res://product4" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex Uno" />
 	</StackLayout>
 <!-- <Button class="doctorhomelist" text="My Profile" tap="{{ doctorProfileAction }}" />
 <Button class="doctorhomelist" text="Products" tap="{{ doctorProductAction }}" />

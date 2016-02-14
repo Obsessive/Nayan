@@ -1,12 +1,15 @@
 var FrameModule = require("ui/frame");
 var observable = require("data/observable");
+// var fontModule = require("ui/styling/font");
 function patientHomeLoaded(args) {
 var page = args.object;
 var patientHomeModel = (function (_super) {
     __extends(patientHomeModel, _super);
     function patientHomeModel() {
         _super.call(this);
-        this.set("patienthomelist", [{ logo:"~/images/profile.png",name: "My Profile" }, { logo:"logo",name: "Eye conditions" },{ logo:"logo",name: "Calender" },{ logo:"logo",name: "Medical Diary" },{ logo:"logo",name: "My Eye" },{ logo:"logo",name: "Drop Reminder" },{ logo:"logo",name: "Eye Exercises" },{ logo:"logo",name: "Food 4 vision" },{ logo:"logo",name: "Contact us" }]);
+        // fontModule.android.registerFont("fontawesome-webfont.ttf");
+
+        this.set("patienthomelist", [{ name:  "My Profile" }, { name: "Eye conditions" },{ name: "Calender" },{ name: "Medical Diary" },{ name: "My Eye" },{ name: "Drop Reminder" },{ name: "Eye Exercises" },{ name: "Food 4 vision" },{ name: "Contact us" }]);
         console.log("patient home is now ready.");
     }
     patientHomeModel.prototype.registerAction = function () {
