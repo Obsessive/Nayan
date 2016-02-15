@@ -139,6 +139,12 @@ TextField{
     color:#fff;
     padding-top:100;
 }
+.icon{
+    padding-top:15;
+    padding-bottom: 15;
+    margin-bottom:10;
+    background-color:#0091EA;
+}
 .patienthomecard{
      font-family: "FontAwesome";
     background-color:#0091EA;
@@ -147,6 +153,7 @@ TextField{
     padding-top:15;
     padding-bottom: 15;
     margin-bottom:10;
+    /*height:50;*/
 
 }
 .doctorhomecard{

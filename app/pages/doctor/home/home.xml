@@ -3,10 +3,12 @@
 
  	<ListView id="doctorhomelist" items="{{ doctorhomelist }}" itemTap="doctorhomelistitemTap">
 		<ListView.itemTemplate>
-		<StackLayout>
-          <Label class="doctorhomelabel" text="{{ name }}" class="doctorhomecard"/>
-          <!-- <Button class="doctorhomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
-        </StackLayout>
+		<GridLayout rows="60" columns="50,*" marginBottom="20" class="" >
+			<Image  col="0" row="0" src="{{ icon }}" stretch ="aspectFit" class="icon" />
+			<!-- <TextView editable="false" text="Home " id="patientconditionspage"/> -->
+          <Label  col="1" row="0" class="doctorhomecard" text="{{ name }}" />
+          <!-- <Button class="patienthomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
+        </GridLayout>
 				<!-- <Label class="doctorhomelabel" text="{{ name }}"  /> -->
 			
 	</ListView.itemTemplate>

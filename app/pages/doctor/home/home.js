@@ -6,7 +6,8 @@ var DoctorHomeModel = (function (_super) {
     __extends(DoctorHomeModel, _super);
     function DoctorHomeModel() {
         _super.call(this);
-        this.set("doctorhomelist", [{ name: "My Profile" }, { name: "Products" },{ name: "My Patients" },{ name: "Medical Diary" },{ name: "My Inbox" },{ name: "References" },{ name: "Others" },{ name: "Contact Us" }]);
+        this.set("doctorhomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/product.png",name: "Products" },{ icon:"~/images/patient.png",name: "My patients" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/inbox.png",name: "My inbox" },{ icon:"~/images/gym.png",name: "References" },{ icon:"~/images/reference.png",name: "Others" },{ icon:"~/images/phone.png",name: "Contact us" }]);
+
         console.log("doctor home is now ready.");
     }
     DoctorHomeModel.prototype.registerAction = function () {

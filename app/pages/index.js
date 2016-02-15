@@ -75,21 +75,27 @@ var HelloWorldModel = (function (_super) {
     pushPlugin.register({ senderID: '316739204235' }, function (data){
         console.log("message", "" + JSON.stringify(data));
         fetchModule.fetch("http://192.168.1.128:8000/subscribe", {
-
+              headers: new Headers({
+              'Content-Type': 'application/json'
+            }),
               method: "POST",
               body: JSON.stringify({user: "nraboy", type: "android", token: data})
             }).then(function(response) {
-                console.log(response);
+                console.log(JSON.stringify(response));
                 console.log("done with fetch");
+                
               }).catch(function(err) {
   // Error :( 
   console.log(err);
 });  
-    }, function(e) {console.log(e); });
-
-    pushPlugin.onMessageReceived(function callback(data) {  
+   pushPlugin.onMessageReceived(function callback(data) {  
         console.log("message", "" + JSON.stringify(data));
     });
+    }, function(e) {console.log(e); });
+
+    // pushPlugin.onMessageReceived(function callback(data) {  
+    //     console.log("message", "" + JSON.stringify(data));
+    // });
     }
     HelloWorldModel.prototype.doctorAction = function () {
        console.log("he/she is a Doctor");

@@ -9,7 +9,7 @@ var patientHomeModel = (function (_super) {
         _super.call(this);
         // fontModule.android.registerFont("fontawesome-webfont.ttf");
 
-        this.set("patienthomelist", [{ name:  "My Profile" }, { name: "Eye conditions" },{ name: "Calender" },{ name: "Medical Diary" },{ name: "My Eye" },{ name: "Drop Reminder" },{ name: "Eye Exercises" },{ name: "Food 4 vision" },{ name: "Contact us" }]);
+        this.set("patienthomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/condition.png",name: "Eye conditions" },{ icon:"~/images/calendar.png",name: "Calendar" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/eye.png",name: "My Eye" },{ icon:"~/images/alarm.png",name: "Drop Reminder" },{ icon:"~/images/gym.png",name: "Eye Exercises" },{ icon:"~/images/apple.png",name: "Food 4 vision" },{ icon:"~/images/phone.png",name: "Contact us" }]);
         console.log("patient home is now ready.");
     }
     patientHomeModel.prototype.registerAction = function () {
@@ -35,6 +35,10 @@ exports.patienthomelistitemTap = function (args) {
     if(index==1){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/eyeconditions/eyeconditions");
+    }
+    if(index==2){
+      var topmost=FrameModule.topmost();
+       topmost.navigate("pages/patient/home/calendar/calendar");
     }
     if(index==3){
       var topmost=FrameModule.topmost();

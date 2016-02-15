@@ -1,0 +1,3 @@
+<Page loaded="calendarLoaded" >
+	<WebView src="~/ui/web-view/calendar.html" />
+</Page>
