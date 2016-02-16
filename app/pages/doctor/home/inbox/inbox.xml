@@ -5,7 +5,7 @@
 		<StackLayout dock="bottom">
 			<TextField  dock="left" class="messageInput" text="{{ messageInput }}"
 				 hint="message..." />
-			<Button class="sendchat" text="Send" tap="addMessage" />
+			<Button class="globalbutton" text="Send" tap="addMessage" />
 		</StackLayout>
 
 

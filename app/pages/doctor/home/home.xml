@@ -3,7 +3,7 @@
 
  	<ListView id="doctorhomelist" items="{{ doctorhomelist }}" itemTap="doctorhomelistitemTap">
 		<ListView.itemTemplate>
-		<GridLayout rows="60" columns="50,*" marginBottom="20" class="" >
+		<GridLayout rows="60" columns="50,*" marginBottom="20" style="border-radius=5" >
 			<Image  col="0" row="0" src="{{ icon }}" stretch ="aspectFit" class="icon" />
 			<!-- <TextView editable="false" text="Home " id="patientconditionspage"/> -->
           <Label  col="1" row="0" class="doctorhomecard" text="{{ name }}" />

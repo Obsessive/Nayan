@@ -7,8 +7,11 @@
 #Others page will have share button and the content sent on your mail (Disclaimer)
 
 # Please add pushnotification suppport as such.
+- Gradle might not build without these ..
 - tns plugin add nativescript-push-notifications 
--- tns plugin add nativescript-plugin-google-play-services
+-- tns plugin add nativescript-calendar
+
+add google play services from android studio sdk manager (extras).. 
 
 
 push notifications wont test run on emulators as emulators usually do not have google play services installed. 

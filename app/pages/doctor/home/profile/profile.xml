@@ -2,22 +2,26 @@
  <ScrollView>
  <StackLayout>
  	<Label text="My Profile" id="doctorprofilepage"/>
- 	<Label text="Name" id="doctorprofilename"/>
-    <TextField text="Vivek Pandit" hint="please enter your name" />
+ 	<Label text="First Name" />
+    <TextField text="" id="doctorprofilefirstname" hint="please enter your name" />
 
-    <Label text="Number" id="doctorprofilephone"/>
-    <TextField text="+91 8553812341" hint="please enter your phone number" />
+    <Label text="Last Name" />
+    <TextField text="" id="doctorprofilelastname" hint="please enter your name" />
 
-    <Label text="Email" id="doctorprofileemail"/>
-    <TextField text="vivek@smak.in" hint="please enter your email id" />
+    <Label text="Number" />
+    <TextField text="" id="doctorprofilephone" hint="please enter your phone number" />
 
-    <Label text="MCN" id="doctorprofilemcn"/>
-    <TextField text="KA04007" hint="please enter your MCN" />
+    <Label text="Email" />
+    <TextField text="" id="doctorprofileemail" hint="please enter your email id" />
 
-    <Label text="Hospital" id="doctorprofilehospital"/>
-    <TextField text="Manipal " hint="please enter your practicing hospital" />
+    <Label text="MCN" />
+    <TextField text="" id="doctorprofilemcn" hint="please enter your MCN" />
 
-    <Button text="Edit" tap="{{ editAction }}" />
+    <Label text="Hospital" />
+    <TextField text="" id="doctorprofilehospital" hint="please enter your practicing hospital" />
+
+    <Button text="Save" class="introbutton" tap="{{ editAction }}" />
+    <Button text="Reset Profile" class="introbutton" tap="{{ resetAction }}" />
  </StackLayout>
 </ScrollView>
 </Page>
