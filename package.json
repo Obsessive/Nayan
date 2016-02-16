@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "nativescript-calendar": "^1.0.1",
+    "nativescript-dialog": "0.0.5",
     "nativescript-push-notifications": "0.0.15",
     "nativescript-sqlite": "^1.0.7",
     "tns-core-modules": "1.5.2"

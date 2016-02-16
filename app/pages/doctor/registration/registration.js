@@ -1,4 +1,6 @@
+var platform = require("platform");
 var FrameModule = require("ui/frame");
+var dialog = require("nativescript-dialog");
 var observable = require("data/observable");
 var Sqlite = require( "nativescript-sqlite" );
 var viewModule = require("ui/core/view");
@@ -115,6 +117,24 @@ function registrationLoaded(args) {
       code = viewModule.getViewById(page, "doctorregistrationcode").text;
       console.log("Check Internet connectivity..");
       id=this.serverRegister();
+      //Loading dialog
+      var nativeView;
+      if(platform.device.os === platform.platformNames.ios){
+          nativeView = UIActivityIndicatorView.alloc().initWithActivityIndicatorStyle(UIActivityIndicatorViewStyle.UIActivityIndicatorViewStyleGray);
+          nativeView.startAnimating();
+      } else if(platform.device.os === platform.platformNames.android){
+          nativeView = new android.widget.ProgressBar(application.android.currentContext);
+          nativeView.setIndeterminate(true);
+      }
+      dialog.show({
+          title: "Loading...",
+          message: "Please wait!",
+          cancelButtonText: "Cancel",
+          nativeView: nativeView}
+        ).then(function(r){ console.log("Result: " + r); },
+        function(e){console.log("Error: " + e)});
+      }
+      
       
       
     };
