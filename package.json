@@ -1,0 +1,17 @@
+{
+  "nativescript": {
+    "id": "org.micro.nayan",
+    "tns-ios": {
+      "version": "1.5.2"
+    },
+    "tns-android": {
+      "version": "1.5.1"
+    }
+  },
+  "dependencies": {
+    "nativescript-calendar": "^1.0.1",
+    "nativescript-push-notifications": "0.0.15",
+    "nativescript-sqlite": "^1.0.7",
+    "tns-core-modules": "1.5.2"
+  }
+}
