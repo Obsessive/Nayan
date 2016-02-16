@@ -1,4 +1,5 @@
 var platform = require("platform");
+var application = require("application");
 var FrameModule = require("ui/frame");
 var dialog = require("nativescript-dialog");
 var observable = require("data/observable");
@@ -44,6 +45,7 @@ function registrationLoaded(args) {
           //This is inexpensive.
           db.get('select * from user', function(err, row) {
             console.log("Row of data was: ", row);  // Prints [["Field1", "Field2",...]]
+            dialog.close();
             var topmost=FrameModule.topmost();
             topmost.navigate("pages/doctor/home/home");
             if(err!=null){
@@ -64,7 +66,8 @@ function registrationLoaded(args) {
         console.log("id: "+response._bodyText);
         id=response._bodyText;
         if(id=="0"){
-            alert("Sorry, Couldn't get you registered.. kindly check your internet connection and try again!");
+            alert("Sorry, Couldn't get you registered.. kindly check the data you entered, internet connection and try again!");
+            dialog.close();
           }else{
         self.localRegister(id);
         self.pushnotification();
@@ -131,12 +134,12 @@ function registrationLoaded(args) {
           message: "Please wait!",
           cancelButtonText: "Cancel",
           nativeView: nativeView}
-        ).then(function(r){ console.log("Result: " + r); },
-        function(e){console.log("Error: " + e)});
-      }
-      
-      
-      
+        ).then(function(r){ 
+          console.log("Result: " + r); 
+        },
+        function(e){
+          console.log("Error: " + e)
+        });
     };
 
     return RegistrationModel;
