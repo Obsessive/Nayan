@@ -1,7 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
  <ScrollView>
  <StackLayout>
- 	<TextView editable="false" text="Food 4 Vision " id="patientconditionspage"/>
+ 	<TextView editable="false" text="Food For Vision " id="patientconditionspage"/>
  	<TextView editable="false" text="Carrots" class="patientconditionquestion"/>
     <TextView editable="false" text="Carrots and other orange coloured fruits contain Beta-carotene; a type of vitamin A helps the retina and other parts of the eye to function smoothly."/>
 

@@ -1,0 +1,6 @@
+<Page loaded="patientDiaryEntryLoaded">
+  <GridLayout rows="*,auto" columns="*">
+   <TextView row="0" col="0" hint="content" id="patientDiaryEntrytextfield"/>
+   <Button class="globalbutton" row="1" col="0" text="&#xf00c; Done" tap="{{ saveAction }}"/>
+ </GridLayout>
+</Page>

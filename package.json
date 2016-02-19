@@ -13,6 +13,8 @@
     "nativescript-dialog": "0.0.5",
     "nativescript-push-notifications": "0.0.15",
     "nativescript-sqlite": "^1.0.7",
+    "nativescript-toast": "^1.2.0",
+    "nativescript-websockets": "^1.1.0",
     "tns-core-modules": "1.5.2"
   }
 }

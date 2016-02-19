@@ -1,7 +1,18 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
+    <!-- <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem text="Nayans" ios.position="right" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar> -->
  <ScrollView>
  <StackLayout>
  	<Label text="My Profile" id="doctorprofilepage"/>
+
+    <Label text="Refferal Code" />
+    <TextField editable="false" text="" id="doctorprofilereferral" />
+
  	<Label text="First Name" />
     <TextField text="" id="doctorprofilefirstname" hint="please enter your name" />
 
@@ -20,7 +31,7 @@
     <Label text="Hospital" />
     <TextField text="" id="doctorprofilehospital" hint="please enter your practicing hospital" />
 
-    <Button text="Save" class="introbutton" tap="{{ editAction }}" />
+    <Button text="Save" class="introbutton" tap="{{ saveAction }}" />
     <Button text="Reset Profile" class="introbutton" tap="{{ resetAction }}" />
  </StackLayout>
 </ScrollView>

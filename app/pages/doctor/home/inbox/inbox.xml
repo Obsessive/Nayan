@@ -1,22 +1,22 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="inboxLoaded">
+<Page loaded="inboxLoaded">
 
 	<DockLayout stretchLastChild="true" >
 
 		<StackLayout dock="bottom">
-			<TextField  dock="left" class="messageInput" text="{{ messageInput }}"
+			<TextField  dock="left" class="messageInput" id="messagetosend" text="{{ messageInput }}"
 				 hint="message..." />
-			<Button class="globalbutton" text="Send" tap="addMessage" />
+			<Button id="sendButton" class="globalbutton" text="Send" tap="{{sendMessage}}" />
 		</StackLayout>
 
 
 <!-- <absoluteWrap> -->
 		<ScrollView id="messageScroll">
-			<ListView id="doctorchatlist" items="{{ doctorchatlist }}" itemTap="doctorhomelistitemTap">
+			<ListView id="doctorinboxlist" items="{{ doctorinboxlist }}" itemTap="doctorhomelistitemTap">
 		<ListView.itemTemplate>
 		<StackLayout id="Mycontainer">
-          <Label cssClass="{{ inout === 1 ? 'chatlabelincoming' : 'chatlabeloutgoing' }}" text="{{ text }}" />
+          <Label cssClass="chatlabeloutgoing" text="{{ text }}" />
         </StackLayout>
-				<!-- <Label class="doctorhomelabel" text="{{ name }}"  /> -->
+				<!-- <Label class="patienthomelabel" text="{{ name }}"  /> -->
 			
 		</ListView.itemTemplate>
 	</ListView>
@@ -26,7 +26,7 @@
 
 				<!-- <Repeater items="{{ incomingList }}">
 					<Repeater.itemTemplate>
-						<Label class="chatlabelincoming" text="{{ incoming }}" 
+						<Label class="inboxlabelincoming" text="{{ incoming }}" 
 							 margin="10" textWrap="true" />
 							 
 						
@@ -34,7 +34,7 @@
 				</Repeater>
 				<Repeater items="{{ outgoingList }}">
 					<Repeater.itemTemplate>
-						<Label class="chatlabeloutgoing" text="{{ outgoing }}" 
+						<Label class="inboxlabeloutgoing" text="{{ outgoing }}" 
 							 margin="10" textWrap="true"/>
 						
 					</Repeater.itemTemplate>

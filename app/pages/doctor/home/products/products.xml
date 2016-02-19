@@ -3,21 +3,39 @@
 
 
  	<StackLayout>
-		 <Image class="doctorproducts" style="width:200" src="res://product1" stretch ="aspectFit" />
+		 <Image class="doctorproducts" style="width:200" src="~/images/product0.jpg" stretch ="aspectFit" />
 	  	 <TextView editable="false"  style="width:200;text-align:center" text="FBN Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="res://product3" stretch ="aspectFit" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product2.jpg" stretch ="aspectFit" />
 	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex DS" />
-	  	 <Image class="doctorproducts" style="width:200" src="res://product4" stretch ="aspectFit" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product3.jpg" stretch ="aspectFit" />
 	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex Uno" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product4.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Lopres 0.5 Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product5.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product6.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Lutivit Capsules" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product7.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Misopt Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product8.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Moistane Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product9.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Monosopt Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product10.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Moxigram-KT Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product11.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Moxigram-LX Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product12.jpg" stretch ="aspectFit" />
+	  	 <!-- <TextView editable="false" style="width:200;text-align:center" text="Oflacin Eye Drops" /> -->
+<!-- 	  	 <Image class="doctorproducts" style="width:200" src="~/images/product13.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Oflacin-DX Eye Drops" />
+	  	 <Image class="doctorproducts" style="width:200" src="~/images/product14.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Rapidon-OD Eye Drops" /> -->
+	  	 <!-- <Image class="doctorproducts" style="width:200" src="~/images/product15.jpg" stretch ="aspectFit" />
+	  	 <TextView editable="false" style="width:200;text-align:center" text="Travo-Z Eye Drops" /> -->
+
 	</StackLayout>
-<!-- <Button class="doctorhomelist" text="My Profile" tap="{{ doctorProfileAction }}" />
-<Button class="doctorhomelist" text="Products" tap="{{ doctorProductAction }}" />
-<Button class="doctorhomelist" text="My Patients" tap="{{ doctorPatientAction }}" />
-<Button class="doctorhomelist" text="Medical Diary" tap="{{ doctordiaryAction }}" />
-<Button class="doctorhomelist" text="My Inbox" tap="{{ doctorinboxAction }}" />
-<Button class="doctorhomelist" text="References" tap="{{ doctorreferencesAction }}" />
-<Button class="doctorhomelist" text="Others" tap="{{ doctorothersrAction }}" />
-<Button class="doctorhomelist" text="Contact Us" tap="{{ doctorcontactusAction }}" /> -->
+
 
 </ScrollView>
   	

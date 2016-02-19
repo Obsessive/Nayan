@@ -1,0 +1,16 @@
+<Page loaded="mypatientLoaded">
+<ScrollView>
+
+ 	<ListView id="mypatientlist" items="{{ mypatientlist }}" itemTap="mypatientlistitemTap">
+		<ListView.itemTemplate>
+		<StackLayout>
+          <Label class="patientEyeConditionslabel" id="{{patientid}}" text="{{ name }}" />
+          <!-- <Label text="{{ name }}" />  -->
+          <!-- <Button class="patientEyeConditionslabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
+        </StackLayout>
+				<!-- <Label class="patientEyeConditionslabel" text="{{ name }}"  /> -->
+			
+	</ListView.itemTemplate>
+</ListView>
+</ScrollView>
+</Page>

@@ -1,5 +1,6 @@
 var platform = require("platform");
 var application = require("application");
+var connectivity = require("connectivity");
 var FrameModule = require("ui/frame");
 var dialog = require("nativescript-dialog");
 var observable = require("data/observable");
@@ -39,7 +40,7 @@ function registrationLoaded(args) {
         if(id=="0"){
         return 0;
       }
-        db.execSQL("insert into user (id,type,firstname,lastname,number,email,code) values (?,?,?,?,?,?,?)", [id,type,firstname,lastname,phone,email,code], function(err, d) {
+        db.execSQL("insert into user (id,type,firstname,lastname,number,email,code,referral) values (?,?,?,?,?,?,?,?)", [id,type,firstname,lastname,phone,email,code,referral], function(err, d) {
           // console.log(err);
           //Replace code to verify the email against inserted value.
           //This is inexpensive.
@@ -57,8 +58,9 @@ function registrationLoaded(args) {
     };
 
     RegistrationModel.prototype.serverRegister = function () {
-     
-        var self=this;
+
+      this.showLoading();
+      var self=this;
       fetchModule.fetch("http://"+server+"/user/create", {
         method: "POST",
         body: JSON.stringify({type:type , firstname:firstname , lastname:lastname ,number:phone,email:email,code:code,address:'',hospital:''})
@@ -66,7 +68,7 @@ function registrationLoaded(args) {
         console.log("id: "+response._bodyText);
         id=response._bodyText;
         if(id=="0"){
-            alert("Sorry, Couldn't get you registered.. kindly check the data you entered, internet connection and try again!");
+            alert("Sorry, Couldn't get you registered.. kindly check the data you entered and try again!");
             dialog.close();
           }else{
         self.localRegister(id);
@@ -77,10 +79,29 @@ function registrationLoaded(args) {
       }).catch(function(err) {
             // Error :( 
             console.log(err);
-            // alert("Sorry, Couldn't get you registered.. kindly check your internet connection and try again!");
+            alert("Sorry, Couldn't get you registered.. kindly check your internet connection and the data you entered!");
           });  
       
     };
+
+    RegistrationModel.prototype.checkconnection=function(){
+      var connectionType = connectivity.getConnectionType();
+      switch (connectionType) {
+          case connectivity.connectionType.none:
+              alert("Please check your internet connection and try again! ");
+              return 0;
+              break;
+          case connectivity.connectionType.wifi:
+              console.log("WiFi connection");
+              return 1;
+              break;
+          case connectivity.connectionType.mobile:
+              console.log("Mobile connection");
+              return 1;
+              break;
+      }
+    };
+
     RegistrationModel.prototype.pushnotification=function(){
             //Testing push notifications. 
         //fetch is analogous to volley, it takes care of http requests-to abhijith
@@ -111,16 +132,7 @@ function registrationLoaded(args) {
             alert("message", "" + JSON.stringify(data));
         });
     };
-    RegistrationModel.prototype.registerAction = function () {
-      console.log("Registration button clicked.");
-      firstname = viewModule.getViewById(page, "doctorregistrationfirstname").text;
-      lastname = viewModule.getViewById(page, "doctorregistrationlastname").text;
-      email = viewModule.getViewById(page, "doctorregistrationemail").text;
-      phone = viewModule.getViewById(page, "doctorregistrationphone").text;
-      code = viewModule.getViewById(page, "doctorregistrationcode").text;
-      console.log("Check Internet connectivity..");
-      id=this.serverRegister();
-      //Loading dialog
+    RegistrationModel.prototype.showLoading = function () {
       var nativeView;
       if(platform.device.os === platform.platformNames.ios){
           nativeView = UIActivityIndicatorView.alloc().initWithActivityIndicatorStyle(UIActivityIndicatorViewStyle.UIActivityIndicatorViewStyleGray);
@@ -140,6 +152,22 @@ function registrationLoaded(args) {
         function(e){
           console.log("Error: " + e)
         });
+    };
+    RegistrationModel.prototype.registerAction = function () {
+      console.log("Registration button clicked.");
+      firstname = viewModule.getViewById(page, "doctorregistrationfirstname").text;
+      lastname = viewModule.getViewById(page, "doctorregistrationlastname").text;
+      email = viewModule.getViewById(page, "doctorregistrationemail").text;
+      phone = viewModule.getViewById(page, "doctorregistrationphone").text;
+      code = viewModule.getViewById(page, "doctorregistrationcode").text;
+      referral = viewModule.getViewById(page, "doctorregistrationreferral").text;
+      console.log("Check Internet connectivity..");
+      var con=this.checkconnection();
+      if(con){
+        id=this.serverRegister();
+      }
+      // dialog.close();
+      
     };
 
     return RegistrationModel;

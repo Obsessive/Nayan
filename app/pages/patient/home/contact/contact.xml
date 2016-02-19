@@ -1,0 +1,9 @@
+<Page loaded="patientDiaryLoaded">
+	<GridLayout rows="250,*,auto" columns="*">
+		
+		<Image row="0" col="0" class="doctorproducts" style="width:200" src="res://logo" stretch ="aspectFit" />
+	  	 <TextView row="1" col="0" editable="false"  style="font-size:34px text-align:center" text="MICRO LABS LIMITED
+27, RACE COURSE ROAD,
+BANGALORE-560 001, INDIA" />
+	</GridLayout>
+</Page>

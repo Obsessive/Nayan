@@ -2,22 +2,25 @@
 <ScrollView>
   <StackLayout>
     <Label text="First Name" />
-    <TextField id="doctorregistrationfirstname" hint="please enter your First name" />
+    <TextField id="doctorregistrationfirstname" hint="Please enter your First name" />
 
     <Label text="Last Name" />
-    <TextField id="doctorregistrationlastname" hint="please enter your Last name" />
+    <TextField id="doctorregistrationlastname" hint="Please enter your Last name" />
 
 
     <Label text="Number" />
-    <TextField id="doctorregistrationphone" hint="please enter your phone number" />
+    <TextField keyboardType="phone" id="doctorregistrationphone" hint="Please enter your phone number" />
 
     <Label text="Email" />
-    <TextField id="doctorregistrationemail" hint="please enter your email id" />
+    <TextField id="doctorregistrationemail" hint="Please enter your email id" />
 
     <Label text="MCN" />
-    <TextField id="doctorregistrationcode" hint="please enter your Medical Council number" />
+    <TextField id="doctorregistrationcode" hint="Medical Council number" />
 
-    <Button text="Register" class="globalbutton" tap="{{ registerAction }}" />
+    <Label text="Referral" />
+    <TextField id="doctorregistrationreferral" hint="Referral Code" />
+
+    <Button text="&#xf00c; Register" class="globalbutton" tap="{{ registerAction }}" />
   </StackLayout>
 </ScrollView>
 </Page>

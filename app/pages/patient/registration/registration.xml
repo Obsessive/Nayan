@@ -1,20 +1,20 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="registrationLoaded">
    <ScrollView>
   <StackLayout>
-    <Label text="First Name" id="patientregistrationname"/>
-    <TextField hint="please enter your fist name" />
+    <Label text="First Name" />
+    <TextField hint="Please enter your First name" id="patientregistrationfirstname"/>
 
-    <Label text="Last Name" id="patientregistrationname"/>
-    <TextField hint="please enter your last name" />
+    <Label text="Last Name" />
+    <TextField hint="Please enter your Last name" id="patientregistrationlastname"/>
 
-    <Label text="Number" id="patientregistrationphone"/>
-    <TextField hint="please enter your phone number" />
+    <Label text="Number" />
+    <TextField keyboardType="phone" hint="Please enter your phone number" id="patientregistrationphone"/>
 
-    <Label text="Email" id="patientregistrationemail"/>
-    <TextField hint="please enter your email id" />
+    <Label text="Email" />
+    <TextField hint="Please enter your email id" id="patientregistrationemail"/>
 
-    <Label text="Referral" id="patientregistrationreferral"/>
-    <TextField hint="please enter your Referral code" />
+    <Label text="Referral" />
+    <TextField hint="Please enter your Referral code" id="patientregistrationcode"/>
 
     <Button text="Register" class="globalbutton" tap="{{ registerAction }}" />
   </StackLayout>

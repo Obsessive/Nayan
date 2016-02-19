@@ -1,20 +1,37 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientProfileLoaded">
+    <!-- <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem text="Nayans" ios.position="right" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar> -->
  <ScrollView>
  <StackLayout>
  	<Label text="My Profile" id="patientprofilepage"/>
- 	<Label text="Name" id="patientprofilename"/>
-    <TextField text="Vivek Pandit" hint="please enter your name" />
+ 	<Label text="First Name" />
+    <TextField text="" id="patientprofilefirstname" hint="please enter your name" />
 
-    <Label text="Number" id="patientprofilephone"/>
-    <TextField text="+91 8553812341" hint="please enter your phone number" />
+    <Label text="Last Name" />
+    <TextField text="" id="patientprofilelastname" hint="please enter your name" />
 
-    <Label text="Email" id="patientprofileemail"/>
-    <TextField text="vivek@smak.in" hint="please enter your email id" />
+    <Label text="Number" />
+    <TextField text="" id="patientprofilephone" hint="please enter your phone number" />
 
-    <Label text="Address" id="patientprofilehospital"/>
-    <TextField text="HAL" hint="please enter your Address" />
+    <Label text="Email" />
+    <TextField text="" id="patientprofileemail" hint="please enter your email id" />
 
-    <Button text="Edit" tap="{{ editAction }}" />
+    <Label text="Referral Code" />
+    <TextField editable="false" text="" id="patientprofilecode"  />
+
+    <Label text="Hospital" />
+    <TextField text="" id="patientprofilehospital" hint="please enter your visiting hospital" />
+
+    <Label text="Address" />
+    <TextField text="" id="patientprofileaddress" hint="please enter your address" />
+
+    <Button text="Save" class="introbutton" tap="{{ editAction }}" />
+    <Button text="Reset Profile" class="introbutton" tap="{{ resetAction }}" />
  </StackLayout>
 </ScrollView>
 </Page>

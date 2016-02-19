@@ -1,8 +1,10 @@
-<Page loaded="pageLoaded">
-	 <ScrollView>
- <StackLayout orientation="vertical">
-   <TextView hint="Type your entry.." />
-   <Button text="Done"/>
- </StackLayout>
-</ScrollView>
+<Page loaded="patientDiaryLoaded">
+	<GridLayout rows="*,auto" columns="*">
+		<ListView items="{{ subjectlist }}" row="0" col="0" itemTap="patientdiarylistitemTap">
+			<ListView.itemTemplate>
+				<Label id="subjectname"  text="{{ subjectname }}" horizontalAlignment="left" verticalAlignment="center"/>
+			</ListView.itemTemplate>
+		</ListView>
+		<Button class="globalbutton" row="1" col="0" text="&#xf067; New Entry" tap="{{ newentryAction }}"/>
+	</GridLayout>
 </Page>
