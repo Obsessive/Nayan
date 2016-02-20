@@ -10,7 +10,7 @@ var patientHomeModel = (function (_super) {
     __extends(patientHomeModel, _super);
     function patientHomeModel() {
         _super.call(this);
-        this.set("patienthomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/condition.png",name: "Eye conditions" },{ icon:"~/images/inbox.png",name: "My inbox" },{ icon:"~/images/calendar.png",name: "Calendar" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/eye.png",name: "My Eye" },{ icon:"~/images/alarm.png",name: "Drop Reminder" },{ icon:"~/images/gym.png",name: "Eye Exercises" },{ icon:"~/images/apple.png",name: "Food For Vision" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
+        this.set("patienthomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/condition.png",name: "Eye conditions" },{ icon:"~/images/inbox.png",name: "My inbox" },{ icon:"~/images/calendar.png",name: "Calendar" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/alarm.png",name: "Drop Reminder" },{ icon:"~/images/gym.png",name: "Eye Opening Story" },{ icon:"~/images/apple.png",name: "Food For Vision" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
         pushPlugin.onMessageReceived(function callback(data) {  
             console.log("push received: "+data );
             var substring = "Inbox:";
@@ -88,24 +88,24 @@ exports.patienthomelistitemTap = function (args) {
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/diary/diary");
     }
-    if(index==6){
+    if(index==5){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/dropreminder/dropreminder");
     }
    
-    if(index==8){
+    if(index==7){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/foodvision/foodvision");
     }
-     if(index==9){
+     if(index==8){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/contact/contact");
     }
-    if(index==7){
+    if(index==6){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/exercise/exercise");
     }
-    if(index==10){
+    if(index==9){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/legal/legal");
     }

@@ -1,26 +1,26 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientconditionglucomaLoaded">
  <ScrollView>
  <StackLayout>
- 	<TextView editable="false" text="Macular Denegeration" id="patientconditionspage"/>
+ 	<TextView editable="false" text="Age-Related Macular Denegeration" id="patientconditionspage"/>
  	<TextView editable="false" text="What is age – related macular degeneration?" class="patientconditionquestion"/>
     <TextView editable="false" text="It is a common medical condition that results in loss of central vision because of damage to the macula, or central part of the retina. Age-related macular degeneration (AMD) is a major cause of blindness in those over 50 years old. The condition can make it difficult to read or recognise faces, although enough peripheral vision (vision outside the central area of your gaze) remains to allow you to continue with other daily activities. However, driving and reading is affected."/>
 
     <TextView editable="false" text="How do I know if I have Age-Related Macular Degeneration?" class="patientconditionquestion"/>
     <TextView editable="false" text="You may have one or some of these symptoms:
-Gradual or rapid on set of blurred vision, especially in the central vision
+&#8226;Gradual or rapid on set of blurred vision, especially in the central vision
 Shadows or missing areas of vision
-Distorted vision, e.g., a grid of straight lines appears wavy and parts of the grid may appear blank
-Problems in deciding colours, specifically dark colours from other dark colours and light colours from other light colours
+&#8226;Distorted vision, e.g., a grid of straight lines appears wavy and parts of the grid may appear blank
+&#8226;Problems in deciding colours, specifically dark colours from other dark colours and light colours from other light colours
 "/>
 
     <TextView editable="false" text="What puts me at risk of Age-Related Macular Degeneration?" class="patientconditionquestion"/>
     <TextView editable="false" text="Your risk increases with:
-Age: People aged 60 and above suffer from the condition
-A positive family history
-Gender: Women are more likely to develop AMD
-Smoking
-Obesity
-Cardiovascular diseases
+&#8226;Age: People aged 60 and above suffer from the condition
+&#8226;A positive family history
+&#8226;Gender: Women are more likely to develop AMD
+&#8226;Smoking
+&#8226;Obesity
+&#8226;Cardiovascular diseases
 "/>
 
     <TextView editable="false" text="

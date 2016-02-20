@@ -1,4 +1,13 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorHomeLoaded">
+	  <Page.actionBar>
+        <Page.actionBar>
+            <ActionBar>
+                <ActionBar.text>
+                    <Label text="Nayan" style="color:#fff"/>
+                </ActionBar.text>
+            </ActionBar>
+        </Page.actionBar>
+    </Page.actionBar>
 <ScrollView>
 
  	<ListView id="doctorhomelist" items="{{ doctorhomelist }}" itemTap="doctorhomelistitemTap">

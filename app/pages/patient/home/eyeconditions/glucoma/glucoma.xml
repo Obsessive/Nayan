@@ -1,13 +1,13 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientconditionglucomaLoaded">
  <ScrollView>
  <StackLayout>
- 	<TextView editable="false" text="Glucoma" id="patientconditionspage"/>
+ 	<TextView editable="false" text="Glaucoma" id="patientconditionspage"/>
  	<TextView editable="false" text="What is Glaucoma?" class="patientconditionquestion"/>
     <TextView editable="false" text="Glaucoma is an eye disease that damages the eye's optic nerve. This damage is often caused by an abnormally high pressure in the eye."/>
     <Image class="doctorproducts" style="width:200" src="~/images/glucoma1.png" stretch ="aspectFit" />
     <TextView editable="false" style="width:200;text-align:center" text="Normal Vision" />
     <Image class="doctorproducts" style="width:200" src="~/images/glucoma2.png" stretch ="aspectFit" />
-    <TextView editable="false" style="width:200;text-align:center" text="Vision with Glucoma" />
+    <TextView editable="false" style="width:200;text-align:center" text="Vision with Glaucoma" />
     <TextView editable="false" text="What causes Glaucoma?" class="patientconditionquestion"/>
     <TextView editable="false" text="The excessive build-up of pressure in your eye occurs because of an imbalance between fluid production and its drainage out of the eye."/>
     <Image class="doctorproducts" style="width:200" src="~/images/glucoma3.png" stretch ="aspectFit" />

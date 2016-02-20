@@ -1,13 +1,29 @@
-<Page loaded="exerciseLoaded">
-<ScrollView orientation="horizontal">
-  <StackLayout orientation="horizontal">
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it1.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it2.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it3.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it4.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it5.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it6.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/it/it7.png" stretch ="aspectFit" />
-  </StackLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientexLoaded">
+  <!-- <ActionBar title="Nayan"> -->
+
+        <Page.actionBar>
+            <ActionBar>
+                <ActionBar.text>
+                    <Label text="Nayan &#xf06e;" android.position="left" class="action-bar"/>
+                </ActionBar.text>
+            </ActionBar>
+        </Page.actionBar>
+
+<ScrollView>
+
+ 	<ListView id="patientexlist" items="{{ patientexlist }}" itemTap="patientexlistitemTap">
+		<ListView.itemTemplate>
+		<!-- <StackLayout>
+          <Label class="patienthomelabel" text="{{ name }}" class="patienthomecard"/>
+          <Button class="doctorhomelabel" text="{{ name }}" tap="{{ listtapAction }}" />
+        </StackLayout> -->
+        <GridLayout rows="60" columns="*" marginBottom="20" class="" >
+			<!-- <Image  col="0" row="0" src="{{ icon }}" stretch ="aspectFit" class="icon" /> -->
+          <Label  col="0" row="0" class="patienthomecard" text="{{ name }}" />
+          <!-- <Button class="patienthomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
+        </GridLayout>
+				
+	</ListView.itemTemplate>
+</ListView>
 </ScrollView>
 </Page>

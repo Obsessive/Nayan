@@ -1,13 +1,14 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientconditionglucomaLoaded">
  <ScrollView>
  <StackLayout>
- 	<TextView editable="false" text="Dry Eye?" id="patientconditionspage"/>
+ 	<TextView editable="false" text="Dry Eye" id="patientconditionspage"/>
  	<TextView editable="false" text="What is Dry Eye?" class="patientconditionquestion"/>
     <TextView editable="false" text="The surface of the eye is continuously bathed by a layer of tear which keeps the eye wet, protects the eye against infection and assists in healing of surface wounds. Dry eye occurs when the eye does not produce tears properly, or when the tears are not of the correct consistency and evaporate too quickly"/>
 
     <TextView editable="false" text="What causes Dry Eye?" class="patientconditionquestion"/>
     <TextView editable="false" text="Dry eye may be caused by variety of factors, including hormonal change, age, viewing or occupational habits, ocular surgery, certain ocular and systemic diseases and medications, as well as a condition of the eyelid called Meibomian gland disease. aging, certain medical conditions, including diabetes, rheumatoid arthritis, thyroid disorders, vitamin A deficiency etc. tear gland damage from inflammation or radiation, cough and cold medicines, hormones,  etc , Infrequent blinking, associated with staring at computer or video screens "/>
     <Image class="doctorproducts" style="width:200" src="~/images/dryeye.png" stretch ="aspectFit" />
+    <TextView editable="false" style="width:200;text-align:center" text="Interpalpebral corneal fluorescein dye staining in a patient with dry eye." />
 
     <TextView editable="false" text="How Dry Eye is treated?" class="patientconditionquestion"/>
     <TextView editable="false" text="Various medications in the form of artificial tear substitute are available for the treatment of Dry Eye. An eye specialist can better diagnose and advice the medication."/>

@@ -1,0 +1,14 @@
+<Page loaded="exerciseLoaded">
+<ScrollView orientation="horizontal">
+  <StackLayout orientation="horizontal">
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/01.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/02.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/03.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/04.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/05.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/06.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/07.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open2/08.png" stretch ="aspectFit" />
+  </StackLayout>
+</ScrollView>
+</Page>

@@ -1,7 +1,8 @@
 <Page loaded="dropreminderLoaded">
 <ScrollView>
   <StackLayout>
-  	 <Label text="No new reminders.. " class="message" textWrap="true"/>
+  		 <Image class="doctorproducts" style="margin-top:30;width:200" src="~/images/logo.png" stretch ="aspectFit" />
+  	 <Label text="Set new drop reminders.. " class="message" textWrap="true"/>
   	
    <Button text="Create New Reminder" tap="{{ createReminderAction }}" />
   </StackLayout>

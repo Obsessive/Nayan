@@ -16,7 +16,7 @@
     <Label text="Referral" />
     <TextField hint="Please enter your Referral code" id="patientregistrationcode"/>
 
-    <Button text="Register" class="globalbutton" tap="{{ registerAction }}" />
+    <Button text="&#xf00c; Register" class="globalbutton" tap="{{ registerAction }}" />
   </StackLayout>
 </ScrollView>
 </Page>
