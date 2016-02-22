@@ -2,11 +2,14 @@
 <ScrollView>
   <StackLayout>
 
-  	<Label text="Select Time to remind on" class="message" textWrap="true"/>
-  	<TimePicker id="pickdate" hour="18" minute="30"/>
+    <Label text="Select Time to remind on" class="message" textWrap="true"/>
+    <TimePicker id="pickdate" hour="18" minute="30"/>
+  	<Label text="Remind me" class="message" textWrap="true"/>
+    <ListPicker items="{{ reminditems }}" selectedIndex="{{ remindIndex }}"
+              verticalAlignment="center" horizontalAlignment="center" style="width:200"/>
   	<Label text="Set Reminder for:" class="message" textWrap="true"/>
-  	 <SegmentedBar style="vertical-align: center; margin: 20;">
-    <SegmentedBar.items>
+  	 <SegmentedBar id="eyep" style="vertical-align: center; margin: 20;">
+    <SegmentedBar.items >
       <SegmentedBarItem title="Left eye" />
       <SegmentedBarItem title="Right eye" />
       <SegmentedBarItem title="Both eyes" />

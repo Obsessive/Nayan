@@ -8,8 +8,10 @@ var Sqlite = require( "nativescript-sqlite" );
 var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var pushPlugin = require("nativescript-push-notifications");
+var applicationSettings = require("application-settings");
 function registrationLoaded(args) {
   var page = args.object;
+  var debug=0;
   var server = "nayanmain.negative.co.in";
   var id;
   var firstname;
@@ -42,6 +44,7 @@ function registrationLoaded(args) {
       }
         db.execSQL("insert into user (id,type,firstname,lastname,number,email,code) values (?,?,?,?,?,?,?)", [id,type,firstname,lastname,phone,email,code], function(err, d) {
           // console.log(err);
+           applicationSettings.setString("type", "patient");
           //Replace code to verify the email against inserted value.
           //This is inexpensive.
           db.get('select * from user', function(err, row) {
@@ -117,21 +120,19 @@ function registrationLoaded(args) {
           }).then(function(response) {
             console.log(JSON.stringify(response));
             console.log("done with subscribing to push server");
-
         }).catch(function(err) {
           // Error :( 
           console.log(err);
         });  
-           // pushPlugin.onMessageReceived(function callback(data) {  
-           //      alert("messagee", "" + JSON.stringify(data));
-           //  });
-
-        }, function(e) {console.log(e); });
+        }, function(e) {
+          console.log(e); 
+        });
 
         pushPlugin.onMessageReceived(function callback(data) {  
             alert("message", "" + JSON.stringify(data));
         });
     };
+
     RegistrationModel.prototype.showLoading = function () {
       var nativeView;
       if(platform.device.os === platform.platformNames.ios){
@@ -164,7 +165,12 @@ function registrationLoaded(args) {
       console.log("Check Internet connectivity..");
       var con=this.checkconnection();
       if(con){
-        id=this.serverRegister();
+        if(!debug){
+          id=this.serverRegister();
+        }else{
+           var topmost=FrameModule.topmost();
+            topmost.navigate("pages/patient/home/home");
+        }
       }
       
     };

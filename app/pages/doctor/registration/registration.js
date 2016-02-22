@@ -7,6 +7,7 @@ var observable = require("data/observable");
 var Sqlite = require( "nativescript-sqlite" );
 var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
+var applicationSettings = require("application-settings");
 var pushPlugin = require("nativescript-push-notifications");
 function registrationLoaded(args) {
   var page = args.object;
@@ -42,6 +43,7 @@ function registrationLoaded(args) {
       }
         db.execSQL("insert into user (id,type,firstname,lastname,number,email,code,referral) values (?,?,?,?,?,?,?,?)", [id,type,firstname,lastname,phone,email,code,referral], function(err, d) {
           // console.log(err);
+           applicationSettings.setString("type", "doctor");
           //Replace code to verify the email against inserted value.
           //This is inexpensive.
           db.get('select * from user', function(err, row) {

@@ -1,16 +1,20 @@
-<!-- <Page loaded="calendarLoaded" >
-	<WebView src="~/ui/web-view/calendar.html" />
-</Page>
- -->
-
 <Page loaded="calendarLoaded">
-<ScrollView>
-  <StackLayout>
-  	 <Label text="Select Date" class="message" textWrap="true"/>
-  	<DatePicker id="pickdate" day="12" month="2" year="2016" verticalAlignment="center" horizontalAlignment="center"/>
-  	<Label text="Event/Appointment for:" class="message" textWrap="true"/>
-  	<TextField id="patientcalendarname" hint="Name of event/appointment" />
-   <Button text="Create Calendar event" tap="{{ setReminderAction }}" />
-  </StackLayout>
-</ScrollView>
+	
+
+<GridLayout rows="*,60" columns="*" marginBottom="20" class="" >
+	 	<Button class="globalbutton" row="1" col="0" text="&#xf067; New Event/Appointment" tap="{{ newEventAction }}"/>
+<ListView id="messageScroll" col="0" row="0" items="{{ calendarlist }}">
+		<ListView.itemTemplate>
+		<StackLayout>
+			<GridLayout rows="60" columns="*,100" marginBottom="20" class="" >
+			 <Label  row="0" col="0"  class="" text="{{ name }}" />
+			<!--  <Button class="globalbutton" row="1" col="0" text="&#xf067; New Event/Appointment" tap="{{ newEventAction }}"/> -->
+			<Button col="1" row="0"  class="chatlabelincoming" text="delete" tap="delbutton" />
+		</GridLayout>
+		</StackLayout>
+	</ListView.itemTemplate>
+</ListView>
+	
+</GridLayout>
+
 </Page>

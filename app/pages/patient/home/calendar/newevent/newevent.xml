@@ -1,0 +1,15 @@
+<!-- <Page loaded="calendarLoaded" >
+  <WebView src="~/ui/web-view/calendar.html" />
+</Page>
+ -->
+<Page loaded="calendarLoaded">
+<ScrollView>
+  <StackLayout>
+     <Label text="Select Date" class="message" textWrap="true"/>
+    <DatePicker id="pickdate" day="12" month="2" year="2016" verticalAlignment="center" horizontalAlignment="center"/>
+    <Label text="Event/Appointment for:" class="message" textWrap="true"/>
+    <TextField id="patientcalendarname" hint="Name of event/appointment" />
+   <Button text="Create Calendar event" tap="{{ setReminderAction }}" />
+  </StackLayout>
+</ScrollView>
+</Page>

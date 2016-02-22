@@ -14,6 +14,13 @@
       </intent-filter>
     </activity>
     <activity android:name="com.tns.ErrorReportActivity"/>
+    <activity android:name="com.telerik.localnotifications.NotificationClickedActivity"/>
+    <receiver android:name="com.telerik.localnotifications.NotificationPublisher" android:exported="false"/>
+    <receiver android:name="com.telerik.localnotifications.NotificationRestoreReceiver" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+      </intent-filter>
+    </receiver>
     <activity android:name="com.telerik.pushplugin.PushHandlerActivity"/>
     <receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
       <intent-filter>
@@ -29,6 +36,7 @@
   </application>
   <uses-permission android:name="android.permission.READ_CALENDAR"/>
   <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.WAKE_LOCK"/>
   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>

@@ -2,13 +2,18 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var dialogs = require("ui/dialogs");
 var Calendar = require("nativescript-calendar");
-
+var applicationSettings = require("application-settings");
+var LocalNotifications = require("nativescript-local-notifications");
+var Sqlite = require( "nativescript-sqlite" );
+var pushid;
 function dropreminderLoaded(args) {
 var page = args.object;
 var dropreminderModel = (function (_super) {
     __extends( dropreminderModel, _super);
+
     function dropreminderModel() {
         _super.call(this);
+        this.set("reminditems", ["at above set time","Twice a day","Thrice a day","four times a day","five times a day","six times a day"]);
         console.log(" is now ready.");
     }
  dropreminderModel.prototype.nextAction = function () {
@@ -17,55 +22,236 @@ var dropreminderModel = (function (_super) {
        topmost.navigate("pages/index");
     };
     dropreminderModel.prototype.setReminderAction = function () {
+      var dateObj = new Date();
+        var month = dateObj.getUTCMonth() + 1; //months from 1-12
+        var day = dateObj.getUTCDate();
+        var year = dateObj.getUTCFullYear();
           var datepick=page.getViewById("pickdate");
-       var ev=page.getViewById("patientdropname");
-      
-              // Only the `title`, `startDate` and `endDate` are mandatory, so this would suffice: 
-  var options = {
-    title: "Nayan : "+ev.text,
-    // Make sure these are valid JavaScript Date objects. 
-    // In this case we schedule an Event for now + 1 hour, lasting 1 hour. 
-     startDate: new Date(new Date().getTime() + (60*60*1000)),
-    endDate: new Date(new Date().getTime() + (2*60*60*1000))
-  };
-  options.recurrence = {
-    frequency: Calendar.RecurrenceFrequency.DAILY, // DAILY|WEEKLY|MONTHLY|YEARLY 
-    interval: 1, // once in every 2 days 
-    endDate: new Date(new Date().getTime() + (10*24*60*60*1000)) // 10 days 
-  };
- 
-  // You can however add lots of properties to enrich the Event: 
-  options.location = 'The doc';
-  options.notes = 'This event has reminders';
- 
-  // iOS has a separate 'url' field, but on Android the plugin appends this to the 'notes' field. 
-  options.url = 'http://microlabs.com';
- 
+          var ev=page.getViewById("patientdropname");
+         var rin=this.get("remindIndex");
+          var hour=datepick.hour;
+         var minute=datepick.minute;
+         var eyeps=page.getViewById("eyep").selectedIndex;
+          console.log(ev.text+" "+hour+" "+minute+" "+eyeps+" "+rin);
+          switch(rin) {
+              // case 0:
+              
+              //     break;
+              case 1:
+              var promise =new Sqlite("nayan.db", function(err, db) {
+                  db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                    pushid=id;
+                  });
+                });
+                  LocalNotifications.schedule([{
+                    id: pushid,
+                    title: 'Nayan Eye Drops Reminder: '+ev.text,
+                    body: 'Drops Reminder for: '+ev.text,
+                    ticker: 'Nayan Reminder: '+ev.text,
+                    at: new Date(year,month-1,day,8,minute,9,123)
+                  }]).then(
+                      function() {
+                        console.log("notification done.");
+                      },
+                      function(error) {
+                        console.log("doSchedule error: " + error);
+                      }
+                  );
 
- 
-  // Want to use a custom calendar for your app? Pass in the 'id' or 'name'. 
-  // If the name doesn't yet exist the plugin will create it for you. 
-  options.calendar = {
-    // id: 3, 
-    name: " Nayan Reminders"
-  };
- 
-  Calendar.createEvent(options).then(
-      function(createdId) {
-        console.log("Created Event with ID: " + createdId);
-      },
-      function(error) {
-        console.log("Error creating an Event: " + error);
-      }
-  );
-  dialogs.alert("Reminder has been set in your device's Calendar Successfully!").then(function() {
-    console.log("Dialog closed!");
-  
-  });
-    };
+                  LocalNotifications.schedule([{
+                    id: pushid,
+                    title: 'Nayan Eye Drops Reminder: '+ev.text,
+                    body: 'Drops Reminder for: '+ev.text,
+                    ticker: 'Nayan Reminder: '+ev.text,
+                    at: new Date(year,month-1,day,20,minute,9,123)
+                  }]).then(
+                      function() {
+                        console.log("notification done.");
+                      },
+                      function(error) {
+                        console.log("doSchedule error: " + error);
+                      }
+                  );
+                
+                
+                  dialogs.alert({
+                          title: "Saved",
+                          message: 'Nayan has now saved your reminder!',
+                          okButtonText: "OK, thanks"
+                        });
+                  break;
+
+
+                case 2:
+                var promise =new Sqlite("nayan.db", function(err, db) {
+                  db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                    pushid=id;
+                  });
+                });
+                  LocalNotifications.schedule([{
+                    id: pushid,
+                    title: 'Nayan Eye Drops Reminder: '+ev.text,
+                    body: 'Drops Reminder for: '+ev.text,
+                    ticker: 'Nayan Reminder: '+ev.text,
+                    at: new Date(year,month-1,day,8,minute,9,123)
+                  }]).then(
+                      function() {
+                        console.log("notification done.");
+                      },
+                      function(error) {
+                        console.log("doSchedule error: " + error);
+                      }
+                  );
+
+                  LocalNotifications.schedule([{
+                    id: pushid,
+                    title: 'Nayan Eye Drops Reminder: '+ev.text,
+                    body: 'Drops Reminder for: '+ev.text,
+                    ticker: 'Nayan Reminder: '+ev.text,
+                    at: new Date(year,month-1,day,2,minute,9,123)
+                  }]).then(
+                      function() {
+                        console.log("notification done.");
+                      },
+                      function(error) {
+                        console.log("doSchedule error: " + error);
+                      }
+                  );
+                  
+
+                  LocalNotifications.schedule([{
+                    id: pushid,
+                    title: 'Nayan Eye Drops Reminder: '+ev.text,
+                    body: 'Drops Reminder for: '+ev.text,
+                    ticker: 'Nayan Reminder: '+ev.text,
+                    at: new Date(year,month-1,day,8,minute,9,123)
+                  }]).then(
+                      function() {
+                        console.log("notification done.");
+                      },
+                      function(error) {
+                        console.log("doSchedule error: " + error);
+                      }
+                  );
+                
+                  dialogs.alert({
+                          title: "Saved",
+                          message: 'Nayan has now saved your reminder!',
+                          okButtonText: "OK, thanks"
+                        });
+                  break;
+
+                  case 3:
+                      var promise =new Sqlite("nayan.db", function(err, db) {
+                      db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                        pushid=id;
+                        console.log("id: "+id);
+                      });
+                    });
+                      LocalNotifications.schedule([{
+                        id: pushid,
+                        title: 'Nayan Eye Drops Reminder: '+ev.text,
+                        body: 'Drops Reminder for: '+ev.text,
+                        ticker: 'Nayan Reminder: '+ev.text,
+                        at: new Date(year,month-1,day,8,minute,9,123)
+                      }]).then(
+                          function() {
+                            console.log("notification done.");
+                          },
+                          function(error) {
+                            console.log("doSchedule error: " + error);
+                          }
+                      );
+
+                      LocalNotifications.schedule([{
+                        id: pushid,
+                        title: 'Nayan Eye Drops Reminder: '+ev.text,
+                        body: 'Drops Reminder for: '+ev.text,
+                        ticker: 'Nayan Reminder: '+ev.text,
+                        at: new Date(year,month-1,day,12,minute,9,123)
+                      }]).then(
+                          function() {
+                            console.log("notification done.");
+                          },
+                          function(error) {
+                            console.log("doSchedule error: " + error);
+                          }
+                      );
+
+                      LocalNotifications.schedule([{
+                        id: pushid,
+                        title: 'Nayan Eye Drops Reminder: '+ev.text,
+                        body: 'Drops Reminder for: '+ev.text,
+                        ticker: 'Nayan Reminder: '+ev.text,
+                        at: new Date(year,month-1,day,4,minute,9,123)
+                      }]).then(
+                          function() {
+                            console.log("notification done.");
+                          },
+                          function(error) {
+                            console.log("doSchedule error: " + error);
+                          }
+                      );
+
+                      LocalNotifications.schedule([{
+                        id: pushid,
+                        title: 'Nayan Eye Drops Reminder: '+ev.text,
+                        body: 'Drops Reminder for: '+ev.text,
+                        ticker: 'Nayan Reminder: '+ev.text,
+                        at: new Date(year,month-1,day,8,minute,9,123)
+                      }]).then(
+                          function() {
+                            console.log("notification done.");
+                          },
+                          function(error) {
+                            console.log("doSchedule error: " + error);
+                          }
+                      );
+                    
+                    
+                    
+                      dialogs.alert({
+                              title: "Saved",
+                              message: 'Nayan has now saved your reminder!',
+                              okButtonText: "OK, thanks"
+                            });
+                  break;
+
+              default:
+              var promise =new Sqlite("nayan.db", function(err, db) {
+                  db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                    pushid=id;
+                    console.log(id);
+                    console.log(err);
+                  });
+                });
+                  LocalNotifications.schedule([{
+                    id: pushid,
+                    title: 'Nayan Eye Drops Reminder: '+ev.text,
+                    body: 'Drops Reminder for: '+ev.text,
+                    ticker: 'Nayan Reminder: '+ev.text,
+                    at: new Date(year,month-1,day,hour,minute,9,123)
+                  }]).then(
+                      function() {
+                        dialogs.alert({
+                          title: "Saved",
+                          message: 'Nayan has now saved your reminder!',
+                          okButtonText: "OK, thanks"
+                        });
+                        console.log("notification done.");
+                      },
+                      function(error) {
+                        console.log("doSchedule error: " + error);
+                      }
+                  );
+                  
+            } 
+          
+        };
    
     return dropreminderModel;
-})(observable.Observable);
+})
+(observable.Observable);
 page.bindingContext = new dropreminderModel();
 }
 
