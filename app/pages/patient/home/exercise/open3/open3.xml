@@ -1,16 +1,23 @@
 <Page loaded="exerciseLoaded">
 <ScrollView orientation="horizontal">
   <StackLayout orientation="horizontal">
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/01.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/02.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/03.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/04.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/05.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/06.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/07.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open3/08.png" stretch ="aspectFit" />
+    <Image class="doctorproducts" style="width:400" src="~/images/open3/02.png" stretch ="aspectFit" />
+    <Image class="doctorproducts" style="width:400" src="~/images/open3/03.png" stretch ="aspectFit" />
+    <Image class="doctorproducts" style="width:400" src="~/images/open3/05.png" stretch ="aspectFit" />
+    <Image class="doctorproducts" style="width:400" src="~/images/open3/06.png" stretch ="aspectFit" />
     <Image class="doctorproducts" style="width:400" src="~/images/open3/09.png" stretch ="aspectFit" />
-    <Image class="doctorproducts" style="width:400" src="~/images/open3/10.png" stretch ="aspectFit" />
+    
+  	
+  	<Image class="doctorproducts" style="width:400" src="~/images/open3/10.png" stretch ="aspectFit" />
+
+  	
+  	<Image class="doctorproducts" style="width:400" src="~/images/open3/08.png" stretch ="aspectFit" />
+  	<Image class="doctorproducts" style="width:400" src="~/images/open3/07.png" stretch ="aspectFit" />
+  	
+    
+    <Image class="doctorproducts" style="width:400" src="~/images/open3/04.png" stretch ="aspectFit" />
+    
+    <Image class="doctorproducts" style="width:400" src="~/images/open3/01.png" stretch ="aspectFit" />
   </StackLayout>
 </ScrollView>
 </Page>

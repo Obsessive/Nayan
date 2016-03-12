@@ -10,18 +10,19 @@ var observable = require("data/observable");
 var observableArrayModule = require("data/observable-array");
 // var panelModule = require("ui/layouts/stack-layout");
 // var LabelModule = require("ui/label");
-var x;
+var x = new observableArrayModule.ObservableArray();
 var id;
 function inboxLoaded(args) {
 var page = args.object;
 
-x = new observableArrayModule.ObservableArray();
+
 
 var inboxModel = (function (_super) {
     __extends( inboxModel, _super);
     function inboxModel() {
         _super.call(this);
         var self=this;
+        x = new observableArrayModule.ObservableArray();
         self.set("patientchatlist",x);
         var push=page.navigationContext; 
 
@@ -39,10 +40,11 @@ var inboxModel = (function (_super) {
                   x.push({ text: row[1] });
                   
           });
-         
+         self.newMessage(push);
         });  
+        
       });
-      self.newMessage(push);
+      
     
         console.log("inbox is now ready.");
     }

@@ -1,7 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
   <ScrollView>
   <StackLayout class="introbg"> 
-  	<Image src="res://logo" stretch ="aspectFit" class="intrologo" />
+  	<Image src="res://logo" stretch ="aspectFit" style="width:60%" class="intrologo" />
     <Label text="Welcome" class="title"/>
     <Button text="&#xf0f0; Doctor" class="introbutton" tap="{{ doctorAction }}" />
     <Button class="introbutton" text="&#xf06e; Patient" tap="{{ patientAction }}" />

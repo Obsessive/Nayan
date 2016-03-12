@@ -20,6 +20,7 @@ var dropreminderModel = (function (_super) {
         new Sqlite("nayan.db", function(err, db) {
           var promise = db.each('select * from reminder', 
             function (err, row) {
+              console.dir(row);
                 console.log("Row results:", row); 
                   calendarlist.push({ name: row[1],id:row[0] });
           });

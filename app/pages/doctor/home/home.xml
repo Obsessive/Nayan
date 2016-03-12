@@ -3,7 +3,7 @@
         <Page.actionBar>
             <ActionBar>
                 <ActionBar.text>
-                    <Label text="Nayan" style="color:#fff"/>
+                    <Label text="Nayan- The Eye Drop Reminder" style="color:#fff"/>
                 </ActionBar.text>
             </ActionBar>
         </Page.actionBar>

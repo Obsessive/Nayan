@@ -4,7 +4,10 @@
     margin: 20;
     /*background-color:#1E88E5;*/
 }
-
+ActionBar{
+    color:#fff;
+    background-color:#ef6c00;
+}
 .font-awesome {
     font-family: "FontAwesome";
     /*font-size:24;*/
@@ -35,6 +38,7 @@ button {
 }
 
 label{
+    font-family: "Open Sans";
     color:#01579B;
     font-size: 20;
 }
@@ -251,6 +255,7 @@ color:#0091EA;
     vertical-align: center;
     /*background-color: #FF9800;*/
     background-color: #fff;
+    /*color:#2962ff;*/
     color:#2962ff;
     padding:5;
     border-radius: 10;

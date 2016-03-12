@@ -75,9 +75,7 @@ var inboxModel = (function (_super) {
 
       fetchModule.fetch("http://"+pushserver+"/send", {
         method: "POST",
-        headers: new Headers({
-                    'Content-Type': 'application/json'
-                  }),
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(post_data)
       }).then(function(response) {
         try{
@@ -92,8 +90,9 @@ var inboxModel = (function (_super) {
         }
         dialog.close();
       }).catch(function(err) {
-         alert("Please try again..");
-        console.log(err);
+        //  alert("Please try again..");
+        // console.log(err);
+        dialog.close();
       }); 
 
     };

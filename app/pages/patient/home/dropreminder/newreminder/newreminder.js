@@ -13,7 +13,8 @@ var dropreminderModel = (function (_super) {
 
     function dropreminderModel() {
         _super.call(this);
-        this.set("reminditems", ["at above set time","Twice a day","Thrice a day","four times a day","five times a day","six times a day"]);
+        this.set("reminditems", ["Once","Twice a day","Thrice a day","four times a day"]);
+        this.set("dosageitems", ["select","1 drop","2 drops","3 drops","4 drops","5 drops","6 drops","7 drops"]);
         console.log(" is now ready.");
     }
  dropreminderModel.prototype.nextAction = function () {
@@ -29,10 +30,21 @@ var dropreminderModel = (function (_super) {
           var datepick=page.getViewById("pickdate");
           var ev=page.getViewById("patientdropname");
          var rin=this.get("remindIndex");
+         var dosage=this.get("dosageIndex");
           var hour=datepick.hour;
          var minute=datepick.minute;
          var eyeps=page.getViewById("eyep").selectedIndex;
-          console.log(ev.text+" "+hour+" "+minute+" "+eyeps+" "+rin);
+         if(eyeps==0){
+            ev.text=ev.text+"|Dosage: "+dosage+" drops|Left Eye";
+         }
+         if(eyeps==1){
+            ev.text=ev.text+"|Dosage: "+dosage+" drops|Right Eye";
+         }
+         if(eyeps==2){
+            ev.text=ev.text+"|Dosage: "+dosage+" drops|Both Eyes";
+         }
+         
+          console.log(ev.text+" "+hour+" "+minute+" "+eyeps+" "+rin+" "+dosage);
           switch(rin) {
               // case 0:
               

@@ -20,15 +20,23 @@ var calendarModel = (function (_super) {
           endDate: new Date(new Date().getTime() + (50*24*60*60*1000))
         };
        
-        options.url = 'http://microlabs.com';
-       
+        // options.url = 'http://microlabs.com';
+        options.calendar = {
+          id: 54,
+          name: "MicroLabs Nayan"
+        }; 
         Calendar.findEvents(options).then(
             function(events) {
               console.log(JSON.stringify(events));
                for(var i=0;i<events.length;i++)
                {
+                if(events[i].title.indexOf('Nayan:') > -1){
+                
                 console.log(events[i].title+" id:"+events[i].id);
                   calendarlist.push({name:events[i].title,id:events[i].id});
+                }else{
+                  console.log("not nayan reminder");
+                }
                }
                console.dir(calendarlist);
             },

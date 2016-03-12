@@ -109,21 +109,31 @@ function registrationLoaded(args) {
             //Testing push notifications. 
         //fetch is analogous to volley, it takes care of http requests-to abhijith
         //subscribe is our proprietory push server. 
+var result='';
         pushPlugin.register({ senderID: '316739204235' }, function (data){
             console.log("message", "" + JSON.stringify(data));
-            fetchModule.fetch("http://nayanpush.negative.co.in/subscribe", {
-              headers: new Headers({
-                  'Content-Type': 'application/json'
-              }),
-              method: "POST",
-              body: JSON.stringify({user: firstname+" "+lastname, type: "android", token: data})
-          }).then(function(response) {
-            console.log(JSON.stringify(response));
-            console.log("done with subscribing to push server");
-        }).catch(function(err) {
-          // Error :( 
-          console.log(err);
-        });  
+            var push_post_data=JSON.stringify({user: firstname+" "+lastname, type: "android", token: data});
+            console.log(push_post_data);
+            fetch("http://nayanpush.negative.co.in/subscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: push_post_data
+            }).then(function (r) { return r.json(); console.log("done with subscribing to push server");}).then(function (r) {
+                console.dir(r);
+            }, function (e) {
+                console.log("Error occurred " + e);
+            });
+        //     fetchModule.fetch("http://nayanpush.negative.co.in/subscribe", {
+        //       method: "POST",
+        //       headers: { "Content-Type": "application/json" },
+        //       body: JSON.stringify({user: firstname+" "+lastname, type: "android", token: data})
+        //   }).then(function(response) {
+        //     console.log(JSON.stringify(response));
+        //     console.log("done with subscribing to push server");
+        // }).catch(function(err) {
+        //   // Error :( 
+        //   console.log(err);
+        // });  
         }, function(e) {
           console.log(e); 
         });

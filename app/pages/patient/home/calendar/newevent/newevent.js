@@ -31,7 +31,7 @@ var calendarModel = (function (_super) {
 
  // Only the `title`, `startDate` and `endDate` are mandatory, so this would suffice: 
   var options = {
-    title: "Nayan : "+ev.text,
+    title: "Nayan: "+ev.text,
     // Make sure these are valid JavaScript Date objects. 
     // In this case we schedule an Event for now + 1 hour, lasting 1 hour. 
     startDate: new Date(year,month-1,day),
@@ -54,8 +54,8 @@ var calendarModel = (function (_super) {
   // Want to use a custom calendar for your app? Pass in the 'id' or 'name'. 
   // If the name doesn't yet exist the plugin will create it for you. 
   options.calendar = {
-    // id: 3, 
-    name: " MicroLabs Nayan"
+    id: 54, 
+    name: "MicroLabs Nayan"
   };
  
   Calendar.createEvent(options).then(
@@ -69,7 +69,7 @@ var calendarModel = (function (_super) {
       LocalNotifications.schedule([{
       id: 1,
       title: 'Nayan Reminder',
-      body: ev.text,
+      body: 'Nayan: '+ev.text,
       ticker: 'Nayan Reminder: '+ev.text,
       at: new Date(year,month-1,day,8,23,9,123)
     }]).then(

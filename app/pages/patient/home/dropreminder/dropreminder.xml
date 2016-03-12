@@ -10,11 +10,11 @@
  <Image class="messageScroll" row="0" col="0" src="~/images/logo.png" stretch ="aspectFit" />
 
 
-<ListView id="messageScroll" col="0" row="1" items="{{ calendarlist }}">
+<ListView style="padding:10" id="messageScroll" col="0" row="1" items="{{ calendarlist }}">
     <ListView.itemTemplate>
     <StackLayout>
       <GridLayout rows="60" columns="*,100" marginBottom="20" class="" >
-       <Label  row="1" col="0"  class="" text="{{ name }}" />
+       <Label  row="1" col="0"  style="font-size:16" text="{{ name }}" />
       <!--  <Button class="globalbutton" row="1" col="0" text="&#xf067; New Event/Appointment" tap="{{ newEventAction }}"/> -->
       <Button col="1" row="0"  class="chatlabelincoming" text="delete" tap="delbutton" />
     </GridLayout>

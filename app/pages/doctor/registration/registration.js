@@ -111,9 +111,7 @@ function registrationLoaded(args) {
         pushPlugin.register({ senderID: '316739204235' }, function (data){
             console.log("message", "" + JSON.stringify(data));
             fetchModule.fetch("http://nayanpush.negative.co.in/subscribe", {
-              headers: new Headers({
-                  'Content-Type': 'application/json'
-              }),
+              headers: { "Content-Type": "application/json" },
               method: "POST",
               body: JSON.stringify({user: firstname+" "+lastname, type: "android", token: data})
           }).then(function(response) {
