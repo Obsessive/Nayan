@@ -1,7 +1,9 @@
 <Page loaded="exerciseLoaded">
 <ScrollView orientation="horizontal">
   <StackLayout orientation="horizontal">
-  	<Image class="doctorproducts" style="width:400" src="~/images/open4/01.png" stretch ="aspectFit" />
+    <ScrollView orientation="vertical">
+  	<Image id="open4image1" class="doctorproducts"  src="~/images/open4/01.png" stretch ="aspectFit" />
+  </ScrollView>
   </StackLayout>
 </ScrollView>
 </Page>

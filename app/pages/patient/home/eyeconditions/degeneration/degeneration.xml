@@ -2,6 +2,7 @@
  <ScrollView>
  <StackLayout>
  	<TextView editable="false" text="Age-Related Macular Denegeration" id="patientconditionspage"/>
+  <Image src="~/images/macular_degeneration.jpg" stretch ="aspectFit" />
  	<TextView editable="false" text="What is age – related macular degeneration?" class="patientconditionquestion"/>
     <TextView editable="false" text="It is a common medical condition that results in loss of central vision because of damage to the macula, or central part of the retina. Age-related macular degeneration (AMD) is a major cause of blindness in those over 50 years old. The condition can make it difficult to read or recognise faces, although enough peripheral vision (vision outside the central area of your gaze) remains to allow you to continue with other daily activities. However, driving and reading is affected."/>
 

@@ -13,6 +13,7 @@ function registrationLoaded(args) {
   var page = args.object;
   var server = "nayanmain.negative.co.in";
   var id;
+  var debug=1;
   var firstname;
   var lastname;
   var type='doctor';
@@ -164,7 +165,12 @@ function registrationLoaded(args) {
       console.log("Check Internet connectivity..");
       var con=this.checkconnection();
       if(con){
-        id=this.serverRegister();
+        if(!debug){
+          id=this.serverRegister();
+        }else{
+           var topmost=FrameModule.topmost();
+            topmost.navigate("pages/doctor/home/home");
+        }
       }
       // dialog.close();
       

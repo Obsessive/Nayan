@@ -17,12 +17,12 @@
           <Label class="patienthomelabel" text="{{ name }}" class="patienthomecard"/>
           <Button class="doctorhomelabel" text="{{ name }}" tap="{{ listtapAction }}" />
         </StackLayout> -->
-        <GridLayout rows="60" columns="*" marginBottom="20" class="" >
+        <GridLayout rows="60" columns="*" marginTop="20" marginLeft="5" marginRight="5" class="" >
 			<!-- <Image  col="0" row="0" src="{{ icon }}" stretch ="aspectFit" class="icon" /> -->
           <Label  col="0" row="0" class="patienthomecard" text="{{ name }}" />
           <!-- <Button class="patienthomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
         </GridLayout>
-				
+
 	</ListView.itemTemplate>
 </ListView>
 </ScrollView>

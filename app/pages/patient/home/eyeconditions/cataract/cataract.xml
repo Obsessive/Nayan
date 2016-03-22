@@ -2,6 +2,7 @@
  <ScrollView>
  <StackLayout>
  	<TextView editable="false" text="Cataract" id="patientconditionspage"/>
+  <Image src="~/images/Cataract.jpg" stretch ="aspectFit" />
  	<TextView editable="false" text="What causes Cataract?" class="patientconditionquestion"/>
     <TextView editable="false" text="It is common in the elderly due to ageing of natural lens present inside the eye becomes progressively opaque, resulting in blurred vision.
 

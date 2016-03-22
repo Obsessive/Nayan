@@ -16,7 +16,10 @@
     <Label text="Referral" />
     <TextField hint="Please enter your Referral code" id="patientregistrationcode"/>
 
-    <Button text="&#xf00c; Register" class="globalbutton" tap="{{ registerAction }}" />
+    <Switch checked="{{ termsagreed }}" />
+    <Label text="I Agree to the terms and conditions for Nayan|Eye drop reminder"/>
+
+    <Button isEanbled="{{ termsagreed }}" text="&#xf00c; Register" class="globalbutton" tap="{{ registerAction }}" />
   </StackLayout>
 </ScrollView>
 </Page>

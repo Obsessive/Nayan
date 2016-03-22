@@ -1,14 +1,30 @@
 <Page loaded="exerciseLoaded">
 <ScrollView orientation="horizontal">
   <StackLayout orientation="horizontal">
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/01.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/02.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/03.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/04.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/05.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/06.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/07.png" stretch ="aspectFit" />
-  	<Image class="doctorproducts" style="width:400" src="~/images/open/08.png" stretch ="aspectFit" />
+    <ScrollView orientation="vertical">
+  	<Image id="open1image1" class="doctorproducts"  src="~/images/open/01.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image2" class="doctorproducts"  src="~/images/open/02.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image3" class="doctorproducts"  src="~/images/open/03.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image4" class="doctorproducts"  src="~/images/open/04.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image5" class="doctorproducts"  src="~/images/open/05.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image6" class="doctorproducts"  src="~/images/open/06.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image7" class="doctorproducts"  src="~/images/open/07.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="open1image8" class="doctorproducts"  src="~/images/open/08.png" stretch ="aspectFit" />
+  </ScrollView>
   </StackLayout>
 </ScrollView>
 </Page>

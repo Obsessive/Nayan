@@ -4,9 +4,9 @@
   <Label text="Medicine name:" class="message" textWrap="true"/>
     <TextField id="patientdropname" hint="Name of Medicine" />
 
-    <Label text="Dosage:" class="message" textWrap="true"/>
+    <!-- <Label text="Dosage:" class="message" textWrap="true"/>
     <ListPicker items="{{ dosageitems }}" selectedIndex="{{ dosageIndex }}"
-              verticalAlignment="center" horizontalAlignment="center" style="width:200"/>
+              verticalAlignment="center" horizontalAlignment="center" style="width:200"/> -->
 
     <Label text="Select Time to remind on" class="message" textWrap="true"/>
     <TimePicker id="pickdate" hour="18" minute="30"/>

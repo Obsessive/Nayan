@@ -60,18 +60,6 @@ TextField{
     /*width:100%;*/
    /* border-radius:5;*/
     background-color:#fff;
-    opacity:0.4;
-}
-#doctorhomelist2{
-    font-size: 20;
-    /*horizontal-align: center;*/
-    /*margin-bottom:10;*/
-    padding:10;
-    color:#2196F3;
-    /*width:100%;*/
-   /* border-radius:5;*/
-    background-color:#fff;
-/*    opacity:0.4;*/
 }
 
 
@@ -116,12 +104,6 @@ TextField{
 }
 .doctorproducts{
    /* width:100;*/
-   width:400;
-   background-color:#fff;
-}
-.doctorproductszoom{
-   /* width:100;*/
-   width:800 ;
    background-color:#fff;
 }
 .introbg{
@@ -204,12 +186,7 @@ TextField{
     margin-bottom:10;
     background-color:#0091EA;
 }
-.icon2{
-    padding-top:15;
-    padding-bottom: 15;
-    margin-bottom:10;
-    /*background*/-color:#0091EA;
-}
+
 .dry{
     font-family:"Dry Brush";
 }

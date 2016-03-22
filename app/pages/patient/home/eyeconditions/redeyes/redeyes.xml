@@ -2,6 +2,7 @@
  <ScrollView>
  <StackLayout>
  	<TextView editable="false" text="Red Eyes" id="patientconditionspage"/>
+  <Image src="~/images/allergies.jpg" stretch ="aspectFit" />
  	<TextView editable="false" text="What are Eye Infections?" class="patientconditionquestion"/>
     <TextView editable="false" text="Eye infections are eye conditions caused by microbiological agents such as viruses and bacteria that may cause your eyes to become red and swollen."/>
 
