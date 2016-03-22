@@ -1,42 +1,18 @@
 <Page loaded="doctorProductsLoaded">
-	<ScrollView>
-
-
  	<StackLayout>
-		 <Image class="doctorproducts" style="width:200" src="~/images/product0.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false"  style="width:200;text-align:center" text="FBN Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product2.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex DS" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product3.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex Uno" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product4.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Lopres 0.5 Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product5.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Lubrex Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product6.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Lutivit Capsules" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product7.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Misopt Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product8.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Moistane Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product9.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Monosopt Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product10.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Moxigram-KT Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product11.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Moxigram-LX Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product12.jpg" stretch ="aspectFit" />
-	  	 <!-- <TextView editable="false" style="width:200;text-align:center" text="Oflacin Eye Drops" /> -->
-<!-- 	  	 <Image class="doctorproducts" style="width:200" src="~/images/product13.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Oflacin-DX Eye Drops" />
-	  	 <Image class="doctorproducts" style="width:200" src="~/images/product14.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Rapidon-OD Eye Drops" /> -->
-	  	 <!-- <Image class="doctorproducts" style="width:200" src="~/images/product15.jpg" stretch ="aspectFit" />
-	  	 <TextView editable="false" style="width:200;text-align:center" text="Travo-Z Eye Drops" /> -->
-
+		<GridLayout rows="*,auto" columns="*">
+		<ListView row="0" col="0" id="doctorproductlist" items="{{ doctorproductlist }}">
+			<ListView.itemTemplate>
+			<GridLayout rows="auto,auto" columns="*" marginBottom="20" style="border-radius=5" >
+				<Image  col="0" row="0" src="{{ product }}" stretch="aspectFit" class="doctorproducts" />
+	          <TextView  col="0" row="1" editable="false"  style="width:200;text-align:center" text="{{ name }}" />
+	        </GridLayout>
+		</ListView.itemTemplate>
+	</ListView>
+	<GridLayout row="1" col="0" rows="auto" columns="*,*" >
+		<Button col="1" row="0" text="NEXT" class="globalbutton" tap="{{ next }}"/>
+		<Button col="0" row="0" text="PREVIOUS" class="globalbutton" tap="{{ prev }}"/>
+			</GridLayout>
+			</GridLayout>
 	</StackLayout>
-
-
-</ScrollView>
-  	
 </Page>
