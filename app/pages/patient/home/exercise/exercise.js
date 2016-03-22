@@ -7,7 +7,7 @@ var exerciseModel = (function (_super) {
     function exerciseModel() {
         _super.call(this);
         console.log(" is now ready.");
-                this.set("patientexlist", [{name: "Eye Opening Story 1" },{name: "Eye Opening Story 2" },{name: "Eye Opening Story 3" },{name: "Eye Opening Story 4" },{name: "How to open eye drop bottle" }]);
+                this.set("patientexlist", [{name: "Eye Opening Story 1" },{name: "Eye Opening Story 2" },{name: "Eye Opening Story 3" },{name: "Eye Opening Story 4" },{name: "How to open eye drop bottle" },{name: "Glaucoma" }]);
     }
  exerciseModel.prototype.nextAction = function () {
        console.log("nextAction activated");
@@ -44,6 +44,10 @@ exports.patientexlistitemTap = function (args) {
     if(index==4){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/patient/home/exercise/open4/open4");
+    }
+    if(index==5){
+      var topmost=FrameModule.topmost();
+       topmost.navigate("pages/patient/home/exercise/glaucoma/glaucoma");
     }
   };
 exports.patientexLoaded = patientexLoaded;

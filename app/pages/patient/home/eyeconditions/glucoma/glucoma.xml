@@ -37,7 +37,7 @@
     <TextView editable="false" text="Eye drops either helps in reducing the fluid production within the eye or by facilitating the outflow of the fluid."/>
     <TextView editable="false" text="Does glaucoma eventually lead to blindness?" class="patientconditionquestion"/>
     <TextView editable="false" text="If treated appropriately it is very rare for glaucoma to lead to blindness. Most people retain vision for their life time."/>
-    <TextView editable="false" text="Why we need to do frequent follow ups?"/>
+    <TextView editable="false" text="Why we need to do frequent follow ups?"  class="patientconditionquestion"/>
     <TextView editable="false" text="Frequent follow ups help the doctor to understand the condition of the disease and evaluate any changes in the medication to control the disease progression."/>
 
  </StackLayout>

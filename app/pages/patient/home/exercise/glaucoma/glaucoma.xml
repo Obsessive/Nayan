@@ -1,0 +1,9 @@
+<Page loaded="glaucomaLoaded">
+<ScrollView orientation="horizontal">
+  <StackLayout orientation="horizontal">
+    <ScrollView orientation="vertical">
+  	<Image id="glaucoma" class="doctorproducts"  src="~/images/gulo.jpg" stretch ="aspectFit" />
+  </ScrollView>
+</StackLayout>
+</ScrollView>
+</Page>
