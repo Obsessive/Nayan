@@ -1,4 +1,9 @@
 <Page loaded="doctorProductsLoaded">
+	<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{ back }}"/>
+            </ActionBar>
+        </Page.actionBar>
  	<StackLayout>
 		<GridLayout rows="*,auto" columns="*">
 		<ListView row="0" col="0" id="doctorproductlist" items="{{ doctorproductlist }}">

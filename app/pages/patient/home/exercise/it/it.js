@@ -68,5 +68,9 @@ var exerciseModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new exerciseModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.exerciseLoaded = exerciseLoaded;

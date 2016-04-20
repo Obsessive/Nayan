@@ -1,4 +1,9 @@
 <Page loaded="exerciseLoaded">
+  <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
 <ScrollView orientation="horizontal">
   <StackLayout orientation="horizontal">
   	<Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-01.jpg" stretch ="aspectFit" />

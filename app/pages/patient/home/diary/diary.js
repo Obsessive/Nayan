@@ -67,4 +67,9 @@ exports.patientdiarylistitemTap = function (args) {
 topmost.navigate(navigationEntry);
 };
 
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.patientDiaryLoaded = patientDiaryLoaded;

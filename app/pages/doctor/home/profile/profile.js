@@ -68,5 +68,9 @@ var DoctorProfileModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new DoctorProfileModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.doctorProfileLoaded = doctorProfileLoaded;

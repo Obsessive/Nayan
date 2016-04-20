@@ -47,4 +47,9 @@ exports.patientEyeConditionslistitemTap = function (args) {
        topmost.navigate("pages/patient/home/eyeconditions/redeyes/redeyes");
     }
 };
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.patientEyeConditionsLoaded = patientEyeConditionsLoaded;

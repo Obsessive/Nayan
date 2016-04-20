@@ -3,8 +3,8 @@
   <StackLayout class="introbg"> 
   	<Image src="res://logo" stretch ="aspectFit" style="width:60%" class="intrologo" />
     <Label text="Welcome" class="title"/>
-    <Button text="&#xf0f0; Doctor" class="introbutton" tap="{{ doctorAction }}" />
-    <Button class="introbutton" text="&#xf06e; Patient" tap="{{ patientAction }}" />
+    <Button text="&#xf0f0; Doctor" class="introbutton font-awesome" tap="{{ doctorAction }}" />
+    <Button class="introbutton font-awesome" text="&#xf06e; Patient" tap="{{ patientAction }}" />
     <Label text="{{ message }}" class="message" textWrap="true"/>
   </StackLayout>
 </ScrollView>

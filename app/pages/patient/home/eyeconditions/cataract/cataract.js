@@ -18,5 +18,9 @@ var cataractModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new cataractModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.cataractLoaded = cataractLoaded;

@@ -2,13 +2,20 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var pushPlugin = require("nativescript-push-notifications");
 var dialogs = require("ui/dialogs");
-
+var appSettings = require("application-settings");
 function doctorHomeLoaded(args) {
 var page = args.object;
 var DoctorHomeModel = (function (_super) {
     __extends(DoctorHomeModel, _super);
     function DoctorHomeModel() {
         _super.call(this);
+        if (appSettings.getBoolean("boolKey", false)) {
+
+         var topmost=FrameModule.topmost();
+
+          topmost.navigate("pages/doctor/home/products/products");
+
+       }
         this.set("doctorhomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/product.png",name: "Products" },{ icon:"~/images/patient.png",name: "My patients" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/gym.png",name: "References" },{ icon:"~/images/reference.png",name: "Others" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
 
         console.log("doctor home is now ready.");

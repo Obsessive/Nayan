@@ -13,7 +13,8 @@ function registrationLoaded(args) {
   var page = args.object;
   var server = "nayanmain.negative.co.in";
   var id;
-  var debug=1;
+  var termsagreecheck=false;
+  var debug=0;
   var firstname;
   var lastname;
   var type='doctor';
@@ -156,7 +157,23 @@ function registrationLoaded(args) {
     };
     RegistrationModel.prototype.registerAction = function () {
       console.log("Registration button clicked.");
-      firstname = viewModule.getViewById(page, "doctorregistrationfirstname").text;
+      check=viewModule.getViewById(page,"termsagreedid").checked;
+      console.log(check);
+      if(!check){
+       
+        dialog.show({
+          title: "Attention...",
+          message: "You must read and agree to the terms and conditions!",
+          cancelButtonText: "Cancel",
+          }
+        ).then(function(r){ 
+          console.log("Result: " + r); 
+        },
+        function(e){
+          console.log("Error: " + e)
+        });
+      }else{
+        firstname = viewModule.getViewById(page, "doctorregistrationfirstname").text;
       lastname = viewModule.getViewById(page, "doctorregistrationlastname").text;
       email = viewModule.getViewById(page, "doctorregistrationemail").text;
       phone = viewModule.getViewById(page, "doctorregistrationphone").text;
@@ -172,8 +189,14 @@ function registrationLoaded(args) {
             topmost.navigate("pages/doctor/home/home");
         }
       }
+      }
+      
       // dialog.close();
       
+    };
+    RegistrationModel.prototype.showtermsAction = function () {
+      var topmost=FrameModule.topmost();
+       topmost.navigate("pages/doctor/home/legal/legal");
     };
 
     return RegistrationModel;

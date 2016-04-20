@@ -19,4 +19,10 @@ var legalModel = (function (_super) {
 page.bindingContext = new legalModel();
 }
 
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
+
 exports.legalLoaded = legalLoaded;

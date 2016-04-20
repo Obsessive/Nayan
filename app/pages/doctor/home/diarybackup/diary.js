@@ -18,5 +18,10 @@ var DoctorDiaryModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new DoctorDiaryModel();
 }
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 
 exports.doctorDiaryLoaded = doctorDiaryLoaded;

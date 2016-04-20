@@ -95,5 +95,9 @@ var calendarModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new calendarModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.calendarLoaded = calendarLoaded;

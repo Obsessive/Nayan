@@ -142,5 +142,9 @@ return chatModel;
 })(observable.Observable);
 page.bindingContext = new chatModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.chatLoaded = chatLoaded;

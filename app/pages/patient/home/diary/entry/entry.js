@@ -62,7 +62,11 @@ function patientDiaryEntryLoaded(args) {
   })(observable.Observable);
   page.bindingContext = new PatientDiaryEntryModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.patientDiaryEntryLoaded = patientDiaryEntryLoaded;
 
 //

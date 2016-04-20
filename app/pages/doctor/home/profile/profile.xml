@@ -1,11 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
-    <!-- <Page.actionBar>
-    <ActionBar>
-      <ActionBar.actionItems>
-        <ActionItem text="Nayans" ios.position="right" android.position="actionBar" />
-      </ActionBar.actionItems>
-    </ActionBar>
-  </Page.actionBar> -->
+    <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
  <ScrollView>
  <StackLayout>
  	<Label text="My Profile" id="doctorprofilepage"/>

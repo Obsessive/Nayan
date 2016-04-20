@@ -69,5 +69,9 @@ function patientDiaryMyPageLoaded(args) {
   })(observable.Observable);
   page.bindingContext = new PatientDiaryMyPageModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.patientDiaryMyPageLoaded = patientDiaryMyPageLoaded;

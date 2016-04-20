@@ -3,9 +3,7 @@
 
         <Page.actionBar>
             <ActionBar>
-                <ActionBar.text>
-                    <Label text="Nayan &#xf06e;" android.position="left" class="action-bar"/>
-                </ActionBar.text>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
             </ActionBar>
         </Page.actionBar>
 

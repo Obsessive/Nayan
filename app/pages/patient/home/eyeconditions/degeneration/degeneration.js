@@ -18,5 +18,10 @@ var degenerationModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new degenerationModel();
 }
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 
 exports.degenerationLoaded = degenerationLoaded;

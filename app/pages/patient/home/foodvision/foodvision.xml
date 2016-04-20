@@ -1,4 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
+    <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
  <ScrollView>
  <StackLayout>
  	<TextView editable="false" text="Food For Vision " id="patientconditionspage"/>

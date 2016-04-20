@@ -13,6 +13,7 @@ var DoctorProductsModel = (function (_super) {
         _super.call(this);
         self=this;
         console.log("doctor Products is now ready.");
+        appSettings.setBoolean("boolKey", false);
         current=appSettings.getNumber("current",0);
         if (current==0) {
           sample = [{ name:"FBN Eye Drops",product: "~/images/product0.jpg" },{ name:"Lubrex DS",product: "~/images/product2.jpg" },{ name:"Lubrex Uno",product: "~/images/product3.jpg" },{ name:"Lopres 0.5 Eye Drops",product: "~/images/product4.jpg" },{ name:"Lubrex Eye Drops",product: "~/images/product5.jpg" }];
@@ -34,15 +35,26 @@ var DoctorProductsModel = (function (_super) {
          current=0;
        }
        appSettings.setNumber("current", current);
-       FrameModule.reloadPage();
+       appSettings.setBoolean("boolKey", true);
+       var topmost=FrameModule.topmost();
+       topmost.goBack();
     };
+
+    DoctorProductsModel.prototype.back = function(args){
+      console.log("back");
+      var topmost=FrameModule.topmost();
+      topmost.navigate("pages/doctor/home/home");
+    }
+
     DoctorProductsModel.prototype.prev = function () {
       current--;
        if (current==-1) {
          current=2;
        }
        appSettings.setNumber("current", current);
-       FrameModule.reloadPage();
+       appSettings.setBoolean("boolKey", true);
+       var topmost=FrameModule.topmost();
+       topmost.goBack();
     };
 
     return DoctorProductsModel;

@@ -18,5 +18,9 @@ var redeyesModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new redeyesModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.redeyesLoaded = redeyesLoaded;

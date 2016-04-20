@@ -145,5 +145,9 @@ var inboxModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new inboxModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.inboxLoaded = inboxLoaded;

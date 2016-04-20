@@ -18,5 +18,9 @@ var dryeyesModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new dryeyesModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.dryeyesLoaded = dryeyesLoaded;

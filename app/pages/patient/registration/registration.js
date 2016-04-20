@@ -14,6 +14,7 @@ function registrationLoaded(args) {
   var debug=0;
   var server = "nayanmain.negative.co.in";
   var id;
+  // var termsagreed=true;
   var firstname;
   var lastname;
   var type='patient';
@@ -91,7 +92,7 @@ function registrationLoaded(args) {
       var connectionType = connectivity.getConnectionType();
       switch (connectionType) {
           case connectivity.connectionType.none:
-              alert("Please check your internet connection and try again! ");
+              alert("Please check your internet connection and try again!");
               return 0;
               break;
           case connectivity.connectionType.wifi:
@@ -166,23 +167,44 @@ var result='';
     };
     RegistrationModel.prototype.registerAction = function () {
       console.log("Registration button clicked.");
-      firstname = viewModule.getViewById(page, "patientregistrationfirstname").text;
-      lastname = viewModule.getViewById(page, "patientregistrationlastname").text;
-      email = viewModule.getViewById(page, "patientregistrationemail").text;
-      phone = viewModule.getViewById(page, "patientregistrationphone").text;
-      code = viewModule.getViewById(page, "patientregistrationcode").text;
-      code = code.substring(code.indexOf("-") + 1);
-      console.log("Check Internet connectivity..");
-      var con=this.checkconnection();
-      if(con){
-        if(!debug){
-          id=this.serverRegister();
-        }else{
-           var topmost=FrameModule.topmost();
-            topmost.navigate("pages/patient/home/home");
+      check=viewModule.getViewById(page,"termsagreedid").checked;
+      console.log(check);
+      if(!check){
+       
+        dialog.show({
+          title: "Attention...",
+          message: "You must read and agree to the terms and conditions!",
+          cancelButtonText: "Cancel",
+          }
+        ).then(function(r){ 
+          console.log("Result: " + r); 
+        },
+        function(e){
+          console.log("Error: " + e)
+        });
+      }else{
+        firstname = viewModule.getViewById(page, "patientregistrationfirstname").text;
+        lastname = viewModule.getViewById(page, "patientregistrationlastname").text;
+        email = viewModule.getViewById(page, "patientregistrationemail").text;
+        phone = viewModule.getViewById(page, "patientregistrationphone").text;
+        code = viewModule.getViewById(page, "patientregistrationcode").text;
+        code = code.substring(code.indexOf("-") + 1);
+        console.log("Check Internet connectivity..");
+        var con=this.checkconnection();
+        if(con){
+          if(!debug){
+            id=this.serverRegister();
+          }else{
+             var topmost=FrameModule.topmost();
+              topmost.navigate("pages/patient/home/home");
+          }
         }
       }
-      
+    };
+
+    RegistrationModel.prototype.showtermsAction = function () {
+      var topmost=FrameModule.topmost();
+       topmost.navigate("pages/patient/home/legal/legal");
     };
 
     return RegistrationModel;

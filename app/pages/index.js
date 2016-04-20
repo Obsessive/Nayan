@@ -32,7 +32,7 @@ var HelloWorldModel = (function (_super) {
         var self = this;
         _super.call(this);
         console.log("ready."); 
-
+        self.set("message","“नयन” मोबाइल एप");
         //Check if database exist.. and take to appropriate page if required.
         if (Sqlite.exists("nayan.db")) {
             //Database does exist.. 

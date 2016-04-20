@@ -1,5 +1,9 @@
 <Page loaded="dropreminderLoaded">
-
+<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
 
 <GridLayout rows="100,*,60" columns="*" marginBottom="20" class="" >
   	<!-- 	 <Image row="1" col="0" class="doctorproducts" style="margin-top:30;width:200" src="~/images/logo.png" stretch ="aspectFit" /> -->

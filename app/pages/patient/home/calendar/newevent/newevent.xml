@@ -3,6 +3,11 @@
 </Page>
  -->
 <Page loaded="calendarLoaded">
+	<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
 <ScrollView>
   <StackLayout>
      <Label text="Select Date" class="message" textWrap="true"/>

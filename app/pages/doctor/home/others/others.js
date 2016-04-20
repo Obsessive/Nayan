@@ -18,5 +18,9 @@ var othersModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new othersModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.othersLoaded = othersLoaded;

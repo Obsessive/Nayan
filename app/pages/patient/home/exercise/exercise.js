@@ -50,4 +50,9 @@ exports.patientexlistitemTap = function (args) {
        topmost.navigate("pages/patient/home/exercise/glaucoma/glaucoma");
     }
   };
+  exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.patientexLoaded = patientexLoaded;

@@ -12,6 +12,10 @@ ActionBar{
     font-family: "FontAwesome";
     /*font-size:24;*/
 }
+.hindi {
+    font-family: "Kruti Dev 010";
+    /*font-size:24;*/
+}
 .actionbar{
     color:#fff;
     font-family: "FontAwesome";
@@ -60,7 +64,7 @@ TextField{
     /*width:100%;*/
    /* border-radius:5;*/
     background-color:#fff;
-    opacity:0.4;
+    /*opacity:0.4;*/
 }
 #doctorhomelist2{
     font-size: 20;
@@ -164,7 +168,7 @@ TextField{
 }
 .introbutton{
     font-size: 20;
-    font-family: "FontAwesome";
+    /*font-family: "FontAwesome";*/
     horizontal-align: center;
     background-color: #1E88E5;
     border-color:#1E88E5;
@@ -173,7 +177,6 @@ TextField{
     color:#fff;
     border-width:1;
     border-radius:25;
-
 }
 /*.introbuttonright{
     font-size: 16;

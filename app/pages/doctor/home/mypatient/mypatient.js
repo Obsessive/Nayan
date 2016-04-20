@@ -135,4 +135,11 @@ exports.mypatientlistitemTap = function (args) {
     topmost.navigate(navigationEntry);
 
 };
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
+
+
 exports.mypatientLoaded = mypatientLoaded;

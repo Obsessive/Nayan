@@ -1,4 +1,9 @@
 <Page loaded="mypatientLoaded">
+	<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
 <ScrollView>
 
  	<ListView id="mypatientlist" items="{{ mypatientlist }}" itemTap="mypatientlistitemTap">

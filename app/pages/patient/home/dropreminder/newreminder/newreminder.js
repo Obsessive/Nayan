@@ -35,13 +35,13 @@ var dropreminderModel = (function (_super) {
          var minute=datepick.minute;
          var eyeps=page.getViewById("eyep").selectedIndex;
          if(eyeps==0){
-            ev.text=ev.text+"|Dosage: "+dosage+" drops|Left Eye";
+            ev.text=ev.text+"|Left Eye";
          }
          if(eyeps==1){
-            ev.text=ev.text+"|Dosage: "+dosage+" drops|Right Eye";
+            ev.text=ev.text+"|Right Eye";
          }
          if(eyeps==2){
-            ev.text=ev.text+"|Dosage: "+dosage+" drops|Both Eyes";
+            ev.text=ev.text+"|Both Eyes";
          }
          
           console.log(ev.text+" "+hour+" "+minute+" "+eyeps+" "+rin+" "+dosage);
@@ -266,5 +266,9 @@ var dropreminderModel = (function (_super) {
 (observable.Observable);
 page.bindingContext = new dropreminderModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.dropreminderLoaded = dropreminderLoaded;

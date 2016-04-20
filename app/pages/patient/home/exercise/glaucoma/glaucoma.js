@@ -26,5 +26,9 @@ var glaucomaModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new glaucomaModel();
 }
-
+exports.back = function(args){
+  console.log("back");
+  var topmost=FrameModule.topmost();
+  topmost.goBack();
+}
 exports.glaucomaLoaded = glaucomaLoaded;

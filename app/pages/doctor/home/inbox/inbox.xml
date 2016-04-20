@@ -1,5 +1,9 @@
 <Page loaded="inboxLoaded">
-
+<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
 	<DockLayout stretchLastChild="true" >
 
 		<StackLayout dock="bottom">
