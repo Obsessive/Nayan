@@ -5,7 +5,9 @@ var Calendar = require("nativescript-calendar");
 var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
 var Sqlite = require( "nativescript-sqlite" );
+var applicationSettings = require("application-settings");
 var pushid;
+var i18n=require("../../../i18n");
 function dropreminderLoaded(args) {
 var page = args.object;
 var dropreminderModel = (function (_super) {
@@ -13,7 +15,26 @@ var dropreminderModel = (function (_super) {
 
     function dropreminderModel() {
         _super.call(this);
-        this.set("reminditems", ["Once","Twice a day","Thrice a day","four times a day"]);
+            //Set all labels and other i18n bindings here
+      //getting it from i18n 
+      //var i18n=require("../i18n");
+      //will ensure no internal var conflicts.
+      //Not the best solution. -Zee
+      //I'm sure. Abhijith will improve this.
+      for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
+        // this.set("reminditems", ["Once","Twice a day","Thrice a day","four times a day"]);
         this.set("dosageitems", ["select","1 drop","2 drops","3 drops","4 drops","5 drops","6 drops","7 drops"]);
         console.log(" is now ready.");
     }

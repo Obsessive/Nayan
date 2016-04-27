@@ -2,8 +2,10 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var ObservableArray = require('data/observable-array');
 var Calendar = require("nativescript-calendar");
+var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
 var dialogs = require("ui/dialogs");
+var i18n=require("../../i18n");
 var calendarlist = new ObservableArray.ObservableArray();
 function calendarLoaded(args) {
 var page = args.object;
@@ -12,6 +14,20 @@ var calendarModel = (function (_super) {
     function calendarModel() {
         _super.call(this);
         var self=this;
+
+        for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
         calendarlist = new ObservableArray.ObservableArray();
         this.set("calendarlist",calendarlist);
         var options = {

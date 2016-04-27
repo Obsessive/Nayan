@@ -9,8 +9,12 @@ var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var pushPlugin = require("nativescript-push-notifications");
 var applicationSettings = require("application-settings");
+ var i18n=require("../i18n");
 function registrationLoaded(args) {
+
+  
   var page = args.object;
+  var langchange=0;
   var debug=0;
   var server = "nayanmain.negative.co.in";
   var id;
@@ -25,10 +29,42 @@ function registrationLoaded(args) {
     __extends(RegistrationModel, _super);
     function RegistrationModel() {
       _super.call(this);
+      // Uncache the package
+
+     
       // var s=JSON.stringify({type:type , firstname:firstname , lastname:lastname ,number:phone,email:email,code:code,address:'',hospital:''})
       // console.log(s);
+      // if(applicationSettings.getString("language")==="hindi" && langchange===0){
+      //   langchange=1;
+      //   //reload the page
+      //   var topmost=FrameModule.topmost();
+      //   topmost.ReloadPage();
+      // }
+      
+
+      //Set all labels and other i18n bindings here
+      //getting it from i18n 
+      //var i18n=require("../i18n");
+      //will ensure no internal var conflicts.
+      //Not the best solution. -Zee
+      //I'm sure. Abhijith will improve this.
+      // console.dir(i18n);
+      for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
+
       console.log("registration ready.");
-    };
+    }
 
     RegistrationModel.prototype.localRegister = function (){
 
@@ -180,7 +216,7 @@ var result='';
           console.log("Result: " + r); 
         },
         function(e){
-          console.log("Error: " + e)
+          console.log("Error: " + e);
         });
       }else{
         firstname = viewModule.getViewById(page, "patientregistrationfirstname").text;
@@ -211,4 +247,6 @@ var result='';
   })(observable.Observable);
   page.bindingContext = new RegistrationModel();
 }
+
+
 exports.registrationLoaded = registrationLoaded;

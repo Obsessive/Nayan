@@ -6,44 +6,44 @@
         </Page.actionBar>
  <ScrollView>
  <StackLayout>
- 	<TextView editable="false" text="Glaucoma" id="patientconditionspage"/>
+ 	<TextView editable="false" text="{{ Glaucoma }}" id="patientconditionspage"/>
   <Image src="~/images/glaucoma-vision.jpg" stretch ="aspectFit" />
- 	<TextView editable="false" text="What is Glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Glaucoma is a subset of condition which affects the optic nerve of the eye. Optic nerve is the nerve connecting eye and brain and is responsible for conducting the visual impulses through it. In most cases of glaucoma the damage to the optic nerve is as a result of elevated pressure (Intra Ocular Pressure) within the eye however there can be a set of people who can develop glaucoma despite normal or low pressure within the eye. "/>
+ 	<TextView editable="false" text="{{ GlaucomaQ1 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA1}}"/>
     <Image class="doctorproducts" style="width:200" src="~/images/glucoma1.png" stretch ="aspectFit" />
-    <TextView editable="false" style="width:200;text-align:center" text="Normal Vision" />
+    <TextView editable="false" style="width:200;text-align:center" text="{{ Glaucomapic1 }}" />
     <Image class="doctorproducts" style="width:200" src="~/images/glucoma2.png" stretch ="aspectFit" />
-    <TextView editable="false" style="width:200;text-align:center" text="Vision with Glaucoma" />
-    <TextView editable="false" text="Is glaucoma a common condition?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Yes, glaucoma is a common condition. In the general population 3 people out of 100 suffer at some point with glaucoma"/>
+    <TextView editable="false" style="width:200;text-align:center" text="{{Glaucomapic2}}" />
+    <TextView editable="false" text="{{ GlaucomaQ2 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA2 }}"/>
     <Image class="doctorproducts" style="width:200" src="~/images/glucoma3.png" stretch ="aspectFit" />
-    <TextView editable="false" text="What are the risk factors for glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Anybody can get glaucoma from infancy to old age however people with a family history of glaucoma, above 40 years of age, patients on steroid medication and people with eye injury are at a higher risk of developing glaucoma as compared to the others."/>
-    <TextView editable="false" text="What are the symptoms of Glaucoma? " class="patientconditionquestion"/>
-    <TextView editable="false" text="In most people glaucoma is asymptomatic (without symptom). A large number of people with glaucoma lose their vision gradually without even becoming aware of it. In very advanced cases glaucoma can give rise to severely constricted field of vision. Few prople may have pain, redness or watering of eyes."/>
-<TextView editable="false" text="What are the causes of glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Most kinds of glaucoma are due to obstruction to the smooth flow of fluid from within the eye to the outside this happens due to blocks at microscopic level at the outflow channel of the eye. The exact cause of microscopic blockage are unknown this variety of glaucoma is known as primary open angle glaucoma. In another subset of people the outflow of fluid is blocked by the pupil who leads to another type of glaucoma called as angle closure glaucoma. In addition to the mentioned causes in few people diabetes, hypertension, trauma, some medication and some other systemic diseases are also known to cause glaucoma."/>
+    <TextView editable="false" text="{{ GlaucomaQ3 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA3}}"/>
+    <TextView editable="false" text="{{ GlaucomaQ4 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA4 }}"/>
+<TextView editable="false" text="{{ GlaucomaQ5 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA5 }}"/>
 
-    <TextView editable="false" text="Is glaucoma hereditary? " class="patientconditionquestion"/>
-    <TextView editable="false" text="Yes glaucoma can be a hereditary disease. In fact 4 out 10 patients with glaucoma would have inherited it. More frequent eye examination is required if there is family history. "/>
-    <TextView editable="false" text="Does glaucoma cause sudden loss of vision?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Most types of glaucoma if untreated causes slow progressive loss of vision. Acute angle closure glaucoma can sudden cause a loss of vision however it is not common."/>
-    <TextView editable="false" text="What happens in acute angle closure glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Due to improper circulation of fluid within the eye, secondary to blockage of the outflow channel by iris, there is a sudden and severe rise of intra ocular pressure. This causes acute angle closure glaucoma."/>
-    <TextView editable="false" text="How is glaucoma diagnosed?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Diagnosis of glaucoma is based on history, some test and investigations.The tests include measurement of intraocular pressure, assessment of the outflow channel of the eye, examination of the optic nerve and other relevant findings in the eye. Investigations include visual field examination, retinal nerve fibre analysis, corneal thickness evaluation and serial optic disc photographs."/>
-    <TextView editable="false" text="What are the different options available to treat glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Glaucoma can be treated most of the times by eye drops. The other options available are in the form of tablets, lasers or even surgery."/>
-    <TextView editable="false" text="How do we decide on the treatment options?" class="patientconditionquestion"/>
-    <TextView editable="false" text="The choice of treatment of glaucoma depends of various factors such as severity of the disease, age of the patient, risk factors like family history, type of glaucoma, associated systemic conditions and ease of accessibility of eye care to the patient."/>
-    <TextView editable="false" text="Can we cure Glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="No, Glaucoma being a chronic disease cannot be cured but it can be controlled with proper medication. "/>
-    <TextView editable="false" text="How do eye drops help in controlling glaucoma?" class="patientconditionquestion"/>
-    <TextView editable="false" text="Eye drops either helps in reducing the fluid production within the eye or by facilitating the outflow of the fluid."/>
-    <TextView editable="false" text="Does glaucoma eventually lead to blindness?" class="patientconditionquestion"/>
-    <TextView editable="false" text="If treated appropriately it is very rare for glaucoma to lead to blindness. Most people retain vision for their life time."/>
-    <TextView editable="false" text="Why we need to do frequent follow ups?"  class="patientconditionquestion"/>
-    <TextView editable="false" text="Frequent follow ups help the doctor to understand the condition of the disease and evaluate any changes in the medication to control the disease progression."/>
+    <TextView editable="false" text=" {{ GlaucomaQ6 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA6 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ7 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA7 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ8 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA8 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ9 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA9 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ10 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA10 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ11 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA11 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ12 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA12 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ13 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA13 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ14 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA14 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ15 }}"  class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA15 }}"/>
 
  </StackLayout>
 </ScrollView>

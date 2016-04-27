@@ -6,34 +6,28 @@
         </Page.actionBar>
  <ScrollView>
  <StackLayout>
- 	<TextView editable="false" text="Food For Vision " id="patientconditionspage"/>
+ 	<TextView editable="false" text="{{FoodForVision}}" id="patientconditionspage"/>
   <Image src="~/images/carrot.jpg" stretch ="aspectFit" />
- 	<TextView editable="false" text="Carrots" class="patientconditionquestion"/>
-    <TextView editable="false" text="Carrots and other orange coloured fruits contain Beta-carotene; a type of vitamin A helps the retina and other parts of the eye to function smoothly."/>
+ 	<TextView editable="false" text="{{Carrots}}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{CarrotsDesc}}"/>
     <Image src="~/images/Leafy green.jpg" stretch ="aspectFit" />
-    <TextView editable="false" text="Leafy greens" class="patientconditionquestion"/>
-    <TextView editable="false" text="Leafy greens packed with lutein and zeaxanthin—antioxidants that, lower the risk of developing macular degeneration and cataracts."/>
+    <TextView editable="false" text="{{LeafyGreens}}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{LeafyGreensDesc}}"/>
     <Image src="~/images/Eggs.jpg" stretch ="aspectFit" />
-    <TextView editable="false" text="Eggs" class="patientconditionquestion"/>
-    <TextView editable="false" text="The egg yolk is a prime source of lutein and zeaxanthin—plus zinc, which also helps reduce macular degeneration risk
-Citrus and berries
-These fruits are powerhouses of vitamin C, which has been shown to reduce the risk of developing macular degeneration and cataracts.
-"/>
+    <TextView editable="false" text="{{Eggs}}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{EggsDesc}}"/>
 <Image src="~/images/Almonds.jpg" stretch ="aspectFit" />
-    <TextView editable="false" text="Almonds" class="patientconditionquestion"/>
-    <TextView editable="false" text="Almonds are rich in vitamin E, which slows macular degeneration."/>
+    <TextView editable="false" text="{{Almonds}}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{AlmondsDesc}}"/>
 <Image src="~/images/fish.jpg" stretch ="aspectFit" />
-<TextView editable="false" text="Fatty Fish" class="patientconditionquestion"/>
-    <TextView editable="false" text="Tuna, salmon, mackerel, anchovies and trout are rich in DHA, a fatty acid found in retina—DHA deficiency is linked to dry eye syndrome.
-"/>
+<TextView editable="false" text="{{FattyFish}}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{FattyFishDesc}}"/>
 <Image src="~/images/tomatoes1.jpg" stretch ="aspectFit" />
-  <TextView editable="false" text="Tomatoes " class="patientconditionquestion"/>
-    <TextView editable="false" text="Tomatoes are rich in carotenoids, including lycopene. The lycopene present in ocular tissues helps prevent light-induced damage to the retina and other areas of the eye.
-Tomatoes are also an excellent source of vitamin C, another vision protector."/>
+  <TextView editable="false" text="{{Tomatoes}} " class="patientconditionquestion"/>
+    <TextView editable="false" text="{{TomatoesDesc}}"/>
 <Image src="~/images/Sweet-Corn_1.png" stretch ="aspectFit" />
-  <TextView editable="false" text="Corn " class="patientconditionquestion"/>
-    <TextView editable="false" text="Yellow corn is great source of lutein and zeaxanthin and ½ cup of cooked corn has 1.8 grams of beneficial pigments combined per serving.
-"/>
+  <TextView editable="false" text="{{Corn}} " class="patientconditionquestion"/>
+    <TextView editable="false" text="{{CornDesc}}"/>
 
  </StackLayout>
 </ScrollView>

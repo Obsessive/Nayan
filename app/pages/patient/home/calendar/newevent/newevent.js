@@ -3,12 +3,33 @@ var observable = require("data/observable");
   var Calendar = require("nativescript-calendar");
 var LocalNotifications = require("nativescript-local-notifications");
 var dialogs = require("ui/dialogs");
+var applicationSettings = require("application-settings");
+var i18n=require("../../../i18n");
 function calendarLoaded(args) {
 var page = args.object;
 var calendarModel = (function (_super) {
     __extends( calendarModel, _super);
     function calendarModel() {
         _super.call(this);
+          //Set all labels and other i18n bindings here
+      //getting it from i18n 
+      //var i18n=require("../i18n");
+      //will ensure no internal var conflicts.
+      //Not the best solution. -Zee
+      //I'm sure. Abhijith will improve this.
+      for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
         console.log(" is now ready.");
     }
  calendarModel.prototype.nextAction = function () {

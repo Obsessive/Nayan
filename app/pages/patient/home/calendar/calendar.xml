@@ -6,7 +6,7 @@
             </ActionBar>
         </Page.actionBar>
 <GridLayout rows="*,60" columns="*" marginBottom="20" class="" >
-	 	<Button class="globalbutton" row="1" col="0" text="&#xf067; New Event/Appointment" tap="{{ newEventAction }}"/>
+	 	<Button class="globalbutton" row="1" col="0" text="{{isEn?'&#xf067; New Event/Appointment':'नया कार्यक्रम / अपॉइंटमेंट'}}" tap="{{ newEventAction }}"/>
 <ListView id="messageScroll" col="0" row="0" items="{{ calendarlist }}">
 		<ListView.itemTemplate>
 		<StackLayout>

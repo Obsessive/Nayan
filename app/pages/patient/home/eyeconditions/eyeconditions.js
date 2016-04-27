@@ -1,12 +1,33 @@
 var FrameModule = require("ui/frame");
+var applicationSettings = require("application-settings");
 var observable = require("data/observable");
+var i18n=require("../../i18n");
 function patientEyeConditionsLoaded(args) {
 var page = args.object;
 var patientEyeConditionsModel = (function (_super) {
     __extends(patientEyeConditionsModel, _super);
     function patientEyeConditionsModel() {
         _super.call(this);
-        this.set("patientEyeConditionslist", [{ name: "Age-Related Macular Degeneration" },{ name: "Cataract" },{ name: "Dry Eyes" },{ name: "Red Eye/Infection" },{ name: "Glaucoma" }]);
+        //Set all labels and other i18n bindings here
+      //getting it from i18n 
+      //var i18n=require("../i18n");
+      //will ensure no internal var conflicts.
+      //Not the best solution. -Zee
+      //I'm sure. Abhijith will improve this.
+      for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
+        // this.set("patientEyeConditionslist", [{ name: "Age-Related Macular Degeneration" },{ name: "Cataract" },{ name: "Dry Eyes" },{ name: "Red Eye/Infection" },{ name: "Glaucoma" }]);
         console.log("doctor home is now ready.");
     }
     patientEyeConditionsModel.prototype.registerAction = function () {

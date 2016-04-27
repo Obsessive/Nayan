@@ -3,9 +3,11 @@ var observable = require("data/observable");
 var ObservableArray = require('data/observable-array');
 var dialogs = require("ui/dialogs");
 var Sqlite = require( "nativescript-sqlite" );
+var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
 var calendarlist = new ObservableArray.ObservableArray();
 var visit=0;
+var i18n=require("../../i18n");
 function dropreminderLoaded(args) {
 var page = args.object;
 
@@ -14,6 +16,25 @@ var dropreminderModel = (function (_super) {
     function dropreminderModel() {
         _super.call(this);
          var self=this;
+           //Set all labels and other i18n bindings here
+      //getting it from i18n 
+      //var i18n=require("../i18n");
+      //will ensure no internal var conflicts.
+      //Not the best solution. -Zee
+      //I'm sure. Abhijith will improve this. Abhijith has improved.
+      for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
        calendarlist = new ObservableArray.ObservableArray();
         this.set("calendarlist",calendarlist);
 // if(!visit){

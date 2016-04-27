@@ -6,28 +6,28 @@
         </Page.actionBar>
 <ScrollView>
   <StackLayout>
-  <Label text="Medicine name:" class="message" textWrap="true"/>
-    <TextField id="patientdropname" hint="Name of Medicine" />
+  <Label text="{{MedicineName}}" class="message" textWrap="true"/>
+    <TextField id="patientdropname" hint="{{MedicineNameHint}}" />
 
     <!-- <Label text="Dosage:" class="message" textWrap="true"/>
     <ListPicker items="{{ dosageitems }}" selectedIndex="{{ dosageIndex }}"
               verticalAlignment="center" horizontalAlignment="center" style="width:200"/> -->
 
-    <Label text="Select Time to remind on" class="message" textWrap="true"/>
+    <Label text="{{ReminderTime}}" class="message" textWrap="true"/>
     <TimePicker id="pickdate" hour="18" minute="30"/>
-  	<Label text="Remind me" class="message" textWrap="true"/>
+  	<Label text="{{RemindMe}}" class="message" textWrap="true"/>
     <ListPicker items="{{ reminditems }}" selectedIndex="{{ remindIndex }}"
               verticalAlignment="center" horizontalAlignment="center" style="width:200"/>
-  	<Label text="Set Reminder for:" class="message" textWrap="true"/>
+  	<Label text="{{ReminderFor}}" class="message" textWrap="true"/>
   	 <SegmentedBar id="eyep" style="vertical-align: center; margin: 20;">
     <SegmentedBar.items >
-      <SegmentedBarItem title="Left eye" />
-      <SegmentedBarItem title="Right eye" />
-      <SegmentedBarItem title="Both eyes" />
+      <SegmentedBarItem title="{{LeftEye}}" />
+      <SegmentedBarItem title="{{RightEye}}" />
+      <SegmentedBarItem title="{{BothEyes}}" />
     </SegmentedBar.items>
   </SegmentedBar>
 
-   <Button text="Set Reminder" tap="{{ setReminderAction }}" />
+   <Button text="{{SetReminder}}" tap="{{ setReminderAction }}" />
   </StackLayout>
 </ScrollView>
 </Page>

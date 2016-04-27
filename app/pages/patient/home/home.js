@@ -5,6 +5,8 @@ var pushPlugin = require("nativescript-push-notifications");
 var tts = require("nativescript-texttospeech");
 var application = require("application");
 var Sqlite = require( "nativescript-sqlite" );
+var applicationSettings = require("application-settings");
+var i18n=require("../i18n");
 // var fontModule = require("ui/styling/font");
 application.on(application.resumeEvent, function (args) {
     if (args.android) {
@@ -52,8 +54,27 @@ var patientHomeModel = (function (_super) {
     __extends(patientHomeModel, _super);
     function patientHomeModel() {
         _super.call(this);
+        //Set all labels and other i18n bindings here
+      //getting it from i18n 
+      //var i18n=require("../i18n");
+      //will ensure no internal var conflicts.
+      //Not the best solution. -Zee
+      //I'm sure. Abhijith will improve this.
+      for(var x in i18n){
+         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+            for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+         if(applicationSettings.getString("language")==="english" && x==="english"){
+             for(var y in i18n[x]){
+              this.set(y,i18n[x][y]);
+            }
+         }
+        // this.set(x,i18n[x]);
+      }
         tts.speak("Home!");
-        this.set("patienthomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/condition.png",name: "Eye conditions" },{ icon:"~/images/inbox.png",name: "My inbox" },{ icon:"~/images/calendar.png",name: "Calendar" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/alarm.png",name: "Drop Reminder" },{ icon:"~/images/gym.png",name: "Eye Opening Story" },{ icon:"~/images/apple.png",name: "Food For Vision" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
+        // this.set("patienthomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/condition.png",name: "Eye conditions" },{ icon:"~/images/inbox.png",name: "My inbox" },{ icon:"~/images/calendar.png",name: "Calendar" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/alarm.png",name: "Drop Reminder" },{ icon:"~/images/gym.png",name: "Eye Opening Story" },{ icon:"~/images/apple.png",name: "Food For Vision" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
         pushPlugin.onMessageReceived(function callback(data) {  
             console.log("push received: "+data );
             var substring = "Inbox:";
@@ -80,6 +101,10 @@ var patientHomeModel = (function (_super) {
             }
         });
         console.log("patient home is now ready.");
+        //back button on home should quit the app.
+        if (application.android) {
+            application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
+        }
     }
     // patientHomeModel.prototype.pageNavigatingTo = function () {
     //   console.log("navigating to...");
@@ -170,4 +195,13 @@ exports.patienthomelistitemTap = function (args) {
        topmost.navigate("pages/patient/home/legal/legal");
     }
 };
+exports.homeUnloaded = function() {
+    // We only want to un-register the event on Android
+    if (application.android) {
+        application.android.off(application.AndroidApplication.activityBackPressedEvent, backEvent);
+    }
+};
+backEvent = function () {
+            android.os.Process.killProcess(android.os.Process.myPid());
+    };
 exports.patientHomeLoaded = patientHomeLoaded;

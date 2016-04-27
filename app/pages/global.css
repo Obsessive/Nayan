@@ -21,6 +21,11 @@ ActionBar{
     font-family: "FontAwesome";
 }
 
+.orange{
+    color:#f58634;
+
+}
+
 .samar{
     font-family: "Samarkan";
 }
@@ -333,4 +338,189 @@ color:#0091EA;
 #messageScroll{
     background-color: #e3f2fd;
 
+}
+
+/*Page{
+  background-color: #ffffff;
+}
+
+ActionBar{
+    color:#ffffff;
+    background-color:#00796B;
+    horizontal-align: center;
+}*/
+
+.buttonnormal {
+    margin: 10;
+    border-radius: 3;
+}
+
+.order_item{
+  margin-left: 2;
+  vertical-align: center;
+}
+
+.quantitystacklayout{
+  horizontal-align: center;
+}
+
+.padding5{
+  padding: 5;
+}
+
+.menu_item{
+  vertical-align: center;
+  margin: 5;
+  border: 2;
+  border-color: #000000;
+}
+
+.texttitle{
+  horizontal-align: center;
+  font-size: 28;
+}
+
+.line{
+  height: 2;
+  margin-left: 3;
+  margin-right: 3;
+}
+
+.textdescripation{
+  margin-top: 10;
+  font-size: 20;
+  text-align: left;
+}
+
+.alignright{
+  horizontal-align: right;
+}
+
+.alignleft{
+  horizontal-align: left;
+}
+
+.verticalcenter{
+  vertical-align: center;
+}
+
+.transparent{
+  background-color: transparent;
+}
+
+.blackbackground{
+  background-color: #000000;
+}
+
+.whitebackground{
+  background-color: #ffffff;
+}
+
+.margin5{
+  margin: 5;
+}
+
+.margintop5{
+  margin-top: 5;
+}
+
+.marginbottom5{
+  margin-bottom: 5;
+}
+
+.marginleft5{
+  margin-left: 5;
+}
+
+.marginright5{
+  margin-right: 5;
+}
+
+.margin10{
+  margin: 10;
+}
+
+.marginleft10{
+  margin-left: 10;
+}
+
+.marginright10{
+  margin-right: 10;
+}
+
+.margintop10{
+  margin-top: 10;
+}
+
+.marginbottom10{
+  margin-bottom: 10;
+}
+
+.margin15{
+  margin: 15;
+}
+
+.marginright20{
+  margin-right: 20;
+}
+
+.fontsymbol{
+  font-family: FontAwesome;
+}
+
+.border3 {
+    border-radius: 3;
+}
+
+.themebackground{
+  background-color: #00796B;
+}
+
+.themetext{
+  color: #00796B;
+}
+
+.whitetext{
+  color: #ffffff;
+}
+
+.blacktext{
+  color: #000000;
+}
+
+.font28{
+  font-size: 28;
+}
+
+.font26{
+  font-size: 26;
+}
+
+.font24{
+  font-size: 24;
+}
+
+.font20{
+  font-size: 20;
+}
+
+.font18{
+  font-size: 18;
+}
+
+.transparent{
+  background-color: transparent;
+}
+
+.listbutton{
+  color: red;
+}
+
+.position{
+  horizontal-align: center;
+  vertical-align: center;
+}
+
+.textcenter{
+  text-align: center;
 }

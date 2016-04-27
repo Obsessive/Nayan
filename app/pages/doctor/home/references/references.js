@@ -22,5 +22,5 @@ exports.back = function(args){
   console.log("back");
   var topmost=FrameModule.topmost();
   topmost.goBack();
-}
+};
 exports.referencesLoaded = referencesLoaded;

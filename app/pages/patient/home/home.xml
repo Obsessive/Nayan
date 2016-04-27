@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientHomeLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" unloaded="homeUnloaded" loaded="patientHomeLoaded">
   <!-- <ActionBar title="Nayan"> -->
   <Page.actionBar>
         <Page.actionBar>

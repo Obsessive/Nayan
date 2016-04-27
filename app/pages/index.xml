@@ -1,11 +1,17 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" unloaded="unload" loaded="pageLoaded" >
   <ScrollView>
   <StackLayout class="introbg"> 
-  	<Image src="res://logo" stretch ="aspectFit" style="width:60%" class="intrologo" />
-    <Label text="Welcome" class="title"/>
-    <Button text="&#xf0f0; Doctor" class="introbutton font-awesome" tap="{{ doctorAction }}" />
-    <Button class="introbutton font-awesome" text="&#xf06e; Patient" tap="{{ patientAction }}" />
-    <Label text="{{ message }}" class="message" textWrap="true"/>
+  	<Image src="res://logo2" stretch ="aspectFit" style="width:60%" class="intrologo" />
+    <Label id="welcometext" text="Welcome" class="title font28 margintop10" visibility="{{ languageVisible ? 'collapsed' : 'visible' }}"/>
+    <Label id="selectlanguagetext" text="Select Language" class="title" visibility="{{ languageVisible ? 'visible' : 'collapsed' }}"/>
+    <GridLayout id="languagegrid" visibility="{{ languageVisible ? 'visible' : 'collapsed' }}" rows="*,auto" columns="*,*">
+      <Label row="0" col="0" id="english_id" text="{{ english_action==false? '&#xf096; English' : '&#xf14a; English' }}" class="{{ english_action==false? 'font24 textcenter blacktext margin15 whitebackground font-awesome' : 'font24 textcenter message margin15 whitebackground font-awesome'  }}" />
+      <Label row="0" col="1" id="hindi_id" text="{{ hindi_action==false? '&#xf096; हिंदी' : '&#xf14a; हिंदी' }}" class="{{ hindi_action==false? 'font24 textcenter blacktext margin15 whitebackground font-awesome' : 'font24 textcenter message margin15 whitebackground font-awesome' }}" />
+    </GridLayout>
+    <Button id="doctorbutton" text="{{ hindi_action==false?'&#xf0f0; Doctor':'&#xf0f0;चिकित्सक'}}" class="introbutton font-awesome" tap="{{ doctorAction }}" visibility="{{ languageVisible ? 'visible' : 'collapsed' }}" />
+    <Button id="patientbutton" class="introbutton font-awesome" text="{{ hindi_action==false?'&#xf06e; Patient':'&#xf06e; मरीज'}}" tap="{{ patientAction }}" visibility="{{ languageVisible ? 'visible' : 'collapsed' }}" />
+    
+    <!-- <Label text="{{ message }}" class="message" textWrap="true" visibility="{{ languageVisible ? 'visible' : 'collapsed' }}"/> -->
   </StackLayout>
 </ScrollView>
 </Page>
