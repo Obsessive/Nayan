@@ -15,12 +15,14 @@ var DoctorProductsModel = (function (_super) {
         console.log("doctor Products is now ready.");
         appSettings.setBoolean("boolKey", false);
         current=appSettings.getNumber("current",0);
-        if (current==0) {
+        if (current===0) {
           sample = [{ name:"FBN Eye Drops",product: "~/images/product0.jpg" },{ name:"Lubrex DS",product: "~/images/product2.jpg" },{ name:"Lubrex Uno",product: "~/images/product3.jpg" },{ name:"Lopres 0.5 Eye Drops",product: "~/images/product4.jpg" },{ name:"Lubrex Eye Drops",product: "~/images/product5.jpg" }];
         }else if (current==1) {
           sample = [{ name:"Lutivit Capsules",product: "~/images/product6.jpg" },{ name:"Misopt Eye Drops",product: "~/images/product7.jpg" },{ name:"Moistane Eye Drops",product: "~/images/product8.jpg" },{ name:"Monosopt Eye Drops",product: "~/images/product9.jpg" },{ name:"Moxigram-KT Eye Drops",product: "~/images/product10.jpg" }];
         }else if (current==2) {
           sample = [{ name:"Moxigram-LX Eye Drops",product: "~/images/product11.jpg" },{ name:"Oflacin Eye Drops",product: "~/images/product12.jpg" },{ name:"Oflacin-DX Eye Drops",product: "~/images/product13.jpg" },{ name:"Rapidon-OD Eye Drops",product: "~/images/product14.jpg" },{ name:"Travo-Z Eye Drops",product: "~/images/product15.jpg" }];
+        }else if (current==2) {
+          sample = [{ name:"Betabrim Uno Eye Drops",product: "~/images/product115.jpg" },{ name:"Extragat Eye Drops",product: "~/images/product116.jpg" },{ name:"ExtraLube Eye Drops",product: "~/images/product117.jpg" },{ name:"Micronac Eye Drops",product: "~/images/product118.jpg" },{ name:"Vesoret Capsules",product: "~/images/product119.jpg" }];
         }
         self.set("doctorproductlist", sample);
     }
@@ -31,7 +33,7 @@ var DoctorProductsModel = (function (_super) {
     };
     DoctorProductsModel.prototype.next = function () {
       current++;
-       if (current==3) {
+       if (current==4) {
          current=0;
        }
        appSettings.setNumber("current", current);
