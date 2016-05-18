@@ -7,7 +7,7 @@ var exerciseModel = (function (_super) {
     function exerciseModel() {
         _super.call(this);
         console.log(" is now ready.");
-                this.set("patientexlist", [{name: "Eye Opening Story 1" },{name: "Eye Opening Story 2" },{name: "Eye Opening Story 3" },{name: "Eye Opening Story 4" },{name: "How to open eye drop bottle" },{name: "Glaucoma" }]);
+                this.set("patientexlist", [{name: "Eye opening story 1" },{name: "Eye opening story 2" },{name: "Eye opening story 3" },{name: "Eye opening story 4" },{name: "How to open eye drop bottle" },{name: "Glaucoma" }]);
     }
  exerciseModel.prototype.nextAction = function () {
        console.log("nextAction activated");

@@ -15,13 +15,13 @@ var exerciseModel = (function (_super) {
             page.getViewById("open2image1").className = "doctorproducts";
           }
         });
-        page.getViewById("open2image2").on(gestures.GestureTypes.doubleTap, function (args) {
-          if (page.getViewById("open2image2").className == "doctorproducts") {
-            page.getViewById("open2image2").className = "doctorproductszoom";
-          }else {
-            page.getViewById("open2image2").className = "doctorproducts";
-          }
-        });
+        // page.getViewById("open2image2").on(gestures.GestureTypes.doubleTap, function (args) {
+        //   if (page.getViewById("open2image2").className == "doctorproducts") {
+        //     page.getViewById("open2image2").className = "doctorproductszoom";
+        //   }else {
+        //     page.getViewById("open2image2").className = "doctorproducts";
+        //   }
+        // });
         page.getViewById("open2image3").on(gestures.GestureTypes.doubleTap, function (args) {
           if (page.getViewById("open2image3").className == "doctorproducts") {
             page.getViewById("open2image3").className = "doctorproductszoom";

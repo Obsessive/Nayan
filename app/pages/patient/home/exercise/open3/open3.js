@@ -64,20 +64,20 @@ function exerciseLoaded(args) {
             page.getViewById("open3image8").className = "doctorproducts";
           }
         });
-        page.getViewById("open3image9").on(gestures.GestureTypes.doubleTap, function (args) {
-          if (page.getViewById("open3image9").className == "doctorproducts") {
-            page.getViewById("open3image9").className = "doctorproductszoom";
-          }else {
-            page.getViewById("open3image9").className = "doctorproducts";
-          }
-        });
-        page.getViewById("open3image10").on(gestures.GestureTypes.doubleTap, function (args) {
-          if (page.getViewById("open3image10").className == "doctorproducts") {
-            page.getViewById("open3image10").className = "doctorproductszoom";
-          }else {
-            page.getViewById("open3image10").className = "doctorproducts";
-          }
-        });
+        // page.getViewById("open3image9").on(gestures.GestureTypes.doubleTap, function (args) {
+        //   if (page.getViewById("open3image9").className == "doctorproducts") {
+        //     page.getViewById("open3image9").className = "doctorproductszoom";
+        //   }else {
+        //     page.getViewById("open3image9").className = "doctorproducts";
+        //   }
+        // });
+        // page.getViewById("open3image10").on(gestures.GestureTypes.doubleTap, function (args) {
+        //   if (page.getViewById("open3image10").className == "doctorproducts") {
+        //     page.getViewById("open3image10").className = "doctorproductszoom";
+        //   }else {
+        //     page.getViewById("open3image10").className = "doctorproducts";
+        //   }
+        // });
     }
     exerciseModel.prototype.nextAction = function () {
       console.log("nextAction activated");

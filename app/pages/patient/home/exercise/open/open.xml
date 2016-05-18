@@ -27,9 +27,9 @@
   <ScrollView orientation="vertical">
   	<Image id="open1image7" class="doctorproducts"  src="~/images/open/07.png" stretch ="aspectFit" />
   </ScrollView>
-  <ScrollView orientation="vertical">
+<!--   <ScrollView orientation="vertical">
   	<Image id="open1image8" class="doctorproducts"  src="~/images/open/08.png" stretch ="aspectFit" />
-  </ScrollView>
+  </ScrollView> -->
   </StackLayout>
 </ScrollView>
 </Page>

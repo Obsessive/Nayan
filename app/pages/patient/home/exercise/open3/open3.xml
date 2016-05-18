@@ -33,14 +33,14 @@
     <ScrollView orientation="vertical">
   	<Image id="open3image8" class="doctorproducts"  src="~/images/open3/07.png" stretch ="aspectFit" />
     </ScrollView>
-    <ScrollView orientation="vertical">
+    <!-- <ScrollView orientation="vertical">
 
     <Image id="open3image9" class="doctorproducts"  src="~/images/open3/04.png" stretch ="aspectFit" />
     </ScrollView>
     <ScrollView orientation="vertical">
 
     <Image id="open3image10" class="doctorproducts"  src="~/images/open3/01.png" stretch ="aspectFit" />
-</ScrollView>
+</ScrollView> -->
   </StackLayout>
 </ScrollView>
 </Page>

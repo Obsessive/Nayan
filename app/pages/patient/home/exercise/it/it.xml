@@ -13,14 +13,15 @@
   	<Image id="it2" class="doctorproducts"  src="~/images/it/it2.png" stretch ="aspectFit" />
   </ScrollView>
   <ScrollView orientation="vertical">
+    <Image id="it5" class="doctorproducts"  src="~/images/it/it5.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
   	<Image id="it3" class="doctorproducts"  src="~/images/it/it3.png" stretch ="aspectFit" />
   </ScrollView>
   <ScrollView orientation="vertical">
   	<Image id="it4" class="doctorproducts"  src="~/images/it/it4.png" stretch ="aspectFit" />
   </ScrollView>
-  <ScrollView orientation="vertical">
-  	<Image id="it5" class="doctorproducts"  src="~/images/it/it5.png" stretch ="aspectFit" />
-  </ScrollView>
+  
   <ScrollView orientation="vertical">
   	<Image id="it6" class="doctorproducts"  src="~/images/it/it6.png" stretch ="aspectFit" />
   </ScrollView>

@@ -57,13 +57,13 @@ var exerciseModel = (function (_super) {
             page.getViewById("open1image7").className = "doctorproducts";
           }
         });
-        page.getViewById("open1image8").on(gestures.GestureTypes.doubleTap, function (args) {
-          if (page.getViewById("open1image8").className == "doctorproducts") {
-            page.getViewById("open1image8").className = "doctorproductszoom";
-          }else {
-            page.getViewById("open1image8").className = "doctorproducts";
-          }
-        });
+        // page.getViewById("open1image8").on(gestures.GestureTypes.doubleTap, function (args) {
+        //   if (page.getViewById("open1image8").className == "doctorproducts") {
+        //     page.getViewById("open1image8").className = "doctorproductszoom";
+        //   }else {
+        //     page.getViewById("open1image8").className = "doctorproducts";
+        //   }
+        // });
     }
  exerciseModel.prototype.nextAction = function () {
        console.log("nextAction activated");
