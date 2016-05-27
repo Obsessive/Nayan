@@ -13,19 +13,19 @@ var PatientProfileModel = (function (_super) {
         _super.call(this);
         var self=this;
               //Set all labels and other i18n bindings here
-      //getting it from i18n 
+      //getting it from i18n
       //var i18n=require("../i18n");
       //will ensure no internal var conflicts.
       //Not the best solution. -Zee
       //I'm sure. Abhijith will improve this.
-      
+
       new Sqlite("nayan.db", function(err, db) {
        if (err) {
          console.log(err);
        }
-       
+
          console.log("db is now ready.");
-         
+
          try{
          db.get('select * from user', function(err, row) {
           console.log(err);
@@ -49,8 +49,8 @@ var PatientProfileModel = (function (_super) {
        }
 
          // db.resultType(sqlite.RESULTSASOBJECT);
-       
-       
+
+
      });
       // setTimeout(function(){
       //     var promise =new Sqlite("nayan.db", function(err, db) {
@@ -70,8 +70,8 @@ var PatientProfileModel = (function (_super) {
       //       });
       //     });
       // },1000);
-        
-        
+
+
         console.log("patient Profile is now ready.");
     }
     PatientProfileModel.prototype.setlang = function () {
@@ -95,7 +95,7 @@ var PatientProfileModel = (function (_super) {
        topmost.navigate("pages/patient/registration/registration");
     };
     PatientProfileModel.prototype.resetAction = function () {
-      
+
        console.log("Will Reset the profile.. and app.");
        console.log("deleting nayan db...");
        Sqlite.deleteDatabase("nayan.db");
@@ -105,7 +105,11 @@ var PatientProfileModel = (function (_super) {
         console.log("Done. Account reset");
         applicationSettings.setString("type","");
         var topmost=FrameModule.topmost();
-        topmost.navigate("pages/index");
+        var navigationEntry = {
+         moduleName: "pages/index",
+         clearHistory: true
+       };
+        topmost.navigate(navigationEntry);
       }
     };
 
@@ -126,7 +130,7 @@ var PatientProfileModel = (function (_super) {
        var topmost=FrameModule.topmost();
         topmost.navigate("pages/patient/home/home");
     };
-   
+
     return PatientProfileModel;
 })(observable.Observable);
 page.bindingContext = new PatientProfileModel();

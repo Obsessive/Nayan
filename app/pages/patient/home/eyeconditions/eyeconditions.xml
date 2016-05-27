@@ -1,14 +1,14 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientEyeConditionsLoaded">
 <ScrollView>
 
- 	<ListView id="patientEyeConditionslist" items="{{ patientEyeConditionslist }}" itemTap="patientEyeConditionslistitemTap">
+ 	<ListView class="margintop5" id="patientEyeConditionslist" separatorColor="#ffffff" items="{{ patientEyeConditionslist }}" itemTap="patientEyeConditionslistitemTap">
 		<ListView.itemTemplate>
-		<StackLayout>
-          <Label class="patientEyeConditionslabel" text="{{ name }}" />
+		<StackLayout >
+          <Label class="patienthomecard" text="{{ name }}" />
           <!-- <Button class="patientEyeConditionslabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
         </StackLayout>
 				<!-- <Label class="patientEyeConditionslabel" text="{{ name }}"  /> -->
-			
+
 	</ListView.itemTemplate>
 </ListView>
 <!-- <Button class="patientEyeConditionslist" text="My Profile" tap="{{ doctorProfileAction }}" />

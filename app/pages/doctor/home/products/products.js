@@ -2,8 +2,9 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var ObservableArray = require('data/observable-array');
 var appSettings = require("application-settings");
+var utilities = require("utils/utils");
 var page;
-var current;
+var current=0;
 var sample;
 function doctorProductsLoaded(args) {
 page = args.object;
@@ -13,19 +14,59 @@ var DoctorProductsModel = (function (_super) {
         _super.call(this);
         self=this;
         console.log("doctor Products is now ready.");
-        appSettings.setBoolean("boolKey", false);
-        current=appSettings.getNumber("current",0);
-        if (current===0) {
-          sample = [{ name:"FBN Eye Drops",product: "~/images/product0.jpg" },{ name:"Lubrex DS",product: "~/images/product2.jpg" },{ name:"Lubrex Uno",product: "~/images/product3.jpg" },{ name:"Lopres 0.5 Eye Drops",product: "~/images/product4.jpg" },{ name:"Lubrex Eye Drops",product: "~/images/product5.jpg" }];
-        }else if (current==1) {
-          sample = [{ name:"Lutivit Capsules",product: "~/images/product6.jpg" },{ name:"Misopt Eye Drops",product: "~/images/product7.jpg" },{ name:"Moistane Eye Drops",product: "~/images/product8.jpg" },{ name:"Monosopt Eye Drops",product: "~/images/product9.jpg" },{ name:"Moxigram-KT Eye Drops",product: "~/images/product10.jpg" }];
-        }else if (current==2) {
-          sample = [{ name:"Moxigram-LX Eye Drops",product: "~/images/product11.jpg" },{ name:"Oflacin Eye Drops",product: "~/images/product12.jpg" },{ name:"Oflacin-DX Eye Drops",product: "~/images/product13.jpg" },{ name:"Rapidon-OD Eye Drops",product: "~/images/product14.jpg" },{ name:"Travo-Z Eye Drops",product: "~/images/product15.jpg" }];
-        }else if (current==2) {
-          sample = [{ name:"Betabrim Uno Eye Drops",product: "~/images/product115.jpg" },{ name:"Extragat Eye Drops",product: "~/images/product116.jpg" },{ name:"ExtraLube Eye Drops",product: "~/images/product117.jpg" },{ name:"Micronac Eye Drops",product: "~/images/product118.jpg" },{ name:"Vesoret Capsules",product: "~/images/product119.jpg" }];
-        }
-        self.set("doctorproductlist", sample);
+        self.setcontent();
     }
+
+    DoctorProductsModel.prototype.setcontent = function () {
+      console.log("setcontent is activated");
+      utilities.GC();
+      if (current===0) {
+        page.getViewById("image_1").src="~/images/product0.jpg";
+        page.getViewById("title_1").text="FBN Eye Drops";
+        page.getViewById("image_2").src="~/images/product2.jpg";
+        page.getViewById("title_2").text="Lubrex DS";
+        page.getViewById("image_3").src="~/images/product3.jpg";
+        page.getViewById("title_3").text="Lubrex Uno";
+        page.getViewById("image_4").src="~/images/product4.jpg";
+        page.getViewById("title_4").text="Lopres 0.5 Eye Drops";
+        page.getViewById("image_5").src="~/images/product5.jpg";
+        page.getViewById("title_5").text="Lubrex Eye Drops";
+      }else if (current==1) {
+        page.getViewById("image_1").src="~/images/product6.jpg";
+        page.getViewById("title_1").text="Lutivit Capsules";
+        page.getViewById("image_2").src="~/images/product7.jpg";
+        page.getViewById("title_2").text="Misopt Eye Drops";
+        page.getViewById("image_3").src="~/images/product8.jpg";
+        page.getViewById("title_3").text="Moistane Eye Drops";
+        page.getViewById("image_4").src="~/images/product9.jpg";
+        page.getViewById("title_4").text="Monosopt Eye Drops";
+        page.getViewById("image_5").src="~/images/product10.jpg";
+        page.getViewById("title_5").text="Moxigram-KT Eye Drops";
+      }else if (current==2) {
+        page.getViewById("image_1").src="~/images/product11.jpg";
+        page.getViewById("title_1").text="Moxigram-LX Eye Drops";
+        page.getViewById("image_2").src="~/images/product12.jpg";
+        page.getViewById("title_2").text="Oflacin Eye Drops";
+        page.getViewById("image_3").src="~/images/product13.jpg";
+        page.getViewById("title_3").text="Oflacin-DX Eye Drops";
+        page.getViewById("image_4").src="~/images/product14.jpg";
+        page.getViewById("title_4").text="Rapidon-OD Eye Drops";
+        page.getViewById("image_5").src="~/images/product15.jpg";
+        page.getViewById("title_5").text="Travo-Z Eye Drops";
+      }else if (current==3) {
+        page.getViewById("image_1").src="~/images/product115.png";
+        page.getViewById("title_1").text="Betabrim Uno Eye Drops";
+        page.getViewById("image_2").src="~/images/product116.png";
+        page.getViewById("title_2").text="Extragat Eye Drops";
+        page.getViewById("image_3").src="~/images/product117.png";
+        page.getViewById("title_3").text="ExtraLube Eye Drops";
+        page.getViewById("image_4").src="~/images/product118.png";
+        page.getViewById("title_4").text="Micronac Eye Drops";
+        page.getViewById("image_5").src="~/images/product119.png";
+        page.getViewById("title_5").text="Vesoret Capsules";
+      }
+    };
+
     DoctorProductsModel.prototype.registerAction = function () {
        console.log("Registration button clicked.");
        var topmost=FrameModule.topmost();
@@ -36,10 +77,7 @@ var DoctorProductsModel = (function (_super) {
        if (current==4) {
          current=0;
        }
-       appSettings.setNumber("current", current);
-       appSettings.setBoolean("boolKey", true);
-       var topmost=FrameModule.topmost();
-       topmost.goBack();
+       self.setcontent();
     };
 
     DoctorProductsModel.prototype.back = function(args){
@@ -51,12 +89,9 @@ var DoctorProductsModel = (function (_super) {
     DoctorProductsModel.prototype.prev = function () {
       current--;
        if (current==-1) {
-         current=2;
+         current=3;
        }
-       appSettings.setNumber("current", current);
-       appSettings.setBoolean("boolKey", true);
-       var topmost=FrameModule.topmost();
-       topmost.goBack();
+       self.setcontent();
     };
 
     return DoctorProductsModel;

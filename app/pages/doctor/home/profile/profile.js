@@ -26,7 +26,7 @@ var DoctorProfileModel = (function (_super) {
               referral.text=row[2]+"-"+id;
             });
           });
-        
+
         console.log("doctor Profile is now ready.");
     }
     DoctorProfileModel.prototype.registerAction = function () {
@@ -46,13 +46,13 @@ var DoctorProfileModel = (function (_super) {
               hospital = viewModule.getViewById(page, "doctorprofilehospital");
               db.execSQL("UPDATE user SET firstname=?,lastname=?,email=?,number=?,code=?,hospital=?", [firstname.text,lastname.text,email.text,phone.text,code.text,hospital.text], function(err, id) {
                console.log("updated");
-              }); 
-          }); 
+              });
+          });
        var topmost=FrameModule.topmost();
        topmost.navigate("pages/doctor/home/home");
     };
 
-    DoctorProfileModel.prototype.resetAction = function () { 
+    DoctorProfileModel.prototype.resetAction = function () {
        console.log("Will Reset the profile.. and app.");
        console.log("deleting nayan db...");
        Sqlite.deleteDatabase("nayan.db");
@@ -60,10 +60,14 @@ var DoctorProfileModel = (function (_super) {
        if (!Sqlite.exists("nayan.db")) {
         console.log("Done. Account reset");
         var topmost=FrameModule.topmost();
-        topmost.navigate("pages/index");
-      }  
+        var navigationEntry = {
+         moduleName: "pages/index",
+         clearHistory: true
+       };
+        topmost.navigate(navigationEntry);
+      }
     };
-   
+
     return DoctorProfileModel;
 })(observable.Observable);
 page.bindingContext = new DoctorProfileModel();
