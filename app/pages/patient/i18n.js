@@ -10,7 +10,7 @@ var english={
 	numberPlaceHolder:"Please enter your phone number",
 	Email:"Email",
 	EmailPlaceHolder:"Please enter your email address",
-	Referral:"Referreal",
+	Referral:"Referral",
 	ReferralPlaceHolder:"Please enter your referral code",
 	Register:"Register",
 	TermsAndConditions:"I Agree to the terms and conditions",
