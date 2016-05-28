@@ -37,9 +37,9 @@ var english={
 	MacularDegenerationQ1:"What is age – related macular degeneration?",
 	MacularDegenerationA1:"It is a common medical condition that results in loss of central vision because of damage to the macula, or central part of the retina. Age-related macular degeneration (AMD) is a major cause of blindness in those over 50 years old. The condition can make it difficult to read or recognise faces, although enough peripheral vision (vision outside the central area of your gaze) remains to allow you to continue with other daily activities. However, driving and reading is affected.",
 	MacularDegenerationQ2:"How do I know if I have Age-Related Macular Degeneration?",
-	MacularDegenerationA2:"You may have one or some of these symptoms: \n &#8226,Gradual or rapid on set of blurred vision, especially in the central visionShadows or missing areas of vision \n &#8226,Distorted vision, e.g., a grid of straight lines appears wavy and parts of the grid may appear blank \n &#8226,Problems in deciding colours, specifically dark colours from other dark colours and light colours from other light colours",
+	MacularDegenerationA2:"You may have one or some of these symptoms: \n \u2022 Gradual or rapid on set of blurred vision, especially in the central visionShadows or missing areas of vision \n \u2022 Distorted vision, e.g., a grid of straight lines appears wavy and parts of the grid may appear blank \n \u2022 Problems in deciding colours, specifically dark colours from other dark colours and light colours from other light colours",
 	MacularDegenerationQ3:"What puts me at risk of Age-Related Macular Degeneration?",
-	MacularDegenerationA3:"Your risk increases with: \n  &#8226,Age: People aged 60 and above suffer from the condition \n &#8226,A positive family history \n &#8226,Gender: Women are more likely to develop AMD \n &#8226,Smoking \n &#8226,Obesity \n &#8226,Cardiovascular diseases",
+	MacularDegenerationA3:"Your risk increases with: \n  \u2022 Age: People aged 60 and above suffer from the condition \n \u2022 A positive family history \n \u2022 Gender: Women are more likely to develop AMD \n \u2022 Smoking \n \u2022 Obesity \n \u2022 Cardiovascular diseases",
 	MacularDegenerationQ4:"What kinds of treatments are available for Age-Related Macular Degeneration?",
 	MacularDegenerationA4:"Your eye doctor will be able to advise you on the best course of treatment for your AMD.",
 	//dry eyes
@@ -167,7 +167,7 @@ var hindi={
 	MacularDegenerationQ1:"आयु सम्बंधित मेकुलर डीजनरेशन क्या है?",
 	MacularDegenerationA1:"यह एक आम रोग-स्थिति है जिसमें मेकुला पीत-ब्̧बदु, जो दृष्टि-पटल रेटिना का केंद्रीय भाग होता है, को नुकसान पहुंचने के कारण केंद्रीय दृष्टि की हानि होती है। आयु-संबंधी मेकुलर डीजनरेशन ए. एम.डी. वर्ष से अधिक आयु के लोगों में अंधता का एक प्रमुख कारण है। इस रोग-स्थिति में पढ़ना या चेहरे पहचानना कठिन हो जाता है, हालांकि परिधीय दृष्टि आपके दृष्टि क्षेत्र में केंद्रीय भाग से बाहर की दृष्टि बनी रहती है जिससे आप अपनी अन्य दैनिक गतिविधियां जारी रख पाते हैं। हालांकि वाहन चालन और पढ़ने की क्रिया पर असर पड़ता है।",
 	MacularDegenerationQ2:"मुझे कैसे पता चलेगा कि मुझे आयु-संबंधी मेकुलर डीजनरेशन है या नहम्̀?",
-	MacularDegenerationA2:"आपमें इनमें से एक या कुछ लक्षण हो सकते हैंः \nम̂ दृष्टि के धुंधलाने की धीमी या तेज़ शुरुआत, विशेषकर केंद्रीय दृष्टि की म̂ दृष्टि क्षेत्र में परछाइयां या काले धब्बे म̂ विकृत दृष्टि, उदाहरण के लिए, सीधी रेखाओं वाली जाली का लहरदार दिखना और जाली के कुछ भाग खाली दिख सकते हैं म̂ रंगों की निश्चित रूप से पहचान करने में समस्या, विशेषकर गहरे रंगों को अन्य गहरे रंगों से तथा हलके रंगों को अन्य हलके रंगों से अलग न बता पाना",
+	MacularDegenerationA2:"आपमें इनमें से एक या कुछ लक्षण हो सकते हैंः \n \u2022 म̂ दृष्टि के धुंधलाने की धीमी या तेज़ शुरुआत \n \u2022 विशेषकर केंद्रीय दृष्टि की म̂ दृष्टि क्षेत्र में परछाइयां या काले धब्बे म̂ विकृत दृष्टि \n \u2022 उदाहरण के लिए, सीधी रेखाओं वाली जाली का लहरदार दिखना और जाली के कुछ भाग खाली दिख सकते हैं म̂ रंगों की निश्चित रूप से पहचान करने में समस्या \n \u2022 विशेषकर गहरे रंगों को अन्य गहरे रंगों से तथा हलके रंगों को अन्य हलके रंगों से अलग न बता पाना",
 	MacularDegenerationQ3:"मुझमें आयु-संबंधी मेकुलर डीजनरेशन का जोखिम किन कारणों से बढ़ सकता है",
 	MacularDegenerationA3:"आपका जोखिम निम्नांकित के साथ बढ़ता हैः म̂ आयुः 60 वर्ष एवं इससे अधिक आयु के लोग इस रोग-स्थिति से पीडि़त होते हैं म̂ परिवार में इस रोग का इतिहास म̂ ब्̧लगः महिलाओं में ए.एम.डी. विकसित होने की संभावना अधिक होती है म̂ धूम्रपान म̂ मोटापा म̂ ं̂दयवाहिकीय रोग",
 	MacularDegenerationQ4:"आयु-संबंधी मेकुलर डीजनरेशन के लिए किस प्रकार के उपचार उपलब्ध हैं?",
@@ -188,7 +188,7 @@ var hindi={
 	RedEyesQ2:"मुझे कैसे पता चलेगा कि मेरी आँखों में संक्रमण है?",
 	RedEyesA2:"आपको इनमें से एक या कुछ लक्षणों का अनुभव हो सकता हैः म̂ आँखें लाल होना म̂ आँखों से स्राव (पानी जैसा, म्यूकस, पीव (मवाद)) म̂ आँखों में तकलीफ़ / दर्द म̂ आँखों में सूजन या आँखों के इर्द-गिर्द के ।̊तक में सूजन म̂ लगातार बनी रहने वाली खुजली म̂ दृष्टि धुंधलाना म̂ पलकों का पपड़ाना",
 	RedEyesQ3:"आँखों के संक्रमणों की रोकथाम कैसे की जाए?",
-	RedEyesA3:"आँखों में रोगजनक पदार्थों/जीवों को घुसने से रोकने के लिएः म̂ अपनी आँखें या चेहरा छूने से पहले अपने हाथ धोएं म̂ आँखों के मेकअप की सामग्री को साझा करने से बचें और उसे हर छः माह पर बदल दें म̂ अपने कांटेक्ट लेंसों की अच्छी तरह देखभाल करने की आदत बनाएं और कांटेक्ट लेंस उपकरण, कंटेनर या घोल को कभी-भी साझा न करें म̂ तौलिया, लिनन, तकिये या रूमाल साझा न करें म̂ अपनी आँखों को संदूषित जल के संपर्क में आने से बचाएं", 	
+	RedEyesA3:"आँखों में रोगजनक पदार्थों/जीवों को घुसने से रोकने के लिएः म̂ अपनी आँखें या चेहरा छूने से पहले अपने हाथ धोएं म̂ आँखों के मेकअप की सामग्री को साझा करने से बचें और उसे हर छः माह पर बदल दें म̂ अपने कांटेक्ट लेंसों की अच्छी तरह देखभाल करने की आदत बनाएं और कांटेक्ट लेंस उपकरण, कंटेनर या घोल को कभी-भी साझा न करें म̂ तौलिया, लिनन, तकिये या रूमाल साझा न करें म̂ अपनी आँखों को संदूषित जल के संपर्क में आने से बचाएं",
 	RedEyesQ4:"आँखों के संक्रमणों के लिए किस प्रकार के उपचार उपलब्ध हैं?",
 	RedEyesA4:"￼आपको अपनी आँख के संक्रमण का कारण निश्चित करने के लिए अपने आँखों के डॉक्टर को दिखाना चाहिए और सर्वश्रेष्ठ उपचार के बारे में सलाह लेनी चाहिए। इसके उपचार में आमतौर पर एंटीबायोटिक￼आ।̃ ड्राप्स या मरहम का उपयोग किया जाता है।",
 	//glaucoma
@@ -262,14 +262,6 @@ var hindi={
 	EventHint:" कार्यक्रम / अपॉइंटमेंट के नाम",
 	CreateEvent:"कार्यक्रम / अपॉइंटमेंट बनाए"
 };
-	
+
 	exports.english=english;
 	exports.hindi=hindi;
-
-
-	
-
-
-
-
-

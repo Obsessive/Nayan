@@ -9,17 +9,10 @@ var DoctorHomeModel = (function (_super) {
     __extends(DoctorHomeModel, _super);
     function DoctorHomeModel() {
         _super.call(this);
-        if (appSettings.getBoolean("boolKey", false)) {
-
-         var topmost=FrameModule.topmost();
-
-          topmost.navigate("pages/doctor/home/products/products");
-
-       }
         this.set("doctorhomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/product.png",name: "Products" },{ icon:"~/images/patient.png",name: "My patients" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/gym.png",name: "References" },{ icon:"~/images/reference.png",name: "Others" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
 
         console.log("doctor home is now ready.");
-        pushPlugin.onMessageReceived(function callback(data) {  
+        pushPlugin.onMessageReceived(function callback(data) {
             console.log("push received: "+data );
             var msg=data.trimLeft("inbox:")
               console.log(msg);
@@ -39,12 +32,12 @@ var DoctorHomeModel = (function (_super) {
     //    var topmost=FrameModule.topmost();
     //    topmost.navigate("pages/doctor/registration/registration");
     // };
-   
+
     return DoctorHomeModel;
 })(observable.Observable);
 page.bindingContext = new DoctorHomeModel();
 }
-//For time being.. doing it outside. 
+//For time being.. doing it outside.
 exports.doctorhomelistitemTap = function (args) {
     var index = args.index;
     console.log('Clicked item with index ' + index);
@@ -66,7 +59,7 @@ exports.doctorhomelistitemTap = function (args) {
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/doctor/home/diary/diary");
     }
-    
+
     if(index==4){
       var topmost=FrameModule.topmost();
        topmost.navigate("pages/doctor/home/references/references");

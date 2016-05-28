@@ -227,12 +227,21 @@ TextField{
      font-family: "FontAwesome";
     background-color:#0091EA;
     font-size: 20;
+    margin-top: 5;
+    margin-left: 10;
+    margin-right: 10;
     color:#fff;
-    padding-top:15;
+    padding-left: 10;
+    padding-top:10;
+    vertical-align: center;
     padding-bottom: 10;
-    margin-bottom:10;
+    margin-bottom:5;
     /*height:50;*/
 
+}
+
+.margintop5{
+  margin-top: 5;
 }
 
 .globalcardtest{
@@ -523,4 +532,19 @@ ActionBar{
 
 .textcenter{
   text-align: center;
+}
+
+.customglobalbutton{
+  font-size: 20;
+  font-family: "FontAwesome";
+  horizontal-align: center;
+  background-color: #1E88E5;
+  border-color:#1E88E5;
+  /*margin-bottom:20;*/
+  /*padding:5;*/
+  color:#fff;
+  /*margin: 0 16 28 16;*/
+  border-width:1;
+  border-radius:25;
+  margin: 10;
 }

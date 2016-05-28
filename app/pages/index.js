@@ -29,14 +29,14 @@ var page = args.object;
 var HelloWorldModel = (function (_super) {
     __extends(HelloWorldModel, _super);
     function HelloWorldModel() {
-        
+
         var self = this;
         _super.call(this);
 
         self.set("languageVisible",false);
 
-//Stage 1. Display nayan logo and Welcome. 
-//Stage 2. fade welcome and display select language. 
+//Stage 1. Display nayan logo and Welcome.
+//Stage 2. fade welcome and display select language.
 //Stage 3. keep select language and display buttons .
         setTimeout(function(){
 
@@ -81,30 +81,35 @@ var HelloWorldModel = (function (_super) {
               });
               },1000);
             },1000);
-            
+
         },1500);
 
-        console.log("ready."); 
+        console.log("ready.");
         self.set("message","“नयन” मोबाइल एप");
 
-        
+
 
         //Check if database exist.. and take to appropriate page if required.
         if (Sqlite.exists("nayan.db")) {
-            //Database does exist.. 
+            //Database does exist..
             //check if the user is a doctor or a patient..
         var promise =new Sqlite("nayan.db", function(err, db) {
             db.get('select * from user', function(err, row) {
-              if(row[1]=='doctor'){
-                var topmost=FrameModule.topmost();
-                topmost.navigate("pages/doctor/home/home");
-              }
-              if(row[1]=='patient'){
-                var topmost=FrameModule.topmost();
-                topmost.navigate("pages/patient/home/home");
-              }
-              if(err!==null){
-                alert('Oops! Looks like something went wrong.. Please restart the app!')
+              try {
+                if(row[1]=='doctor'){
+                  var topmost=FrameModule.topmost();
+                  topmost.navigate("pages/doctor/home/home");
+                }
+                if(row[1]=='patient'){
+                  var topmost=FrameModule.topmost();
+                  topmost.navigate("pages/patient/home/home");
+                }
+                if(err!==null){
+                  alert('Oops! Looks like something went wrong.. Please restart the app!');
+                }
+              } catch (e) {
+                self.setui();
+                console.log("i am right");
               }
             });
         });
@@ -187,7 +192,7 @@ var HelloWorldModel = (function (_super) {
       console.log(e);
     }
 
-      
+
     };
 
 
@@ -202,7 +207,7 @@ var HelloWorldModel = (function (_super) {
        var topmost=FrameModule.topmost();
        topmost.navigate("pages/doctor/registration/registration");
     };
-    
+
     HelloWorldModel.prototype.patientAction = function () {
     	 console.log("he/she is a patient");
        page.getViewById("languagegrid").off("tap", function (args) {
@@ -215,7 +220,7 @@ var HelloWorldModel = (function (_super) {
 })(observable.Observable);
 page.bindingContext = new HelloWorldModel();
 }
-unload=function(){ 
+unload=function(){
   page.getViewById("languagegrid").off("tap", function (args) {
        });
 };
