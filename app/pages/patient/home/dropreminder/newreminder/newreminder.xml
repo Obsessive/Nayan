@@ -23,7 +23,7 @@
     <SegmentedBar.items >
       <SegmentedBarItem title="{{LeftEye}}" />
       <SegmentedBarItem title="{{RightEye}}" />
-      <SegmentedBarItem title="{{BothEyes}}" />
+      <SegmentedBarItem title="{{BothEye}}" />
     </SegmentedBar.items>
   </SegmentedBar>
 
