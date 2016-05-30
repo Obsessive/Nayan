@@ -5,6 +5,8 @@
     /*background-color:#1E88E5;*/
 }
 ActionBar{
+    padding: 10;
+    font-size: 26;
     color:#ffffff;
     background-color:#ef6c00;
 }
@@ -266,9 +268,8 @@ TextField{
     background-color:#fff;
     font-size: 20;
     color:#2962ff;
-    padding-top:15;
-    padding-bottom: 10;
-    margin-bottom:10;
+    padding-left: 10;
+    vertical-align: center;
     /*height:50;*/
 }
 

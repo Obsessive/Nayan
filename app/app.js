@@ -14,7 +14,7 @@ application.on(application.launchEvent, function (args) {
             console.dir(args.android.stackTrace);
             console.log("Obsessive: " + args.android);
             args.android.stackTrace="Contact the folks who caused this.  - Obsessive Inc. +91 7676550018";
-            
+
             //useless
             frameModule.topmost().navigate("pages/custom");
         } else if (args.ios) {
@@ -30,13 +30,13 @@ application.on(application.launchEvent, function (args) {
         // hook the onActivityCreated callback upon application launching
             application.android.onActivityCreated = function(activity) {
             // apply the default theme once the Activity is created
-            var id = activity.getResources().getIdentifier("AppTheme", "style", activity.getPackageName());
-            // activity.setTheme(id);
+            var id = activity.getResources().getIdentifier("Theme.AppCompat.Light", "style", activity.getPackageName());
+            activity.setTheme(id);
             };
         };
-    
+
     }
-     
+
 	var type=applicationSettings.getString("type");
     if (type=="doctor") {
     	application.mainModule = "pages/doctor/home/home";
@@ -54,5 +54,3 @@ application.start();
 }catch(e){
 	console.log(e);
 }
-
-
