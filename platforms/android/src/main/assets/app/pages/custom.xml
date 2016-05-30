@@ -1,7 +1,0 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" >
-  <ScrollView>
-  <StackLayout class="introbg"> 
-  	<Label text="Oops. Something seems to have gone wrong. Contact the folks who caused this.  - Obsessive Inc. +91 7676550018"/>
-  </StackLayout>
-</ScrollView>
-</Page>
