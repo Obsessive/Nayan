@@ -1,0 +1,13 @@
+<Page loaded="othersLoaded">
+	<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
+<ScrollView>
+  <StackLayout>
+  	<Button style="margin-top:50" text="&#xf00c; Rate our app" class="globalbutton" />
+  	<Button text="&#xf00c; Feedback" class="globalbutton" />
+  </StackLayout>
+</ScrollView>
+</Page>

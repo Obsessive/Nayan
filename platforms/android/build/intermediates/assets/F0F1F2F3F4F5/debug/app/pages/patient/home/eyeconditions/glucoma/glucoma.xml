@@ -1,0 +1,50 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="patientDiaryLoaded">
+    <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
+ <ScrollView>
+ <StackLayout>
+ 	<TextView editable="false" text="{{ Glaucoma }}" id="patientconditionspage"/>
+  <Image src="~/images/glaucoma-vision.jpg" stretch ="aspectFit" />
+ 	<TextView editable="false" text="{{ GlaucomaQ1 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA1}}"/>
+    <Image class="doctorproducts" style="width:200" src="~/images/glucoma1.png" stretch ="aspectFit" />
+    <TextView editable="false" style="width:200;text-align:center" text="{{ Glaucomapic1 }}" />
+    <Image class="doctorproducts" style="width:200" src="~/images/glucoma2.png" stretch ="aspectFit" />
+    <TextView editable="false" style="width:200;text-align:center" text="{{Glaucomapic2}}" />
+    <TextView editable="false" text="{{ GlaucomaQ2 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA2 }}"/>
+    <Image class="doctorproducts" style="width:200" src="~/images/glucoma3.png" stretch ="aspectFit" />
+    <TextView editable="false" text="{{ GlaucomaQ3 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA3}}"/>
+    <TextView editable="false" text="{{ GlaucomaQ4 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA4 }}"/>
+<TextView editable="false" text="{{ GlaucomaQ5 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA5 }}"/>
+
+    <TextView editable="false" text=" {{ GlaucomaQ6 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA6 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ7 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA7 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ8 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA8 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ9 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA9 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ10 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA10 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ11 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA11 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ12 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA12 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ13 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA13 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ14 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA14 }}"/>
+    <TextView editable="false" text="{{ GlaucomaQ15 }}"  class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ GlaucomaA15 }}"/>
+
+ </StackLayout>
+</ScrollView>
+</Page>

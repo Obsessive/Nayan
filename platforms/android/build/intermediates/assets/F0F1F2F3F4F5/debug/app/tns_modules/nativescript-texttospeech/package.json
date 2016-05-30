@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      "nativescript-texttospeech@1.1.1",
+      "D:\\projects\\Nayan"
+    ]
+  ],
+  "_from": "nativescript-texttospeech@1.1.1",
+  "_id": "nativescript-texttospeech@1.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/nativescript-texttospeech",
+  "_nodeVersion": "0.12.4",
+  "_npmUser": {
+    "email": "anarchicknight@gmail.com",
+    "name": "anarchicknight"
+  },
+  "_npmVersion": "2.10.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "nativescript-texttospeech",
+    "raw": "nativescript-texttospeech@1.1.1",
+    "rawSpec": "1.1.1",
+    "scope": null,
+    "spec": "1.1.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-texttospeech/-/nativescript-texttospeech-1.1.1.tgz",
+  "_shasum": "d593fc7a2bcafa008d35692464d45a3cafc14252",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-texttospeech@1.1.1",
+  "_where": "D:\\projects\\Nayan",
+  "author": {
+    "email": "anarchicknight@gmail.com",
+    "name": "Anarchic Knight",
+    "url": "http://www.anarchicknight.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/anarchicknight/nativescript-texttospeech/issues"
+  },
+  "dependencies": {},
+  "description": "A texttospeech NativeScript plugin for Android and iOS",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "d593fc7a2bcafa008d35692464d45a3cafc14252",
+    "tarball": "http://registry.npmjs.org/nativescript-texttospeech/-/nativescript-texttospeech-1.1.1.tgz"
+  },
+  "gitHead": "825988af1f113e5ea1fc5da923e0bf5cd4d6990b",
+  "homepage": "https://github.com/anarchicknight/nativescript-texttospeech",
+  "keywords": [
+    "NativeScript"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/anarchicknight/nativescript-texttospeech/blob/master/LICENSE"
+  },
+  "main": "texttospeech.js",
+  "maintainers": [
+    {
+      "email": "anarchicknight@gmail.com",
+      "name": "anarchicknight"
+    }
+  ],
+  "name": "nativescript-texttospeech",
+  "nativescript": {
+    "platforms": {
+      "android": "1.1.0",
+      "ios": "1.1.2"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anarchicknight/nativescript-texttospeech.git"
+  },
+  "scripts": {},
+  "version": "1.1.1"
+}

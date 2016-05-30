@@ -1,0 +1,33 @@
+<Page loaded="exerciseLoaded">
+  <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
+<ScrollView orientation="horizontal">
+  <StackLayout orientation="horizontal">
+    <ScrollView orientation="vertical">
+  	<Image id="it1" class="doctorproducts"  src="~/images/it/it1.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="it2" class="doctorproducts"  src="~/images/it/it2.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+    <Image id="it5" class="doctorproducts"  src="~/images/it/it5.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="it3" class="doctorproducts"  src="~/images/it/it3.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="it4" class="doctorproducts"  src="~/images/it/it4.png" stretch ="aspectFit" />
+  </ScrollView>
+  
+  <ScrollView orientation="vertical">
+  	<Image id="it6" class="doctorproducts"  src="~/images/it/it6.png" stretch ="aspectFit" />
+  </ScrollView>
+  <ScrollView orientation="vertical">
+  	<Image id="it7" class="doctorproducts"  src="~/images/it/it7.png" stretch ="aspectFit" />
+  </ScrollView>
+  </StackLayout>
+</ScrollView>
+</Page>

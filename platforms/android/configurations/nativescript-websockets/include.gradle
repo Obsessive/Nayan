@@ -1,0 +1,7 @@
+android {
+          productFlavors {
+            "F4" {
+              dimension "nativescriptwebsockets"
+            }
+          }
+        }

@@ -1,0 +1,36 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorProfileLoaded">
+    <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
+ <ScrollView>
+ <StackLayout>
+ 	<Label text="My Profile" id="doctorprofilepage"/>
+
+    <Label text="Refferal Code" />
+    <TextField editable="false" text="" id="doctorprofilereferral" />
+
+ 	<Label text="First Name" />
+    <TextField text="" id="doctorprofilefirstname" hint="please enter your name" />
+
+    <Label text="Last Name" />
+    <TextField text="" id="doctorprofilelastname" hint="please enter your name" />
+
+    <Label text="Number" />
+    <TextField text="" id="doctorprofilephone" hint="please enter your phone number" />
+
+    <Label text="Email" />
+    <TextField text="" id="doctorprofileemail" hint="please enter your email id" />
+
+    <Label text="MCN" />
+    <TextField text="" id="doctorprofilemcn" hint="please enter your MCN" />
+
+    <Label text="Hospital" />
+    <TextField text="" id="doctorprofilehospital" hint="please enter your practicing hospital" />
+
+    <Button text="Save" class="introbutton" tap="{{ saveAction }}" />
+    <Button text="Reset Profile" class="introbutton" tap="{{ resetAction }}" />
+ </StackLayout>
+</ScrollView>
+</Page>

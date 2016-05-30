@@ -1,0 +1,31 @@
+<Page loaded="doctorProductsLoaded">
+	<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{ back }}"/>
+            </ActionBar>
+        </Page.actionBar>
+ 	<StackLayout>
+		<GridLayout rows="*,auto" columns="*">
+		<StackLayout row="0" col="0">
+			<ScrollView>
+				<StackLayout>
+					<Image stretch="aspectFit" class="margin10 position" id="image_1"/>
+					<Label textWrap="true" id="title_1" class="font24 position"/>
+					<Image stretch="aspectFit" class="margin10 position" id="image_2"/>
+					<Label textWrap="true" id="title_2" class="font24 position"/>
+					<Image stretch="aspectFit" class="margin10 position" id="image_3"/>
+					<Label textWrap="true" id="title_3" class="font24 position"/>
+					<Image stretch="aspectFit" class="margin10 position" id="image_4"/>
+					<Label textWrap="true" id="title_4" class="font24 position"/>
+					<Image stretch="aspectFit" class="margin10 position" id="image_5"/>
+					<Label textWrap="true" id="title_5" class="font24 position"/>
+				</StackLayout>
+			</ScrollView>
+		</StackLayout>
+	<GridLayout row="1" col="0" rows="auto" columns="10,*,10,*,10" >
+		<Button col="3" row="0" text="NEXT" class="customglobalbutton" tap="{{ next }}"/>
+		<Button col="1" row="0" text="PREVIOUS" class="customglobalbutton" tap="{{ prev }}"/>
+			</GridLayout>
+			</GridLayout>
+	</StackLayout>
+</Page>

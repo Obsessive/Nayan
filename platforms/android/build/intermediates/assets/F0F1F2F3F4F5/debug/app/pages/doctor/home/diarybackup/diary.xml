@@ -1,0 +1,12 @@
+<Page loaded="pageLoaded">
+<!--  <StackLayout orientation="vertical">
+   <TextView class="diaryentry" hint="Type your entry.." />
+   <Button text="Done"/>
+ </StackLayout> -->
+
+ <GridLayout columns="*" rows="*,auto" >
+ 	<TextView col="0" row="0"  hint="Type your entry.." />
+   <Button col="0" row="1" text="Done"/>
+ 
+</GridLayout>
+</Page>

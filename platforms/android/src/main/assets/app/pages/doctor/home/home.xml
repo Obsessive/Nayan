@@ -1,0 +1,35 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="doctorHomeLoaded">
+	  <Page.actionBar>
+        <Page.actionBar>
+            <ActionBar>
+                <ActionBar.text>
+                    <Label text="Nayan- The Eye Drop Reminder" style="color:#fff"/>
+                </ActionBar.text>
+            </ActionBar>
+        </Page.actionBar>
+    </Page.actionBar>
+<ScrollView>
+
+ 	<ListView id="doctorhomelist" items="{{ doctorhomelist }}" itemTap="doctorhomelistitemTap">
+		<ListView.itemTemplate>
+		<GridLayout rows="60" columns="50,*" marginBottom="20" style="border-radius=5" >
+			<Image  col="0" row="0" src="{{ icon }}" stretch ="aspectFit" class="icon" />
+			<!-- <TextView editable="false" text="Home " id="patientconditionspage"/> -->
+          <Label  col="1" row="0" class="globalcardtest" text="{{ name }}" />
+          <!-- <Button class="patienthomelabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
+        </GridLayout>
+				<!-- <Label class="doctorhomelabel" text="{{ name }}"  /> -->
+			
+	</ListView.itemTemplate>
+</ListView>
+<!-- <Button class="doctorhomelist" text="My Profile" tap="{{ doctorProfileAction }}" />
+<Button class="doctorhomelist" text="Products" tap="{{ doctorProductAction }}" />
+<Button class="doctorhomelist" text="My Patients" tap="{{ doctorPatientAction }}" />
+<Button class="doctorhomelist" text="Medical Diary" tap="{{ doctordiaryAction }}" />
+<Button class="doctorhomelist" text="My Inbox" tap="{{ doctorinboxAction }}" />
+<Button class="doctorhomelist" text="References" tap="{{ doctorreferencesAction }}" />
+<Button class="doctorhomelist" text="Others" tap="{{ doctorothersrAction }}" />
+<Button class="doctorhomelist" text="Contact Us" tap="{{ doctorcontactusAction }}" /> -->
+
+</ScrollView>
+</Page>

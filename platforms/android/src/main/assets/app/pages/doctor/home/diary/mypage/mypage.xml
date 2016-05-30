@@ -1,0 +1,13 @@
+<Page loaded="patientDiaryMyPageLoaded">
+	    <Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
+
+	<GridLayout rows="*,auto" columns="*,*">
+		<TextView row="0" col="0" colspan="2" id="diarymypagetextview" text="{{ diarymypagetext }}"/>
+    <Button row="1" col="1" text="&#xf014; Delete" tap="{{ mypagedeleteAction }}" class="globalbutton btnred"/>
+		<Button row="1" col="0" text="&#xf0c7; Save" tap="{{ mypagesaveAction }}" class="globalbutton btnblue"/>
+	</GridLayout>
+</Page>

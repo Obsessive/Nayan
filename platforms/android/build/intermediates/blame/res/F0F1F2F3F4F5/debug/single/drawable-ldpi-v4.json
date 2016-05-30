@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\splashscreen1.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\splashscreen1.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\icon2.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon2.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\logo2.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\logo2.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\logo.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\logo.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\splashscreen.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\splashscreen.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\icon.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-ldpi-v4\\icon3.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon3.png"
+    }
+]

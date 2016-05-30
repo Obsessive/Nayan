@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="redeyesLoaded">
+ <ScrollView>
+ <StackLayout>
+ 	<TextView editable="false" text="{{ RedEyes }}" id="patientconditionspage"/>
+  <Image src="~/images/allergies.jpg" stretch ="aspectFit" />
+ 	<TextView editable="false" text="{{ RedEyesQ1 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ RedEyesA1 }}"/>
+
+    <TextView editable="false" text="{{ RedEyesQ2 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ RedEyesA2 }}"/>
+
+    <TextView editable="false" text="{{ RedEyesQ3 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ RedEyesA3 }}"/>
+
+    <TextView editable="false" text="{{ RedEyesQ4 }}" class="patientconditionquestion"/>
+    <TextView editable="false" text="{{ RedEyesA4 }}"/>
+
+ </StackLayout>
+</ScrollView>
+</Page>

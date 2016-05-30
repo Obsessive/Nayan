@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/NativeScriptToolbarStyle</item>
+        
+		<item name="colorPrimary">@color/ns_primary</item>
+    	<item name="colorPrimaryDark">@color/ns_primaryDark</item>
+		<item name="colorAccent">@color/ns_accent</item>
+    </style>
+    
+    <style name="SplashTheme" parent="AppBaseTheme">
+    <!-- Disable window features like ActionBar, Title and Overlay. -->
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+    <style name="NativeScriptToolbarStyleBase" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/ns_primary</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
+    </style>
+    
+	<style name="NativeScriptToolbarStyle" parent="NativeScriptToolbarStyleBase">
+    </style>
+</resources> 

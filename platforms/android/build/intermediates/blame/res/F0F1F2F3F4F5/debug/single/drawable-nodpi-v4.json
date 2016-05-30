@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-nodpi-v4\\logo.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-nodpi\\logo.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-nodpi-v4\\splashscreen.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-nodpi\\splashscreen.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-nodpi-v4\\dicon.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-nodpi\\dicon.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-nodpi-v4\\logo2.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-nodpi\\logo2.png"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-nodpi-v4\\icon.png",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\src\\main\\res\\drawable-nodpi\\icon.png"
+    }
+]

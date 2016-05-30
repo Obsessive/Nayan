@@ -1,0 +1,7 @@
+android {
+          productFlavors {
+            "F3" {
+              dimension "nativescripttimedatepicker"
+            }
+          }
+        }

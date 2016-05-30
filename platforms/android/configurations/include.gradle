@@ -1,0 +1,3 @@
+android {
+						flavorDimensions "nativescriptcalendar", "nativescriptlocalnotifications", "nativescriptpushnotifications", "nativescripttimedatepicker", "nativescriptwebsockets", "tnscoremoduleswidgets"
+					}

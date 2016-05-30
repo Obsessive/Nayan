@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="registrationLoaded">
+<ScrollView>
+  <StackLayout>
+    <Label text="First Name" />
+    <TextField id="doctorregistrationfirstname" hint="Please enter your First name" />
+
+    <Label text="Last Name" />
+    <TextField id="doctorregistrationlastname" hint="Please enter your Last name" />
+
+
+    <Label text="Number" />
+    <TextField keyboardType="phone" id="doctorregistrationphone" hint="Please enter your phone number" />
+
+    <Label text="Email" />
+    <TextField id="doctorregistrationemail" hint="Please enter your email id" />
+
+    <Label text="MCN" />
+    <TextField id="doctorregistrationcode" hint="Medical Council number" />
+
+    <Label text="Referral" />
+    <TextField id="doctorregistrationreferral" hint="Referral Code" />
+    <GridLayout rows="40" columns="70,*" marginBottom="20" style="border-radius=5" >
+    <Switch id="termsagreedid" checked="{{ termsagree }}" row="0" col="0" style="horizontal-align:left" />
+    <Label row="0" col="1" tap="{{ showtermsAction }}" text="I Agree to the terms and conditions"/>
+    </GridLayout>
+    <Button text="&#xf00c; Register" class="globalbutton" tap="{{ registerAction }}" />
+  </StackLayout>
+</ScrollView>
+</Page>

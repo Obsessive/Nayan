@@ -1,0 +1,52 @@
+<Page loaded="exerciseLoaded">
+  <TabView class="TabViewclass whitetext" selectedColor="#039be5" tabsBackgroundColor="#ef6c00">
+    <TabView.items>
+      <TabViewItem title="Near Vision Test">
+        <TabViewItem.view>
+          <ScrollView orientation="horizontal">
+            <StackLayout orientation="horizontal">
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-01.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-02.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-03.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-04.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-15.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-16.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-17.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-11.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-12.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-18.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-19.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-20.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/ref/near-vision-25.jpg" stretch ="aspectFit" />
+            </StackLayout>
+          </ScrollView>
+        </TabViewItem.view>
+      </TabViewItem>
+      <TabViewItem title="Conference Calendar">
+        <TabViewItem.view>
+          <ScrollView orientation="horizontal">
+            <StackLayout orientation="horizontal">
+              <Image class="doctorproducts" style="width:400" src="~/images/Calendar.jpg" stretch ="aspectFit" />
+            </StackLayout>
+          </ScrollView>
+        </TabViewItem.view>
+      </TabViewItem>
+      <TabViewItem title="Micro Vision Products">
+        <TabViewItem.view>
+          <ScrollView orientation="horizontal">
+            <StackLayout orientation="horizontal">
+              <Image class="doctorproducts" style="width:400" src="~/images/03.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/04.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/05.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/06.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/07.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/13.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/14.jpg" stretch ="aspectFit" />
+              <Image class="doctorproducts" style="width:400" src="~/images/20.jpg" stretch ="aspectFit" />
+            </StackLayout>
+          </ScrollView>
+        </TabViewItem.view>
+      </TabViewItem>
+    </TabView.items>
+  </TabView>
+</Page>

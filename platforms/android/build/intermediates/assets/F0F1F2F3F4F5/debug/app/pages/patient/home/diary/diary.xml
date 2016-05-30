@@ -1,0 +1,15 @@
+<Page loaded="patientDiaryLoaded">
+	<Page.actionBar>
+            <ActionBar>
+              <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
+            </ActionBar>
+        </Page.actionBar>
+	<GridLayout rows="*,auto" columns="*">
+		<ListView items="{{ subjectlist }}" row="0" col="0" itemTap="patientdiarylistitemTap">
+			<ListView.itemTemplate>
+				<Label id="subjectname"  text="{{ subjectname }}" horizontalAlignment="left" verticalAlignment="center"/>
+			</ListView.itemTemplate>
+		</ListView>
+		<Button class="globalbutton" row="1" col="0" text="&#xf067; New Entry" tap="{{ newentryAction }}"/>
+	</GridLayout>
+</Page>

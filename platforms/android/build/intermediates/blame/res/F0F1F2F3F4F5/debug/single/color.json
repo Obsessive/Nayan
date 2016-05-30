@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\done_text_color.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\nativescript-datetimepicker-release\\res\\color\\done_text_color.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\common_plus_signin_btn_text_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\color\\common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\common_plus_signin_btn_text_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\color\\common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\date_picker_year_selector.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\nativescript-datetimepicker-release\\res\\color\\date_picker_year_selector.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_search_url_text.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\done_text_color_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\nativescript-datetimepicker-release\\res\\color\\done_text_color_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\date_picker_selector.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\nativescript-datetimepicker-release\\res\\color\\date_picker_selector.xml"
+    },
+    {
+        "merged": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\color\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "D:\\projects\\Nayan\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
+    }
+]
