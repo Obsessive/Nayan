@@ -9,10 +9,10 @@ var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var pushPlugin = require("nativescript-push-notifications");
 var applicationSettings = require("application-settings");
- var i18n=require("../i18n");
+var i18n=require("../i18n");
 function registrationLoaded(args) {
 
-  
+
   var page = args.object;
   var langchange=0;
   var debug=0;
@@ -31,7 +31,7 @@ function registrationLoaded(args) {
       _super.call(this);
       // Uncache the package
 
-     
+
       // var s=JSON.stringify({type:type , firstname:firstname , lastname:lastname ,number:phone,email:email,code:code,address:'',hospital:''})
       // console.log(s);
       // if(applicationSettings.getString("language")==="hindi" && langchange===0){
@@ -40,10 +40,10 @@ function registrationLoaded(args) {
       //   var topmost=FrameModule.topmost();
       //   topmost.ReloadPage();
       // }
-      
+
 
       //Set all labels and other i18n bindings here
-      //getting it from i18n 
+      //getting it from i18n
       //var i18n=require("../i18n");
       //will ensure no internal var conflicts.
       //Not the best solution. -Zee
@@ -117,11 +117,11 @@ function registrationLoaded(args) {
         return id;
         }
       }).catch(function(err) {
-            // Error :( 
+            // Error :(
             console.log(err);
             alert("Sorry, Couldn't get you registered.. kindly check your internet connection and the data you entered!");
-          });  
-      
+          });
+
     };
 
     RegistrationModel.prototype.checkconnection=function(){
@@ -143,9 +143,9 @@ function registrationLoaded(args) {
     };
 
     RegistrationModel.prototype.pushnotification=function(){
-            //Testing push notifications. 
+            //Testing push notifications.
         //fetch is analogous to volley, it takes care of http requests-to abhijith
-        //subscribe is our proprietory push server. 
+        //subscribe is our proprietory push server.
 var result='';
         pushPlugin.register({ senderID: '316739204235' }, function (data){
             console.log("message", "" + JSON.stringify(data));
@@ -168,14 +168,14 @@ var result='';
         //     console.log(JSON.stringify(response));
         //     console.log("done with subscribing to push server");
         // }).catch(function(err) {
-        //   // Error :( 
+        //   // Error :(
         //   console.log(err);
-        // });  
+        // });
         }, function(e) {
-          console.log(e); 
+          console.log(e);
         });
 
-        pushPlugin.onMessageReceived(function callback(data) {  
+        pushPlugin.onMessageReceived(function callback(data) {
             alert("message", "" + JSON.stringify(data));
         });
     };
@@ -194,8 +194,8 @@ var result='';
           message: "Please wait!",
           cancelButtonText: "Cancel",
           nativeView: nativeView}
-        ).then(function(r){ 
-          console.log("Result: " + r); 
+        ).then(function(r){
+          console.log("Result: " + r);
         },
         function(e){
           console.log("Error: " + e)
@@ -206,14 +206,14 @@ var result='';
       check=viewModule.getViewById(page,"termsagreedid").checked;
       console.log(check);
       if(!check){
-       
+
         dialog.show({
           title: "Attention...",
           message: "You must read and agree to the terms and conditions!",
           cancelButtonText: "Cancel",
           }
-        ).then(function(r){ 
-          console.log("Result: " + r); 
+        ).then(function(r){
+          console.log("Result: " + r);
         },
         function(e){
           console.log("Error: " + e);

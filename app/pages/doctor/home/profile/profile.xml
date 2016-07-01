@@ -24,7 +24,7 @@
     <TextField text="" id="doctorprofileemail" hint="please enter your email id" />
 
     <Label text="MCN" />
-    <TextField text="" id="doctorprofilemcn" hint="please enter your MCN" />
+    <TextField text="" id="doctorprofilemcn" hint="please enter your MCN" editable="false"/>
 
     <Label text="Hospital" />
     <TextField text="" id="doctorprofilehospital" hint="please enter your practicing hospital" />

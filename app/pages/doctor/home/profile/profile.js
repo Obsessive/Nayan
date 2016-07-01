@@ -20,10 +20,10 @@ var DoctorProfileModel = (function (_super) {
               id=row[0];
               firstname.text=row[2];
               lastname.text=row[3];
-              email.text=row[4];
-              phone.text=row[5];
+              email.text=row[5];
+              phone.text=row[4];
               code.text=row[6];
-              referral.text=row[2]+"-"+id;
+              referral.text=row[9];
             });
           });
 

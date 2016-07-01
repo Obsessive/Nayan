@@ -3,6 +3,7 @@ var observable = require("data/observable");
 var pushPlugin = require("nativescript-push-notifications");
 var dialogs = require("ui/dialogs");
 var appSettings = require("application-settings");
+var Toast = require("nativescript-toast");
 function doctorHomeLoaded(args) {
 var page = args.object;
 var DoctorHomeModel = (function (_super) {
