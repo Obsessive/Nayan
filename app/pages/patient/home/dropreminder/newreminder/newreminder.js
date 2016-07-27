@@ -72,7 +72,7 @@ var dropreminderModel = (function (_super) {
               //     break;
               case 1:
               var promise =new Sqlite("nayan.db", function(err, db) {
-                  db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                  db.execSQL("insert into reminder (medicine,times) values (?,?)", [ev.text,"Twice a day"], function(err, id) {
                     pushid=id;
                   });
                 });
@@ -117,7 +117,7 @@ var dropreminderModel = (function (_super) {
 
                 case 2:
                 var promise =new Sqlite("nayan.db", function(err, db) {
-                  db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                  db.execSQL("insert into reminder (medicine,times) values (?,?)", [ev.text,"Three times a day"], function(err, id) {
                     pushid=id;
                   });
                 });
@@ -176,7 +176,7 @@ var dropreminderModel = (function (_super) {
 
                   case 3:
                       var promise =new Sqlite("nayan.db", function(err, db) {
-                      db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                      db.execSQL("insert into reminder (medicine,times) values (?,?)", [ev.text,"Four times a day"], function(err, id) {
                         pushid=id;
                         console.log("id: "+id);
                       });
@@ -251,10 +251,8 @@ var dropreminderModel = (function (_super) {
                   break;
 
               default:
-              console.log(new Date(year,month,day,hour,minute,9,123));
-              console.log(new Date(new Date().getTime() + (10*1000)));
               var promise =new Sqlite("nayan.db", function(err, db) {
-                  db.execSQL("insert into reminder (medicine) values (?)", [ev.text], function(err, id) {
+                  db.execSQL("insert into reminder (medicine,times) values (?,?)", [ev.text,hour+":"+minute], function(err, id) {
                     pushid=id;
                     console.log(id);
                     console.log(err);

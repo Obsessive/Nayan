@@ -23,7 +23,7 @@ var DoctorProfileModel = (function (_super) {
               email.text=row[5];
               phone.text=row[4];
               code.text=row[6];
-              referral.text=row[9];
+              referral.text=row[2]+"-"+id;
             });
           });
 

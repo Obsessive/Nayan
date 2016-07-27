@@ -187,7 +187,11 @@ function registrationLoaded(args) {
       if (validator.matches(referral.toString(),'[Nn][Aa][Yy][Aa][Nn]-([1-5][0-9][0-9]|[1-9][0-9]|[1-9])','i')) {
         console.log("right");
       }else {
-        Toast.makeText("You must enter a valid referral code!","long").show();
+        if (application.android) {
+          Toast.makeText("You must enter a valid referral code!", "long").show();
+        }else {
+          alert("You must enter a valid referral code!");
+        }
         console.log("wrong");
         return ;
       }

@@ -42,8 +42,8 @@ this.set("calendarlist",calendarlist);
           var promise = db.each('select * from reminder',
             function (err, row) {
               console.dir(row);
-                console.log("Row results:", row[1]);
-                  calendarlist.push({ name: row[1],id:row[0] });
+                console.log("Row results:", row[2]);
+                  calendarlist.push({ name: row[1]+" | "+row[2],id:row[0] });
 
           });
         });
