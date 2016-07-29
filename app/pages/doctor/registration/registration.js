@@ -53,7 +53,8 @@ function registrationLoaded(args) {
           //Replace code to verify the email against inserted value.
           //This is inexpensive.
           db.get('select * from user', function(err, row) {
-            console.log("Row of data was: ", row);  // Prints [["Field1", "Field2",...]]
+            console.log("Row of data was: ", row); // Prints [["Field1", "Field2",...]]
+            self.send_referral_code();
             dialog.close();
             var topmost=FrameModule.topmost();
             topmost.navigate("pages/doctor/home/home");

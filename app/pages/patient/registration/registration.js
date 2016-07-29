@@ -21,6 +21,7 @@ function registrationLoaded(args) {
   // var termsagreed=true;
   var firstname;
   var lastname;
+  var check_code;
   var type='patient';
   var email;
   var code;
@@ -50,16 +51,16 @@ function registrationLoaded(args) {
       //I'm sure. Abhijith will improve this.
       // console.dir(i18n);
       for(var x in i18n){
-         if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
-            for(var y in i18n[x]){
-              this.set(y,i18n[x][y]);
-            }
-         }
-         if(applicationSettings.getString("language")==="english" && x==="english"){
-             for(var y in i18n[x]){
-              this.set(y,i18n[x][y]);
-            }
-         }
+        if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
+          for(var y in i18n[x]){
+            this.set(y,i18n[x][y]);
+          }
+        }
+        if(applicationSettings.getString("language")==="english" && x==="english"){
+          for(var y in i18n[x]){
+            this.set(y,i18n[x][y]);
+          }
+        }
         // this.set(x,i18n[x]);
       }
 
@@ -77,11 +78,11 @@ function registrationLoaded(args) {
       }
       var promise =new Sqlite("nayan.db", function(err, db) {
         if(id=="0"){
-        return 0;
-      }
+          return 0;
+        }
         db.execSQL("insert into user (id,type,firstname,lastname,number,email,code) values (?,?,?,?,?,?,?)", [id,type,firstname,lastname,phone,email,code], function(err, d) {
           // console.log(err);
-           applicationSettings.setString("type", "patient");
+          applicationSettings.setString("type", "patient");
           //Replace code to verify the email against inserted value.
           //This is inexpensive.
           db.get('select * from user', function(err, row) {
@@ -97,9 +98,34 @@ function registrationLoaded(args) {
       });
     };
 
+    RegistrationModel.prototype.check_referral_code = function () {
+      console.log("check_referral_code is activated");
+      var self = this;
+      this.showLoading();
+      var split_array = check_code.split("-");
+      console.log(split_array);
+      fetchModule.fetch("http://"+server+"/user/getdoctor/" + split_array[0] + "/" + split_array[1], {
+        method: "GET",
+      }).then(function(response) {
+        console.log("id: "+response._bodyText);
+        id_temp=response._bodyText;
+        if(id_temp=="0"){
+          alert("Sorry, Couldn't get you registered.. kindly check the data you entered and try again!");
+          dialog.close();
+        }else{
+          id=self.serverRegister();
+        }
+      }).catch(function(err) {
+        // Error :(
+        console.log(err);
+        alert("Sorry, Couldn't get you registered.. kindly check your internet connection and the data you entered!");
+        dialog.close();
+      });
+    };
+
     RegistrationModel.prototype.serverRegister = function () {
 
-      this.showLoading();
+
       var self=this;
       fetchModule.fetch("http://"+server+"/user/create", {
         method: "POST",
@@ -108,58 +134,58 @@ function registrationLoaded(args) {
         console.log("id: "+response._bodyText);
         id=response._bodyText;
         if(id=="0"){
-            alert("Sorry, Couldn't get you registered.. kindly check the data you entered and try again!");
-            dialog.close();
-          }else{
-        self.localRegister(id);
-        self.pushnotification();
-        console.log("Registered on server.");
-        return id;
+          alert("Sorry, Couldn't get you registered.. kindly check the data you entered and try again!");
+          dialog.close();
+        }else{
+          self.localRegister(id);
+          self.pushnotification();
+          console.log("Registered on server.");
+          return id;
         }
       }).catch(function(err) {
-            // Error :(
-            console.log(err);
-            alert("Sorry, Couldn't get you registered.. kindly check your internet connection and the data you entered!");
-          });
+        // Error :(
+        console.log(err);
+        alert("Sorry, Couldn't get you registered.. kindly check your internet connection and the data you entered!");
+      });
 
     };
 
     RegistrationModel.prototype.checkconnection=function(){
       var connectionType = connectivity.getConnectionType();
       switch (connectionType) {
-          case connectivity.connectionType.none:
-              alert("Please check your internet connection and try again!");
-              return 0;
-              break;
-          case connectivity.connectionType.wifi:
-              console.log("WiFi connection");
-              return 1;
-              break;
-          case connectivity.connectionType.mobile:
-              console.log("Mobile connection");
-              return 1;
-              break;
+        case connectivity.connectionType.none:
+        alert("Please check your internet connection and try again!");
+        return 0;
+        break;
+        case connectivity.connectionType.wifi:
+        console.log("WiFi connection");
+        return 1;
+        break;
+        case connectivity.connectionType.mobile:
+        console.log("Mobile connection");
+        return 1;
+        break;
       }
     };
 
     RegistrationModel.prototype.pushnotification=function(){
-            //Testing push notifications.
-        //fetch is analogous to volley, it takes care of http requests-to abhijith
-        //subscribe is our proprietory push server.
-var result='';
-        pushPlugin.register({ senderID: '316739204235' }, function (data){
-            console.log("message", "" + JSON.stringify(data));
-            var push_post_data=JSON.stringify({user: firstname+" "+lastname, type: "android", token: data});
-            console.log(push_post_data);
-            fetch("http://nayanpush.negative.co.in/subscribe", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: push_post_data
-            }).then(function (r) { return r.json(); console.log("done with subscribing to push server");}).then(function (r) {
-                console.dir(r);
-            }, function (e) {
-                console.log("Error occurred " + e);
-            });
+      //Testing push notifications.
+      //fetch is analogous to volley, it takes care of http requests-to abhijith
+      //subscribe is our proprietory push server.
+      var result='';
+      pushPlugin.register({ senderID: '316739204235' }, function (data){
+        console.log("message", "" + JSON.stringify(data));
+        var push_post_data=JSON.stringify({user: firstname+" "+lastname, type: "android", token: data});
+        console.log(push_post_data);
+        fetch("http://nayanpush.negative.co.in/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: push_post_data
+        }).then(function (r) { return r.json(); console.log("done with subscribing to push server");}).then(function (r) {
+          console.dir(r);
+        }, function (e) {
+          console.log("Error occurred " + e);
+        });
         //     fetchModule.fetch("http://nayanpush.negative.co.in/subscribe", {
         //       method: "POST",
         //       headers: { "Content-Type": "application/json" },
@@ -171,35 +197,35 @@ var result='';
         //   // Error :(
         //   console.log(err);
         // });
-        }, function(e) {
-          console.log(e);
-        });
+      }, function(e) {
+        console.log(e);
+      });
 
-        pushPlugin.onMessageReceived(function callback(data) {
-            alert("message", "" + JSON.stringify(data));
-        });
+      pushPlugin.onMessageReceived(function callback(data) {
+        alert("message", "" + JSON.stringify(data));
+      });
     };
 
     RegistrationModel.prototype.showLoading = function () {
       var nativeView;
       if(platform.device.os === platform.platformNames.ios){
-          nativeView = UIActivityIndicatorView.alloc().initWithActivityIndicatorStyle(UIActivityIndicatorViewStyle.UIActivityIndicatorViewStyleGray);
-          nativeView.startAnimating();
+        nativeView = UIActivityIndicatorView.alloc().initWithActivityIndicatorStyle(UIActivityIndicatorViewStyle.UIActivityIndicatorViewStyleGray);
+        nativeView.startAnimating();
       } else if(platform.device.os === platform.platformNames.android){
-          nativeView = new android.widget.ProgressBar(application.android.currentContext);
-          nativeView.setIndeterminate(true);
+        nativeView = new android.widget.ProgressBar(application.android.currentContext);
+        nativeView.setIndeterminate(true);
       }
       dialog.show({
-          title: "Loading...",
-          message: "Please wait!",
-          cancelButtonText: "Cancel",
-          nativeView: nativeView}
-        ).then(function(r){
-          console.log("Result: " + r);
-        },
-        function(e){
-          console.log("Error: " + e)
-        });
+        title: "Loading...",
+        message: "Please wait!",
+        cancelButtonText: "Cancel",
+        nativeView: nativeView}
+      ).then(function(r){
+        console.log("Result: " + r);
+      },
+      function(e){
+        console.log("Error: " + e)
+      });
     };
     RegistrationModel.prototype.registerAction = function () {
       console.log("Registration button clicked.");
@@ -211,41 +237,42 @@ var result='';
           title: "Attention...",
           message: "You must read and agree to the terms and conditions!",
           cancelButtonText: "Cancel",
-          }
-        ).then(function(r){
-          console.log("Result: " + r);
-        },
-        function(e){
-          console.log("Error: " + e);
-        });
-      }else{
-        firstname = viewModule.getViewById(page, "patientregistrationfirstname").text;
-        lastname = viewModule.getViewById(page, "patientregistrationlastname").text;
-        email = viewModule.getViewById(page, "patientregistrationemail").text;
-        phone = viewModule.getViewById(page, "patientregistrationphone").text;
-        code = viewModule.getViewById(page, "patientregistrationcode").text;
-        code = code.substring(code.indexOf("-") + 1);
-        console.log("Check Internet connectivity..");
-        var con=this.checkconnection();
-        if(con){
-          if(!debug){
-            id=this.serverRegister();
-          }else{
-             var topmost=FrameModule.topmost();
-              topmost.navigate("pages/patient/home/home");
-          }
+        }
+      ).then(function(r){
+        console.log("Result: " + r);
+      },
+      function(e){
+        console.log("Error: " + e);
+      });
+    }else{
+      firstname = viewModule.getViewById(page, "patientregistrationfirstname").text;
+      lastname = viewModule.getViewById(page, "patientregistrationlastname").text;
+      email = viewModule.getViewById(page, "patientregistrationemail").text;
+      phone = viewModule.getViewById(page, "patientregistrationphone").text;
+      code = viewModule.getViewById(page, "patientregistrationcode").text;
+      check_code = code;
+      code = code.substring(code.indexOf("-") + 1);
+      console.log("Check Internet connectivity..");
+      var con=this.checkconnection();
+      if(con){
+        if(!debug){
+          this.check_referral_code();
+        }else{
+          var topmost=FrameModule.topmost();
+          topmost.navigate("pages/patient/home/home");
         }
       }
-    };
+    }
+  };
 
-    RegistrationModel.prototype.showtermsAction = function () {
-      var topmost=FrameModule.topmost();
-       topmost.navigate("pages/patient/home/legal/legal");
-    };
+  RegistrationModel.prototype.showtermsAction = function () {
+    var topmost=FrameModule.topmost();
+    topmost.navigate("pages/patient/home/legal/legal");
+  };
 
-    return RegistrationModel;
-  })(observable.Observable);
-  page.bindingContext = new RegistrationModel();
+  return RegistrationModel;
+})(observable.Observable);
+page.bindingContext = new RegistrationModel();
 }
 
 
