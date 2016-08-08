@@ -3,6 +3,7 @@ var observable = require("data/observable");
 var viewModule = require("ui/core/view");
 var sqlite = require( "nativescript-sqlite" );
 var Toast = require("nativescript-toast");
+var application =require("application");
 var dbname = 'medicaldiary.sqlite';
 var db = null;
 var page;
@@ -31,7 +32,11 @@ function patientDiaryEntryLoaded(args) {
           console.log("string ",content.toString().length);
           var subject;
           if (content.toString().length==0) {
-            Toast.makeText("Enter the content in diary", "long").show();
+            if (application.android) {
+              Toast.makeText("Enter the content in diary", "long").show();
+            }else {
+              alert("Enter the content in diary");
+            }
           }else {
           if (content.toString().length<=20) {
             subject = content.toString();

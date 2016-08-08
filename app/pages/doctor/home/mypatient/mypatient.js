@@ -5,12 +5,12 @@ var observable = require("data/observable");
 var observableArrayModule = require("data/observable-array");
 var fetchModule = require("fetch");
 var Sqlite = require( "nativescript-sqlite" );
-var viewModule = require("ui/core/view"); 
+var viewModule = require("ui/core/view");
 var platform = require("platform");
 var connectivity = require("connectivity");
 var dialog = require("nativescript-dialog");
 var application = require("application");
-var x;
+var x,self,id_again;
 function mypatientLoaded(args) {
   var page = args.object;
   var id=0;
@@ -24,10 +24,10 @@ function mypatientLoaded(args) {
       self=this;
       self.set("mypatientlist",x);
       new Sqlite("nayan.db", function(err, db) {
-        var promisea = db.get('select * from user'); 
+        var promisea = db.get('select * from user');
         promisea.then(function(row){
-
           id=row[0];
+          id_again=row[0];
           code=row[2]+"-"+id;
           console.log(" patients are now ready.");
           return self.getpatients(row[0]);
@@ -51,31 +51,52 @@ function mypatientLoaded(args) {
             try{
             pdata=JSON.parse(response._bodyInit);
             dialog.close();
+            x.length = 0;
             if(pdata.length==0){
-              x.push({ patientid:'0',name: "Referral code: " });
-              x.push({ patientid:'0',name:  code });
+              page.getViewById("message_name").text = "Your Referral code: " + code;
             }
-            for(var i=0;i<pdata.length;i++){
-              console.log(pdata[i].id);
-              var name=pdata[i].firstname+" "+pdata[i].lastname;
-              console.log(name);
-              x.push({ patientid:pdata[i].id,name: name });
-            } 
+            page.getViewById("message_name").text = "Your Referral code: " + code;
+            new Sqlite("nayan.db", function(err, db) {
+              var promiseabc = db.all('select blocked from blockeduser');
+              promiseabc.then(function(row){
+                console.log("blocked list");
+                console.log(row);
+                for(var i=0;i<pdata.length;i++){
+                  console.log(pdata[i].id);
+                  var flag = 0;
+                  for (var j = 0; j < row.length; j++) {
+                    if (pdata[i].id == row[j]) {
+                      flag = 1;
+                    }
+                  }
+                  if (flag == 1) {
+                    console.log("flagged");
+                  }else {
+                    console.log("unflagged");
+                    var name=pdata[i].firstname+" "+pdata[i].lastname;
+                    console.log(name);
+                    x.push({ patientid:pdata[i].id,name: name });
+                    page.getViewById("message_name").text = "Your patients list"
+                  }
+                  console.log("end");
+                }
+                self.set("mypatientlist",x);
+              });
+            });
           }
           catch (e) {
             console.log("no json");
             // x.push({ patientid:'0',name: "No Patients" });
-            x.push({ patientid:'0',name: "Referral code: " });
-            x.push({ patientid:'0',name:  code });
+            page.getViewById("message_name").text = "Your Referral code: " + code;
             dialog.close();
           }
-            
+
           }).catch(function(err) {
-                // Error :( 
+                // Error :(
                 console.log(err);
                 alert("Please try again in some time..");
                 dialog.close();
-              });  
+              });
     };
 
     mypatientModel.prototype.showLoading = function () {
@@ -92,8 +113,8 @@ function mypatientLoaded(args) {
           message: "Please wait!",
           cancelButtonText: "Cancel",
           nativeView: nativeView}
-        ).then(function(r){ 
-          console.log("Result: " + r); 
+        ).then(function(r){
+          console.log("Result: " + r);
         },
         function(e){
           console.log("Error: " + e)
@@ -126,6 +147,7 @@ function mypatientLoaded(args) {
 
 exports.mypatientlistitemTap = function (args) {
     var index = args.index;
+    console.log();index
     var topmost=FrameModule.topmost();
     var navigationEntry = {
       moduleName: "pages/doctor/home/inbox/inbox",
@@ -140,6 +162,20 @@ exports.back = function(args){
   var topmost=FrameModule.topmost();
   topmost.goBack();
 }
+
+exports.block_user = function(args){
+  console.log('block_user clicked');
+  var btn = args.object;
+  var tappedItemData = btn.bindingContext;
+  console.log(tappedItemData.patientid);
+  new Sqlite("nayan.db", function(err, db) {
+    var promiseab = db.execSQL("INSERT INTO blockeduser (blocked) VALUES (?)",[tappedItemData.patientid]);
+    promiseab.then(function(resultSet){
+      console.log(resultSet);
+      self.getpatients(id_again);
+    });
+  });
+};
 
 
 exports.mypatientLoaded = mypatientLoaded;

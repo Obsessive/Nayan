@@ -4,18 +4,15 @@
               <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="back"/>
             </ActionBar>
         </Page.actionBar>
-<ScrollView>
-
+				<StackLayout>
+<Label textWrap="true" class="patientEyeConditionslabel" id="message_name"/>
  	<ListView id="mypatientlist" items="{{ mypatientlist }}" itemTap="mypatientlistitemTap">
 		<ListView.itemTemplate>
-		<StackLayout>
-          <Label class="patientEyeConditionslabel" id="{{patientid}}" text="{{ name }}" />
-          <!-- <Label text="{{ name }}" />  -->
-          <!-- <Button class="patientEyeConditionslabel" text="{{ name }}" tap="{{ listtapAction }}" /> -->
-        </StackLayout>
-				<!-- <Label class="patientEyeConditionslabel" text="{{ name }}"  /> -->
-			
+		<GridLayout rows="auto" columns="*,*,*">
+          <Label row="0" col="0" colspan="2" textWrap="true" class="patientEyeConditionslabel" id="{{patientid}}" text="{{ name }}" />
+					<Label row="0" col="2" class="againagainbutton" text="Block" tap="block_user" id="block_user_id"/>
+        </GridLayout>
 	</ListView.itemTemplate>
 </ListView>
-</ScrollView>
+</StackLayout>
 </Page>

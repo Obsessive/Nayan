@@ -9,9 +9,9 @@ var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var applicationSettings = require("application-settings");
 var pushPlugin = require("nativescript-push-notifications");
-var validator = require('validator');
+if (application.android) {
 var Toast = require("nativescript-toast");
-var sanitize = require('validator').sanitize;
+}
 function registrationLoaded(args) {
   var page = args.object;
   var server = "nayanmain.negative.co.in";
@@ -53,7 +53,7 @@ function registrationLoaded(args) {
           //Replace code to verify the email against inserted value.
           //This is inexpensive.
           db.get('select * from user', function(err, row) {
-            console.log("Row of data was: ", row);  // Prints [["Field1", "Field2",...]]
+            console.log("Row of data was: ", row); // Prints [["Field1", "Field2",...]]
             dialog.close();
             var topmost=FrameModule.topmost();
             topmost.navigate("pages/doctor/home/home");
@@ -184,12 +184,16 @@ function registrationLoaded(args) {
       phone = viewModule.getViewById(page, "doctorregistrationphone").text;
       code = viewModule.getViewById(page, "doctorregistrationcode").text;
       referral = viewModule.getViewById(page, "doctorregistrationreferral").text;
-      if (validator.matches(referral.toString(),'[Nn][Aa][Yy][Aa][Nn]-([1-5][0-9][0-9]|[1-9][0-9]|[1-9])','i')) {
-        console.log("right");
-      }else {
-        Toast.makeText("You must enter a valid referral code!","long").show();
+      if (!(/[Nn][Aa][Yy][Aa][Nn]-([1-5][0-9][0-9]|[1-9][0-9]|[1-9])/.test(referral.toString()))) {
+        if (application.android) {
+          Toast.makeText("You must enter a valid referral code!", "long").show();
+        }else {
+          alert("You must enter a valid referral code!");
+        }
         console.log("wrong");
         return ;
+      }else {
+        console.log("right");
       }
       console.log("Check Internet connectivity..");
       var con=this.checkconnection();

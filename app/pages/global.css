@@ -41,6 +41,20 @@ button {
     border-radius:5;
     width:300;
 }
+.againagainbutton{
+  margin:5;
+  color:#fff;
+  border-radius:5;
+  font-size: 28;
+  padding: 5;
+  text-align: center;
+  background-color: #1E88E5;
+}
+
+.centerit{
+  vertical-align: center;
+  horizontal-align: center;
+}
 
 .message {
     font-size: 20;
@@ -125,6 +139,9 @@ TextField{
     font-size:32;
     padding:10;
     color:#2196F3;
+}
+.font30{
+  font-size: 30;
 }
 .doctorproducts{
    /* width:100;*/

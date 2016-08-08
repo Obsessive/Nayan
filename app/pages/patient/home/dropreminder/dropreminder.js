@@ -36,15 +36,17 @@ var dropreminderModel = (function (_super) {
         // this.set(x,i18n[x]);
       }
        calendarlist = new ObservableArray.ObservableArray();
-this.set("calendarlist",calendarlist);
+
 // if(!visit){
         new Sqlite("nayan.db", function(err, db) {
-          var promise = db.each('select * from reminder',
-            function (err, row) {
-              console.dir(row);
-                console.log("Row results:", row[1]);
-                  calendarlist.push({ name: row[1],id:row[0] });
-
+          var promise = db.all('select * from reminder',
+            function (err, resultSet) {
+              console.dir(resultSet);
+              for (var i = 0; i < resultSet.length; i++) {
+                console.log("Row results:", resultSet[i][2]);
+                calendarlist.push({ name: resultSet[i][1]+" | "+resultSet[i][2],id:resultSet[i][0] });
+              }
+              self.set("calendarlist",calendarlist);
           });
         });
         // visit=1;

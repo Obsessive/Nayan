@@ -7,8 +7,8 @@
 
 <GridLayout rows="100,*,60" columns="*" marginBottom="20" class="" >
   	<!-- 	 <Image row="1" col="0" class="doctorproducts" style="margin-top:30;width:200" src="~/images/logo.png" stretch ="aspectFit" /> -->
-      
-    
+
+
 
  <Button row="2" col="0" class="globalbutton" text="{{CreateReminder}}" tap="{{ createReminderAction }}" />
  <Image class="messageScroll" row="0" col="0" src="~/images/logo.png" stretch ="aspectFit" />
@@ -18,7 +18,7 @@
     <ListView.itemTemplate>
     <StackLayout>
       <GridLayout rows="60" columns="*,100" marginBottom="20" class="" >
-       <Label  row="1" col="0"  style="font-size:16" text="{{ name }}" />
+       <Label  row="1" col="0"  textWrap="true" style="font-size:20" class="centerit" text="{{ name }}" />
       <!--  <Button class="globalbutton" row="1" col="0" text="&#xf067; New Event/Appointment" tap="{{ newEventAction }}"/> -->
       <Button col="1" row="0"  class="chatlabelincoming" text="delete" tap="delbutton" />
     </GridLayout>
