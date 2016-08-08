@@ -157,7 +157,7 @@ function registrationLoaded(args) {
           console.log("Result: " + r);
         },
         function(e){
-          console.log("Error: " + e)
+          console.log("Error: " + e);
         });
     };
     RegistrationModel.prototype.registerAction = function () {
