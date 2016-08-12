@@ -16,9 +16,9 @@
     <Label text="{{Referral}}" />
     <TextField hint="{{ReferralPlaceHolder}}" id="patientregistrationcode"/>
 
-    <GridLayout rows="40" columns="70,*" marginBottom="20" style="border-radius=5" >
+    <GridLayout rows="auto" columns="70,*" marginBottom="20" style="border-radius=5" >
     <Switch id="termsagreedid" checked="{{ termsagree }}" row="0" col="0" style="horizontal-align:left" />
-    <Label row="0" col="1" tap="{{ showtermsAction }}" text="{{TermsAndConditions}}"/>
+    <Label row="0" col="1" tap="{{ showtermsAction }}" textWrap="true" text="{{TermsAndConditions}}"/>
     </GridLayout>
     <Button isEnabled="{{ termsagreed }}" text="{{isEn?'&#xf00c; Register':'&#xf00c;  रजिस्टर करें'}}" class="globalbutton" tap="{{ registerAction }}" />
   </StackLayout>

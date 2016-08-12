@@ -227,9 +227,8 @@ TextField{
     padding-top:100;
 }
 .icon{
-    padding-top:15;
-    padding-bottom: 15;
-    margin-bottom:10;
+    padding-left: 10;
+    padding-right: 10;
     background-color:#0091EA;
 }
 .icon2{
