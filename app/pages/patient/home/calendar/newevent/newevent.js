@@ -68,7 +68,7 @@ var calendarModel = (function (_super) {
   options.notes = 'This event has reminders';
 
   // iOS has a separate 'url' field, but on Android the plugin appends this to the 'notes' field.
-  options.url = 'http://microlabs.com';
+  options.url = 'http://www.microlabsltd.com/';
 
 
 

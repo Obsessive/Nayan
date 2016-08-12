@@ -1,6 +1,7 @@
 var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var dialogs = require("ui/dialogs");
+var application = require("application");
 var Calendar = require("nativescript-calendar");
 var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
@@ -15,6 +16,7 @@ var dropreminderModel = (function (_super) {
 
     function dropreminderModel() {
         _super.call(this);
+
             //Set all labels and other i18n bindings here
       //getting it from i18n
       //var i18n=require("../i18n");

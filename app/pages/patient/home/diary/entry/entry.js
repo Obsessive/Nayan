@@ -2,8 +2,10 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var viewModule = require("ui/core/view");
 var sqlite = require( "nativescript-sqlite" );
-var Toast = require("nativescript-toast");
 var application =require("application");
+if (application.android) {
+var Toast = require("nativescript-toast");
+}
 var dbname = 'medicaldiary.sqlite';
 var db = null;
 var page;

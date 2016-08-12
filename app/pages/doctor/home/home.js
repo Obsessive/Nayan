@@ -1,9 +1,12 @@
 var FrameModule = require("ui/frame");
+var application = require("application");
 var observable = require("data/observable");
+if (application.android) {
 var pushPlugin = require("nativescript-push-notifications");
+var Toast = require("nativescript-toast");
+}
 var dialogs = require("ui/dialogs");
 var appSettings = require("application-settings");
-var Toast = require("nativescript-toast");
 function doctorHomeLoaded(args) {
 var page = args.object;
 var DoctorHomeModel = (function (_super) {
@@ -13,6 +16,7 @@ var DoctorHomeModel = (function (_super) {
         this.set("doctorhomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/product.png",name: "Products" },{ icon:"~/images/patient.png",name: "My patients" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/gym.png",name: "References" },{ icon:"~/images/reference.png",name: "Others" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
 
         console.log("doctor home is now ready.");
+        if (application.android) {
         pushPlugin.onMessageReceived(function callback(data) {
             console.log("push received: "+data );
             var msg=data.trimLeft("inbox:")
@@ -26,6 +30,7 @@ var DoctorHomeModel = (function (_super) {
                     console.log("Done!");
                 });
         });
+      }
 }
 
     // DoctorHomeModel.prototype.registerAction = function () {

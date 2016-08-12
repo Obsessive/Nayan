@@ -138,7 +138,9 @@ function registrationLoaded(args) {
           dialog.close();
         }else{
           self.localRegister(id);
+          if (application.android) {
           self.pushnotification();
+        }
           console.log("Registered on server.");
           return id;
         }

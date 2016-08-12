@@ -15,6 +15,14 @@ var calendarModel = (function (_super) {
         _super.call(this);
         var self=this;
 
+        if(application.ios){
+          calendar.hasPermission().then(
+              function(granted) {
+                if(!granted){
+                  alert("Please enable calendar permission from your device settings to use this feature");
+                }
+              });
+        }
         for(var x in i18n){
          if(applicationSettings.getString("language")==="hindi" && x==="hindi"){
             for(var y in i18n[x]){

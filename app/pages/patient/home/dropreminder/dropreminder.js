@@ -3,6 +3,7 @@ var observable = require("data/observable");
 var ObservableArray = require('data/observable-array');
 var dialogs = require("ui/dialogs");
 var Sqlite = require( "nativescript-sqlite" );
+var application = require("application");
 var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
 var calendarlist = new ObservableArray.ObservableArray();
@@ -16,6 +17,24 @@ var dropreminderModel = (function (_super) {
     function dropreminderModel() {
         _super.call(this);
          var self=this;
+         if(application.ios){
+          LocalNotifications.hasPermission().then(
+              function(granted) {
+                console.log("Permission granted? " + granted);
+                if(!granted){
+                  LocalNotifications.requestPermission().then(
+                    function(granted) {
+                      if(!granted){
+                        alert("Please enable notifications from your device settings to use this feature.");
+                      }
+                    console.log("Permission granted? " + granted);
+                  });
+                }
+              
+              });
+            
+         }
+        
            //Set all labels and other i18n bindings here
       //getting it from i18n
       //var i18n=require("../i18n");

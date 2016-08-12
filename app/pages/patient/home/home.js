@@ -1,9 +1,12 @@
 var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var dialogs = require("ui/dialogs");
-var pushPlugin = require("nativescript-push-notifications");
 var tts = require("nativescript-texttospeech");
 var application = require("application");
+if (application.android) {
+var pushPlugin = require("nativescript-push-notifications");
+var Toast = require("nativescript-toast");
+}
 var Sqlite = require( "nativescript-sqlite" );
 var applicationSettings = require("application-settings");
 var i18n=require("../i18n");
@@ -12,6 +15,7 @@ application.on(application.resumeEvent, function (args) {
     if (args.android) {
         // For Android applications, args.android is an android activity class.
         console.log("Activity: " + args.android);
+
         pushPlugin.onMessageReceived(function callback(data) {  
             console.log("push received: "+data );
             var substring = "Inbox:";
@@ -75,6 +79,7 @@ var patientHomeModel = (function (_super) {
       }
         tts.speak("Home!");
         // this.set("patienthomelist", [{ icon:"~/images/user.png",name: "My Profile" }, { icon:"~/images/condition.png",name: "Eye conditions" },{ icon:"~/images/inbox.png",name: "My inbox" },{ icon:"~/images/calendar.png",name: "Calendar" },{ icon:"~/images/book.png",name: "Medical Diary" },{ icon:"~/images/alarm.png",name: "Drop Reminder" },{ icon:"~/images/gym.png",name: "Eye Opening Story" },{ icon:"~/images/apple.png",name: "Food For Vision" },{ icon:"~/images/phone.png",name: "Contact us" },{ icon:"",name: "Legal" }]);
+        if (application.android) {
         pushPlugin.onMessageReceived(function callback(data) {  
             console.log("push received: "+data );
             var substring = "Inbox:";
@@ -100,6 +105,7 @@ var patientHomeModel = (function (_super) {
                 });
             }
         });
+      }
         console.log("patient home is now ready.");
         //back button on home should quit the app.
         if (application.android) {

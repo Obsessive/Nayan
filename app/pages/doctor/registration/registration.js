@@ -8,8 +8,8 @@ var Sqlite = require( "nativescript-sqlite" );
 var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var applicationSettings = require("application-settings");
-var pushPlugin = require("nativescript-push-notifications");
 if (application.android) {
+var pushPlugin = require("nativescript-push-notifications");
 var Toast = require("nativescript-toast");
 }
 function registrationLoaded(args) {
@@ -80,7 +80,9 @@ function registrationLoaded(args) {
             dialog.close();
           }else{
         self.localRegister(id);
-        self.pushnotification();
+        if (application.android) {
+          self.pushnotification();
+        }
         console.log("Registered on server.");
         return id;
         }
