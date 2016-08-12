@@ -9,7 +9,9 @@ var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var applicationSettings = require("application-settings");
 var pushPlugin = require("nativescript-push-notifications");
+if (application.android) {
 var Toast = require("nativescript-toast");
+}
 function registrationLoaded(args) {
   var page = args.object;
   var server = "nayanmain.negative.co.in";
@@ -155,7 +157,7 @@ function registrationLoaded(args) {
           console.log("Result: " + r);
         },
         function(e){
-          console.log("Error: " + e)
+          console.log("Error: " + e);
         });
     };
     RegistrationModel.prototype.registerAction = function () {
