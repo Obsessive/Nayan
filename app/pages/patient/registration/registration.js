@@ -138,9 +138,9 @@ function registrationLoaded(args) {
           dialog.close();
         }else{
           self.localRegister(id);
-          if (application.android) {
+          // if (application.android) {
           self.pushnotification();
-        }
+        // }
           console.log("Registered on server.");
           return id;
         }
@@ -174,8 +174,57 @@ function registrationLoaded(args) {
       //Testing push notifications.
       //fetch is analogous to volley, it takes care of http requests-to abhijith
       //subscribe is our proprietory push server.
+
+       var settings = {
+        // Android settings
+        senderID: '316739204235', // Android: Required setting with the sender/project number
+        notificationCallbackAndroid: function(message, pushNotificationObject) { // Android: Callback to invoke when a new push is received.
+            alert("Message: "+JSON.stringify(message));
+        },
+
+        // iOS settings
+        badge: true, // Enable setting badge through Push Notification
+        sound: true, // Enable playing a sound
+        alert: true, // Enable creating a alert
+
+        // Callback to invoke, when a push is received on iOS
+        notificationCallbackIOS: function(message) {
+             alert("Message: "+JSON.stringify(message));
+             console.log("push received: "+data );
+            var substring = "Inbox:";
+            console.log(data.indexOf(substring) > -1);
+            if(data.indexOf(substring) > -1){
+              var msg=data.slice(6);
+              console.log(msg);
+               new Sqlite("nayan.db", function(err, db) {
+                  var promise =db.execSQL("INSERT INTO chat (`message`,`fromid`,`toid`) VALUES(?,?,?)",[msg,'1','1']);
+                  promise.then(function(){
+                      console.log(JSON.stringify({"payload":[{"fromid":id,"toid":patient.id,"message":msg}]}));
+                  });
+              });
+              // var topmost=FrameModule.topmost();
+              // var navigationEntry = {
+              //   moduleName: "pages/patient/home/inbox/inbox",
+              //   context: {msg:msg},
+              //   animated: true
+              // };
+              // topmost.navigate(navigationEntry);
+            }else{
+                var options = {
+                    title: "Notification",
+                    message: data,
+                    okButtonText: "OK"
+                };
+                dialogs.alert(options).then(function () {
+                    console.log("Done!");
+                });
+            }
+        }
+    };
+
       var result='';
-      pushPlugin.register({ senderID: '316739204235' }, function (data){
+      // pushPlugin.register({ senderID: '316739204235' }, function (data){
+      pushPlugin.register(settings, function (data){
         console.log("message", "" + JSON.stringify(data));
         var push_post_data=JSON.stringify({user: firstname+" "+lastname, type: "android", token: data});
         console.log(push_post_data);
@@ -202,10 +251,10 @@ function registrationLoaded(args) {
       }, function(e) {
         console.log(e);
       });
-
-      pushPlugin.onMessageReceived(function callback(data) {
-        alert("message", "" + JSON.stringify(data));
-      });
+      // mostly not required untill we reach home.. please consider posibility of this being useful here.
+      // pushPlugin.onMessageReceived(function callback(data) {
+      //   alert("message", "" + JSON.stringify(data));
+      // });
     };
 
     RegistrationModel.prototype.showLoading = function () {
@@ -260,8 +309,12 @@ function registrationLoaded(args) {
         if(!debug){
           this.check_referral_code();
         }else{
-          var topmost=FrameModule.topmost();
-          topmost.navigate("pages/patient/home/home");
+          FrameModule.topmost().navigate({
+              moduleName: "pages/patient/home/home",
+              backstackVisible: false
+          });
+          // var topmost=FrameModule.topmost();
+          // topmost.navigate("pages/patient/home/home");
         }
       }
     }

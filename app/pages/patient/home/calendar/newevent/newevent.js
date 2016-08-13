@@ -70,8 +70,6 @@ var calendarModel = (function (_super) {
   // iOS has a separate 'url' field, but on Android the plugin appends this to the 'notes' field.
   options.url = 'http://www.microlabsltd.com/';
 
-
-
   // Want to use a custom calendar for your app? Pass in the 'id' or 'name'.
   // If the name doesn't yet exist the plugin will create it for you.
   options.calendar = {
@@ -87,25 +85,25 @@ var calendarModel = (function (_super) {
         console.log("Error creating an Event: " + error);
       }
   );
-      LocalNotifications.schedule([{
-      id: 1,
-      title: 'Nayan Reminder',
-      body: 'Nayan: '+ev.text,
-      ticker: 'Nayan Reminder: '+ev.text,
-      at: new Date(year,month-1,day,8,23,9,123)
-    }]).then(
-        function() {
-          // dialogs.alert({
-          //   title: "Notification scheduled",
-          //   message: 'ID: 1',
-          //   okButtonText: "OK, thanks"
-          // });
-          console.log("notification done.");
-        },
-        function(error) {
-          console.log("doSchedule error: " + error);
-        }
-    );
+    //   LocalNotifications.schedule([{
+    //   id: 1,
+    //   title: 'Nayan Reminder',
+    //   body: 'Nayan: '+ev.text,
+    //   ticker: 'Nayan Reminder: '+ev.text,
+    //   at: new Date(year,month-1,day,8,23,9,123)
+    // }]).then(
+    //     function() {
+    //       // dialogs.alert({
+    //       //   title: "Notification scheduled",
+    //       //   message: 'ID: 1',
+    //       //   okButtonText: "OK, thanks"
+    //       // });
+    //       console.log("notification done.");
+    //     },
+    //     function(error) {
+    //       console.log("doSchedule error: " + error);
+    //     }
+    // );
   dialogs.alert("Reminder has been set in your device's Calendar Successfully!").then(function() {
     console.log("Dialog closed!");
   });

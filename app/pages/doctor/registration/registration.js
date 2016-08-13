@@ -8,8 +8,8 @@ var Sqlite = require( "nativescript-sqlite" );
 var viewModule = require("ui/core/view");
 var fetchModule = require("fetch");
 var applicationSettings = require("application-settings");
-if (application.android) {
 var pushPlugin = require("nativescript-push-notifications");
+if (application.android) {
 var Toast = require("nativescript-toast");
 }
 function registrationLoaded(args) {
@@ -80,9 +80,9 @@ function registrationLoaded(args) {
             dialog.close();
           }else{
         self.localRegister(id);
-        if (application.android) {
+        // if (application.android) {
           self.pushnotification();
-        }
+        // }
         console.log("Registered on server.");
         return id;
         }
@@ -119,10 +119,16 @@ function registrationLoaded(args) {
         console.log("push start");
         pushPlugin.register({ senderID: '316739204235' }, function (data){
             console.log("message", "" + JSON.stringify(data));
+            if(application.android){
+              fetchbody=JSON.stringify({user: firstname+" "+lastname, type: "android", token: data});
+            }else{
+              fetchbody=JSON.stringify({user: firstname+" "+lastname, type: "ios", token: data});  
+            }
+            
             fetchModule.fetch("http://nayanpush.negative.co.in/subscribe", {
               headers: { "Content-Type": "application/json" },
               method: "POST",
-              body: JSON.stringify({user: firstname+" "+lastname, type: "android", token: data})
+              body: fetchbody
           }).then(function(response) {
             console.log(JSON.stringify(response));
             console.log("done with subscribing to push server");
@@ -137,9 +143,9 @@ function registrationLoaded(args) {
 
         }, function(e) {console.log(e); });
 
-        pushPlugin.onMessageReceived(function callback(data) {
-            alert("message", "" + JSON.stringify(data));
-        });
+        // pushPlugin.onMessageReceived(function callback(data) {
+        //     alert("message", "" + JSON.stringify(data));
+        // });
     };
     RegistrationModel.prototype.showLoading = function () {
       var nativeView;
@@ -203,8 +209,12 @@ function registrationLoaded(args) {
         if(!debug){
           id=this.serverRegister();
         }else{
-           var topmost=FrameModule.topmost();
-            topmost.navigate("pages/doctor/home/home");
+          FrameModule.topmost().navigate({
+              moduleName: "pages/doctor/home/home",
+              backstackVisible: false
+          });
+          // var topmost=FrameModule.topmost();
+          // topmost.navigate("pages/doctor/home/home");
         }
       }
       }

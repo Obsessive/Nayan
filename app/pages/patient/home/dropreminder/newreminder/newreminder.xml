@@ -27,7 +27,7 @@
     </SegmentedBar.items>
   </SegmentedBar>
 
-   <Button text="{{SetReminder}}" tap="{{ setReminderAction }}" />
+   <Button text="{{SetReminder}}" textWrap="true" tap="{{ setReminderAction }}" />
   </StackLayout>
 </ScrollView>
 </Page>

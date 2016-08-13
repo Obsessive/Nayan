@@ -3,8 +3,8 @@ var observable = require("data/observable");
 var dialogs = require("ui/dialogs");
 var tts = require("nativescript-texttospeech");
 var application = require("application");
-if (application.android) {
 var pushPlugin = require("nativescript-push-notifications");
+if (application.android) {
 var Toast = require("nativescript-toast");
 }
 var Sqlite = require( "nativescript-sqlite" );

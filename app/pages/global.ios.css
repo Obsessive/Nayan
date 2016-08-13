@@ -229,13 +229,15 @@ TextField{
 .icon{
     padding-left: 10;
     padding-right: 10;
-    background-color:#0091EA;
+    /*background-color:#0091EA;*/
+    background-color: #0091EA;
+    /*color:#0091EA;*/
 }
 .icon2{
     padding-top:15;
     padding-bottom: 15;
     margin-bottom:10;
-    /*background*/-color:#0091EA;
+    background-color:#0091EA;
 }
 .dry{
     font-family:"Dry Brush";
@@ -281,12 +283,18 @@ TextField{
     /*font-family:"Dry Brush";*/
      font-family: "Open Sans";
      font-weight: lighter;
-    background-color:#fff;
+    /*background-color:#fff;*/
+    color:#fff;
     font-size: 20;
-    color:#2962ff;
+    /*color:#2962ff;*/
+    color:#fff;
     padding-left: 10;
     vertical-align: center;
+    background-color:#0091EA;
     /*height:50;*/
+}
+.homegrid{
+  background-color:#0091EA;
 }
 
 .doctorhomecard{

@@ -2,7 +2,7 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var dialogs = require("ui/dialogs");
 var application = require("application");
-var Calendar = require("nativescript-calendar");
+// var Calendar = require("nativescript-calendar");
 var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
 var Sqlite = require( "nativescript-sqlite" );
@@ -83,6 +83,7 @@ var dropreminderModel = (function (_super) {
                     title: 'Nayan Eye Drops Reminder: '+ev.text,
                     body: 'Drops Reminder for: '+ev.text,
                     ticker: 'Nayan Reminder: '+ev.text,
+                    badge: 1,
                     at: new Date(year,month,day,8,minute,9,123)
                   }]).then(
                       function() {
@@ -98,6 +99,7 @@ var dropreminderModel = (function (_super) {
                     title: 'Nayan Eye Drops Reminder: '+ev.text,
                     body: 'Drops Reminder for: '+ev.text,
                     ticker: 'Nayan Reminder: '+ev.text,
+                    badge: 1,
                     at: new Date(year,month,day,20,minute,9,123)
                   }]).then(
                       function() {
@@ -265,6 +267,7 @@ var dropreminderModel = (function (_super) {
                     title: 'Nayan Eye Drops Reminder: '+ev.text,
                     body: 'Drops Reminder for: '+ev.text,
                     ticker: 'Nayan Reminder: '+ev.text,
+                    badge: 1,
                     at: new Date(year,month,day,hour,minute,9,123)
                   }]).then(
                       function() {

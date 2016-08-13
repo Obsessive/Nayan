@@ -14,7 +14,7 @@
     <DatePicker id="pickdate" day="12" month="2" year="2016" verticalAlignment="center" horizontalAlignment="center"/>
     <Label text="{{EventFor}}" class="message" textWrap="true"/>
     <TextField id="patientcalendarname" hint="{{EventHint}}" />
-   <Button text="{{CreateEvent}}" tap="{{ setReminderAction }}" />
+   <Button text="{{CreateEvent}}" textWrap="true" tap="{{ setReminderAction }}" />
   </StackLayout>
 </ScrollView>
 </Page>

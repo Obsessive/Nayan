@@ -2,6 +2,7 @@ var FrameModule = require("ui/frame");
 var observable = require("data/observable");
 var ObservableArray = require('data/observable-array');
 var Calendar = require("nativescript-calendar");
+var application = require("application");
 var applicationSettings = require("application-settings");
 var LocalNotifications = require("nativescript-local-notifications");
 var dialogs = require("ui/dialogs");
@@ -16,7 +17,7 @@ var calendarModel = (function (_super) {
         var self=this;
 
         if(application.ios){
-          calendar.hasPermission().then(
+          Calendar.hasPermission().then(
               function(granted) {
                 if(!granted){
                   alert("Please enable calendar permission from your device settings to use this feature");
@@ -46,7 +47,7 @@ var calendarModel = (function (_super) {
 
         // options.url = 'http://microlabs.com';
         options.calendar = {
-          id: 54,
+          // id: 54,
           name: "MicroLabs Nayan"
         };
         Calendar.findEvents(options).then(
